@@ -27,22 +27,14 @@ The XMPP/Jabber connector was tested on ejabberd and GTalk.
 The IRC connector was tested on freenode.net.
 The bot was tested on Debian Stable (squeeze atm).
 
-To install all dependencies, run the following script:
-    ./cnb/bin/misc/inst-dep.sh
-
 Install
 =======
 
 First download the code from git
     git clone https://github.com/hackfestca/cnb cnb
 
-Then link the python code (python package is not done yet)
-    ln -s cnb/cnb/ /usr/lib/pymodules/python2.6/
-
-Then, change the ROOT_DIR var in cnb/bin/cnb-cli at line 32 to your own root
-
-Finally, create a gmail account and/or freenode account for the bot
-
+Then run setup.py
+    ./cnb/setup.py install
 
 How to use
 ==========
@@ -50,7 +42,7 @@ How to use
 Setting up the main config file
 -------------------------------
 
-First, go to *config/* folder and open the *cnb.conf*. This is the main config
+First, go to */etc/cnb/ folder and copy the *cnb.conf.default* to *cnb.conf*. This is the main config
 file. Most of this should not have to change, except for the **connectors** and 
 **smtp** sections. Here is an example of a *cnb.conf* file. Simply fill the
 <...> fields.
@@ -81,7 +73,7 @@ server. The next section explain how to setup a connection config file.
 Setting up a connection config file
 -----------------------------------
 
-The bot will import specified *\*.conf* files in *cnb.conf* file. Here's
+The bot will import files specified in *cnb.conf* file. Here's
 the syntax of an IRC connection file. Again, simply fill the <...> fields. 
     [bot]
     type = irc
@@ -115,20 +107,17 @@ And this is a XMPP connection file
     verbose = 0
     admins = [<a list of admins (Syntax: email1,...)>]
 
+
 Running the bot
 -----------------
 It is recommended to start it as a shell script first to see errors if any 
 and then start it as a service
 
 To run the bot as a shell script:
-    ./cnb/bin/cnb-cli [--help]
+    [/usr/local/bin/]cnb-cli [--help]
 
 To run as a service:
-    # Create a user with limited privileges    
-    adduser chuck
-    
-    # Start the bot
-    sudo ./cnb/bin/cnb-service start|stop|restart|status
+    sudo /etc/init.d/cnb start|stop|restart|status
 
 
 Bot Security
@@ -150,23 +139,6 @@ is always a good idea to run the bot as a user with limited privileges.
 
 Disabling modules can also reduce attack vectors. Disable modules by removing 
 symbolic links in the cnb/modEnabled folder (apache style).
-
-
-FAQ
-===
-
-Python can't find cnb package?
-------------------------------
-
-Ensure that the symbolic link is added in a standard path. On debian, I had the following:
-    >>> import sys
-    >>> str(sys.path)
-    "['', '/usr/lib/python2.6', '/usr/lib/python2.6/plat-linux2', 
-    '/usr/lib/python2.6/lib-tk', '/usr/lib/python2.6/lib-old', 
-    '/usr/lib/python2.6/lib-dynload', '/usr/local/lib/python2.6/dist-packages', 
-    '/usr/lib/python2.6/dist-packages', '/usr/lib/python2.6/dist-packages/PIL', 
-    '/usr/lib/python2.6/dist-packages/gst-0.10', '/usr/lib/pymodules/python2.6', 
-    '/usr/lib/pymodules/python2.6/gtk-2.0']"
 
 
 Contributors
