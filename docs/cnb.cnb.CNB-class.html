@@ -1,0 +1,699 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>cnb.cnb.CNB</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="cnb-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="cnb-module.html">Package&nbsp;cnb</a> ::
+        <a href="cnb.cnb-module.html">Module&nbsp;cnb</a> ::
+        Class&nbsp;CNB
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="cnb.cnb.CNB-class.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS DESCRIPTION ==================== -->
+<h1 class="epydoc">Class CNB</h1><p class="nomargin-top"><span class="codelink"><a href="cnb.cnb-pysrc.html#CNB">source&nbsp;code</a></span></p>
+<center>
+<center>  <map id="uml_class_diagram_for_cnb_cnb_" name="uml_class_diagram_for_cnb_cnb_">
+<area shape="rect" id="node1" href="cnb.cnbCore.CNBCore-class.html#log" title="This is the log object for the current class." alt="" coords="616,383,740,401"/>
+<area shape="rect" id="node1" href="cnb.cnbCore.CNBCore-class.html#oMatrix" title="This is the Matrix object" alt="" coords="616,401,740,420"/>
+<area shape="rect" id="node1" href="cnb.cnbCore.CNBCore-class.html#getState" title="This method return the current state of CNB" alt="" coords="616,423,740,441"/>
+<area shape="rect" id="node1" href="cnb.cnbCore.CNBCore-class.html#isRunning" title="Determine if CNB is running" alt="" coords="616,441,740,460"/>
+<area shape="rect" id="node1" href="cnb.cnbCore.CNBCore-class.html#killCNB" title="Kill CNB" alt="" coords="616,460,740,479"/>
+<area shape="rect" id="node1" href="cnb.cnbCore.CNBCore-class.html#run" title="This method is called when the thread is started and contains the main loop" alt="" coords="616,479,740,497"/>
+<area shape="rect" id="node1" href="cnb.cnbCore.CNBCore-class.html#setState" title="This method set the current state of CNB" alt="" coords="616,497,740,516"/>
+<area shape="rect" id="node1" href="cnb.cnbCore.CNBCore-class.html#startCNB" title="Start CNB" alt="" coords="616,516,740,535"/>
+<area shape="rect" id="node1" href="cnb.cnbCore.CNBCore-class.html#stopCNB" title="Stop CNB" alt="" coords="616,535,740,553"/>
+<area shape="rect" id="node1" href="cnb.cnbCore.CNBCore-class.html" title="This class manage the main loop, all the states and this loop logs." alt="" coords="604,358,751,559"/>
+<area shape="rect" id="node3" href="cnb.cnbConnectorManager.CNBConnectorManager-class.html" title="This class manage the connectors (xmpp, irc, sip, etc.)." alt="" coords="5,657,315,695"/>
+<area shape="poly" id="edge2" href="cnb.cnbCore.CNBCore-class.html#oConMgr" title="cnb.cnbCore.CNBCore.oConMgr" alt="" coords="616,487 330,602 204,659 202,654 328,598 614,482"/>
+<area shape="rect" id="edge2" href="cnb.cnbCore.CNBCore-class.html#oConMgr" title="oConMgr" alt="" coords="396,571,449,589"/>
+<area shape="rect" id="node5" href="cnb.cnbConsole.CNBConsole-class.html" title="This class is the cli admin console of CNB" alt="" coords="344,657,531,695"/>
+<area shape="poly" id="edge4" href="cnb.cnbCore.CNBCore-class.html#oConsole" title="cnb.cnbCore.CNBCore.oConsole" alt="" coords="616,519 465,654 462,650 613,515"/>
+<area shape="rect" id="edge4" href="cnb.cnbCore.CNBCore-class.html#oConsole" title="oConsole" alt="" coords="552,571,608,589"/>
+<area shape="rect" id="node0" href="cnb.cnb.CNB-class.html#__init__" title="x.__init__(...) initializes x; see x.__class__.__doc__ for signature" alt="" coords="572,633,784,652"/>
+<area shape="rect" id="node0" href="cnb.cnb.CNB-class.html#__del__" title="cnb.cnb.CNB.__del__" alt="" coords="572,652,784,671"/>
+<area shape="rect" id="node0" href="cnb.cnb.CNB-class.html#joinCNB" title="This method let you connect a specific instance to a chan/room." alt="" coords="572,671,784,689"/>
+<area shape="rect" id="node0" href="cnb.cnb.CNB-class.html#inviteCNB" title="This method let you invite someone to a chan/room on a specific instance." alt="" coords="572,689,784,708"/>
+<area shape="rect" id="node0" href="cnb.cnb.CNB-class.html#sayCNB" title="This method let you say something to a specific destination." alt="" coords="572,708,784,727"/>
+<area shape="rect" id="node0" href="cnb.cnb.CNB-class.html#getConfigCNB" title="This method let you resolve a config object from a connection ID." alt="" coords="572,727,784,745"/>
+<area shape="rect" id="node7" href="cnb.cnb.CNB-class.html" title="Once this class is instanciated, connections are initiated, console is started and the Matrix powered on." alt="" coords="560,601,795,751"/>
+<area shape="rect" id="node6" href="javascript:void(0);" title="threading._Verbose" alt="" coords="609,6,748,50"/>
+<area shape="rect" id="node2" href="javascript:void(0);" title="threading.Thread.name" alt="" coords="595,100,763,119"/>
+<area shape="rect" id="node2" href="javascript:void(0);" title="threading.Thread.ident" alt="" coords="595,119,763,137"/>
+<area shape="rect" id="node2" href="javascript:void(0);" title="threading.Thread.daemon" alt="" coords="595,137,763,156"/>
+<area shape="rect" id="node2" href="javascript:void(0);" title="repr(x)" alt="" coords="595,159,763,177"/>
+<area shape="rect" id="node2" href="javascript:void(0);" title="threading.Thread.start" alt="" coords="595,177,763,196"/>
+<area shape="rect" id="node2" href="javascript:void(0);" title="threading.Thread.join" alt="" coords="595,196,763,215"/>
+<area shape="rect" id="node2" href="javascript:void(0);" title="threading.Thread.isAlive" alt="" coords="595,215,763,233"/>
+<area shape="rect" id="node2" href="javascript:void(0);" title="threading.Thread.is_alive" alt="" coords="595,233,763,252"/>
+<area shape="rect" id="node2" href="javascript:void(0);" title="threading.Thread.isDaemon" alt="" coords="595,252,763,271"/>
+<area shape="rect" id="node2" href="javascript:void(0);" title="threading.Thread.setDaemon" alt="" coords="595,271,763,289"/>
+<area shape="rect" id="node2" href="javascript:void(0);" title="threading.Thread.getName" alt="" coords="595,289,763,308"/>
+<area shape="rect" id="node2" href="javascript:void(0);" title="threading.Thread.setName" alt="" coords="595,308,763,327"/>
+<area shape="rect" id="node8" href="javascript:void(0);" title="threading.Thread" alt="" coords="583,75,775,333"/>
+</map>
+  <img src="uml_class_diagram_for_cnb_cnb_.gif" alt='' usemap="#uml_class_diagram_for_cnb_cnb_" ismap="ismap" class="graph-without-title" />
+</center>
+</center>
+<hr />
+<p>Once this class is instanciated, connections are initiated, console is
+  started and the Matrix powered on.</p>
+  <p>This class mainly contain config and high level functions to interact 
+  with the bot. Most of the &quot;back-end&quot; code is in CNBCore 
+  class.</p>
+
+<!-- ==================== INSTANCE METHODS ==================== -->
+<a name="section-InstanceMethods"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Instance Methods</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-InstanceMethods"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cnb.cnb.CNB-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      x.__init__(...) initializes x; see x.__class__.__doc__ for signature</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cnb.cnb-pysrc.html#CNB.__init__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cnb.cnb.CNB-class.html#__del__" class="summary-sig-name">__del__</a>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cnb.cnb-pysrc.html#CNB.__del__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cnb.cnb.CNB-class.html#joinCNB" class="summary-sig-name">joinCNB</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">conId</span>,
+        <span class="summary-sig-arg">chan</span>)</span><br />
+      This method let you connect a specific instance to a chan/room.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cnb.cnb-pysrc.html#CNB.joinCNB">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cnb.cnb.CNB-class.html#inviteCNB" class="summary-sig-name">inviteCNB</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">conId</span>,
+        <span class="summary-sig-arg">users</span>,
+        <span class="summary-sig-arg">chan</span>)</span><br />
+      This method let you invite someone to a chan/room on a specific 
+      instance.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cnb.cnb-pysrc.html#CNB.inviteCNB">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cnb.cnb.CNB-class.html#sayCNB" class="summary-sig-name">sayCNB</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">conId</span>,
+        <span class="summary-sig-arg">dest</span>,
+        <span class="summary-sig-arg">msg</span>)</span><br />
+      This method let you say something to a specific destination.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cnb.cnb-pysrc.html#CNB.sayCNB">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cnb.cnb.CNB-class.html#getConfigCNB" class="summary-sig-name">getConfigCNB</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">conId</span>)</span><br />
+      This method let you resolve a config object from a connection ID.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cnb.cnb-pysrc.html#CNB.getConfigCNB">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="cnb.cnbCore.CNBCore-class.html">cnbCore.CNBCore</a></code></b>:
+      <code><a href="cnb.cnbCore.CNBCore-class.html#getState">getState</a></code>,
+      <code><a href="cnb.cnbCore.CNBCore-class.html#isRunning">isRunning</a></code>,
+      <code><a href="cnb.cnbCore.CNBCore-class.html#killCNB">killCNB</a></code>,
+      <code><a href="cnb.cnbCore.CNBCore-class.html#run">run</a></code>,
+      <code><a href="cnb.cnbCore.CNBCore-class.html#setState">setState</a></code>,
+      <code><a href="cnb.cnbCore.CNBCore-class.html#startCNB">startCNB</a></code>,
+      <code><a href="cnb.cnbCore.CNBCore-class.html#stopCNB">stopCNB</a></code>
+      </p>
+    <div class="private">    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="cnb.cnbCore.CNBCore-class.html">cnbCore.CNBCore</a></code></b> (private):
+      <code><a href="cnb.cnbCore.CNBCore-class.html#_configLogs" onclick="show_private();">_configLogs</a></code>,
+      <code><a href="cnb.cnbCore.CNBCore-class.html#_die" onclick="show_private();">_die</a></code>,
+      <code><a href="cnb.cnbCore.CNBCore-class.html#_shutdown" onclick="show_private();">_shutdown</a></code>,
+      <code><a href="cnb.cnbCore.CNBCore-class.html#_start" onclick="show_private();">_start</a></code>,
+      <code><a href="cnb.cnbCore.CNBCore-class.html#_stop" onclick="show_private();">_stop</a></code>
+      </p></div>
+    <p class="indent-wrapped-lines"><b>Inherited from <code>threading.Thread</code></b>:
+      <code>__repr__</code>,
+      <code>getName</code>,
+      <code>isAlive</code>,
+      <code>isDaemon</code>,
+      <code>is_alive</code>,
+      <code>join</code>,
+      <code>setDaemon</code>,
+      <code>setName</code>,
+      <code>start</code>
+      </p>
+    <div class="private">    <p class="indent-wrapped-lines"><b>Inherited from <code>threading.Thread</code></b> (private):
+      <code>_set_daemon</code>,
+      <code>_set_ident</code>
+      </p></div>
+    <div class="private">    <p class="indent-wrapped-lines"><b>Inherited from <code>threading._Verbose</code></b> (private):
+      <code>_note</code>
+      </p></div>
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__delattr__</code>,
+      <code>__format__</code>,
+      <code>__getattribute__</code>,
+      <code>__hash__</code>,
+      <code>__new__</code>,
+      <code>__reduce__</code>,
+      <code>__reduce_ex__</code>,
+      <code>__setattr__</code>,
+      <code>__sizeof__</code>,
+      <code>__str__</code>,
+      <code>__subclasshook__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== INSTANCE VARIABLES ==================== -->
+<a name="section-InstanceVariables"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Instance Variables</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-InstanceVariables"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">bool</span>
+    </td><td class="summary">
+        <a href="cnb.cnb.CNB-class.html#_bEnableShellConsole" class="summary-name" onclick="show_private();">_bEnableShellConsole</a> = <code title="True">True</code><br />
+      This let you choose if you start the console or not (daemon mode 
+      should not need it)
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">bool</span>
+    </td><td class="summary">
+        <a href="cnb.cnb.CNB-class.html#_bEnableInstanceConsole" class="summary-name" onclick="show_private();">_bEnableInstanceConsole</a> = <code title="False">False</code><br />
+      This enable the console from an instance (Ex: The bot would be 
+      manageable from IRC).
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">bool</span>
+    </td><td class="summary">
+        <a href="cnb.cnb.CNB-class.html#_bAutoConnect" class="summary-name" onclick="show_private();">_bAutoConnect</a> = <code title="True">True</code><br />
+      This make Chuck auto connect to all instances when started.
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">bool</span>
+    </td><td class="summary">
+        <a name="_bAutoReconnect"></a><span class="summary-name">_bAutoReconnect</span> = <code title="True">True</code><br />
+      This make the bot reconnect an instance if this one 
+      fail/drop/disconnect.
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="cnb.cnbCore.CNBCore-class.html">cnbCore.CNBCore</a></code></b>:
+      <code><a href="cnb.cnbCore.CNBCore-class.html#log">log</a></code>,
+      <code><a href="cnb.cnbCore.CNBCore-class.html#oConMgr">oConMgr</a></code>,
+      <code><a href="cnb.cnbCore.CNBCore-class.html#oConsole">oConsole</a></code>,
+      <code><a href="cnb.cnbCore.CNBCore-class.html#oMatrix">oMatrix</a></code>
+      </p>
+    <div class="private">    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="cnb.cnbCore.CNBCore-class.html">cnbCore.CNBCore</a></code></b> (private):
+      <code><a href="cnb.cnbCore.CNBCore-class.html#_bState" onclick="show_private();">_bState</a></code>
+      </p></div>
+    </td>
+  </tr>
+</table>
+<!-- ==================== PROPERTIES ==================== -->
+<a name="section-Properties"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Properties</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Properties"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>threading.Thread</code></b>:
+      <code>daemon</code>,
+      <code>ident</code>,
+      <code>name</code>
+      </p>
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__class__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== METHOD DETAILS ==================== -->
+<a name="section-MethodDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Method Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-MethodDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="__init__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>)</span>
+    <br /><em class="fname">(Constructor)</em>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cnb.cnb-pysrc.html#CNB.__init__">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>x.__init__(...) initializes x; see x.__class__.__doc__ for 
+  signature</p>
+  <dl class="fields">
+    <dt>Overrides:
+        object.__init__
+        <dd><em class="note">(inherited documentation)</em></dd>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="__del__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__del__</span>(<span class="sig-arg">self</span>)</span>
+    <br /><em class="fname">(Destructor)</em>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cnb.cnb-pysrc.html#CNB.__del__">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  
+  <dl class="fields">
+    <dt>Overrides:
+        <a href="cnb.cnbCore.CNBCore-class.html#__del__">cnbCore.CNBCore.__del__</a>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="joinCNB"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">joinCNB</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">conId</span>,
+        <span class="sig-arg">chan</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cnb.cnb-pysrc.html#CNB.joinCNB">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>This method let you connect a specific instance to a chan/room.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>conId</code></strong> (int) - a connection ID (auto generated).</li>
+        <li><strong class="pname"><code>chan</code></strong> (string) - a chan or a room (ex: on irc = #something, on xmpp = 
+          something@xmpp.server.com)</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="inviteCNB"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">inviteCNB</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">conId</span>,
+        <span class="sig-arg">users</span>,
+        <span class="sig-arg">chan</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cnb.cnb-pysrc.html#CNB.inviteCNB">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>This method let you invite someone to a chan/room on a specific 
+  instance.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>conId</code></strong> (int) - a connection ID (auto generated).</li>
+        <li><strong class="pname"><code>users</code></strong> (array) - a list of users to invite</li>
+        <li><strong class="pname"><code>chan</code></strong> (string) - a chan or a room (ex: on irc = #something, on xmpp = 
+          something@xmpp.server.com)</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="sayCNB"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">sayCNB</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">conId</span>,
+        <span class="sig-arg">dest</span>,
+        <span class="sig-arg">msg</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cnb.cnb-pysrc.html#CNB.sayCNB">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>This method let you say something to a specific destination.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>conId</code></strong> (int) - a connection ID (auto generated).</li>
+        <li><strong class="pname"><code>dest</code></strong> (string) - a user, a chan or a room (irc = #chan, irc = user, xmpp = 
+          room@xmpp.server.com, xmpp = user@xmpp.server.com</li>
+        <li><strong class="pname"><code>msg</code></strong> (string) - a message to say</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getConfigCNB"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getConfigCNB</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">conId</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cnb.cnb-pysrc.html#CNB.getConfigCNB">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>This method let you resolve a config object from a connection ID.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>conId</code></strong> (int) - a connection ID (auto generated).</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== INSTANCE VARIABLE DETAILS ==================== -->
+<a name="section-InstanceVariableDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Instance Variable Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-InstanceVariableDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="_bEnableShellConsole"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">_bEnableShellConsole</h3>
+  This let you choose if you start the console or not (daemon mode should 
+  not need it)
+  <dl class="fields">
+    <dt>Type:</dt>
+      <dd>bool</dd>
+  </dl>
+<div class="fields">      <p><strong>To Do:</strong>
+        Make the console work
+      </p>
+</div>  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+True
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="_bEnableInstanceConsole"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">_bEnableInstanceConsole</h3>
+  This enable the console from an instance (Ex: The bot would be manageable
+  from IRC).
+  <dl class="fields">
+    <dt>Type:</dt>
+      <dd>bool</dd>
+  </dl>
+<div class="fields">      <p><strong>Note:</strong>
+        Currently not working.
+      </p>
+      <p><strong>To Do:</strong>
+        Make Proto Console work
+      </p>
+</div>  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+False
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="_bAutoConnect"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">_bAutoConnect</h3>
+  This make Chuck auto connect to all instances when started. Note that 
+  this is can be overwritten by user at startup.
+  <dl class="fields">
+    <dt>Type:</dt>
+      <dd>bool</dd>
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+True
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="cnb-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Wed Mar 27 22:22:30 2013
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

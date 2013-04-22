@@ -1,0 +1,95 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+'''
+This script let you start Chuck, as a service or a shell script. 
+
+@author: Martin Dubé
+@organization: Hackfest Communications
+@license: GNU GENERAL PUBLIC LICENSE Version 3
+@contact: martin.dube@gmail.com
+
+    Copyright (C) 2013  Martin Dubé
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+'''
+
+# System imports
+import os
+import sys
+import logging
+import ConfigParser
+from optparse import OptionParser
+from logging.handlers import TimedRotatingFileHandler
+from cnb.cnbConfig import CNBConfig
+from cnb.cnb import CNB
+
+# Some constants
+#ROOT_DIR = '/home/martin/share/git/cnb/'                # 
+#BIN_DIR = ROOT_DIR + 'bin/'                             # Should be /usr/bin/cnb/
+#CONFIG_DIR = ROOT_DIR + 'config/'                       # Should be /etc/cnb/config
+#LOG_DIR = ROOT_DIR + 'log/'                             # Should be /var/log/cnb/
+#TP_DIR = ROOT_DIR + 'thirdParties/'                     # Should be /usr/lib/pymodules/python2.6/cnb/thirdParties
+
+ROOT_DIR = '/tmp/'
+BIN_DIR = '/usr/local/bin/'
+CONFIG_DIR = '/etc/cnb/'
+LOG_DIR = '/var/log/cnb/'
+TP_DIR = '/usr/local/cnb/thirdParties/'
+FACT_DIR = '/etc/cnb/facts/'
+TRIVIA_DIR = '/etc/cnb/trivia/'
+
+# Get args
+usage = 'usage: %prog [options]'
+parser = OptionParser(usage=usage)
+parser.add_option('-d', '--daemon', action='store_true', dest='daemon', default=False,
+              help='Launch in daemon mode (not interactive)')
+parser.add_option('--pid-file', action='store', type='string', dest='pidfile', default='',
+              help='Specify the PID file')
+parser.add_option('--version', action='store_true', dest='version', default=False,
+              help='show version')
+(options, args) = parser.parse_args()
+
+# Import Config
+config = CNBConfig.getInstance()
+config.setPath(CONFIG_DIR)
+config.loadMain()
+config.overwriteFromArgs(options)
+config.set('global', 'root-dir', ROOT_DIR)
+config.set('global', 'bin-dir', BIN_DIR)
+config.set('global', 'config-dir', CONFIG_DIR)
+config.set('global', 'log-dir', LOG_DIR)
+config.set('global', 'tp-dir', TP_DIR)
+config.set('global', 'fact-dir', FACT_DIR)
+config.set('global', 'trivia-dir', TRIVIA_DIR)
+
+# Create log folder if doesn't exist
+logdir = os.path.abspath(config.get('global', 'log-dir'))
+if not os.path.exists(logdir):
+    try: 
+        os.mkdir(logdir)
+    except Exception, e: 
+        print "Could not create log folder: " + logdir
+        sys.exit(1)
+
+# Display header
+print 'Chuck Norris Bot ' + config.get('global', 'version') + ' - XMPP & IRC bot'
+print 'Hackfest Project'
+
+# Log errors
+#sys.stderr = open(config.get('global', 'log-dir') + 'errors.log', 'w')
+
+c = CNB()
+c.start()
+

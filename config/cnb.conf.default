@@ -1,0 +1,22 @@
+[global]
+#root-dir = <string>  (dynamically added)
+#bin-dir = <string>  (dynamically added)
+#config-dir = <string> (dynamically added)
+#log-dir = <string>  (dynamically added)
+#tp-dir = <string>  (dynamically added)
+#pid-file = <string>  (dynamically added if started as a daemon)
+version = 0.20
+log-format = %(asctime)s - %(name)s - %(levelname)s - %(message)s
+
+[connectors]
+auto = [freenode.irc.conf,gmail.xmpp.conf]
+
+[spy]
+rules = []
+
+
+[smtp]
+smtp-user = <insert email address here>
+smtp-pass = <insert password here>
+smtp-host = <insert host here>
+smtp-port = <insert port here>

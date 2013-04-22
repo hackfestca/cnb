@@ -1,0 +1,15 @@
+[bot]
+#id = <int> (dynamically added)
+#config-file = <string> (dynamically added)
+type = irc
+log-file = freenode.irc.log
+username = <insert username here>
+password = <insert password here (ident)>
+server = irc.freenode.net
+channels = [<a channel list to join by default>]
+auto-join = 1
+auto-start = 1
+auto-reconnect = 1
+verbose = 0
+admins = [<an admin list>]
+

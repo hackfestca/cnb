@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>cnb.cnb</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="cnb-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="cnb-module.html">Package&nbsp;cnb</a> ::
+        Module&nbsp;cnb
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="cnb.cnb-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="cnb.cnb-module.html">Module cnb.cnb</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno">  1</tt>  <tt class="py-line"><tt class="py-comment">#!/usr/bin/python</tt> </tt>
+<a name="L2"></a><tt class="py-lineno">  2</tt>  <tt class="py-line"><tt class="py-comment"># -*- coding: utf-8 -*-</tt> </tt>
+<a name="L3"></a><tt class="py-lineno">  3</tt>  <tt class="py-line"> </tt>
+<a name="L4"></a><tt class="py-lineno">  4</tt>  <tt class="py-line"><tt class="py-docstring">'''</tt> </tt>
+<a name="L5"></a><tt class="py-lineno">  5</tt>  <tt class="py-line"><tt class="py-docstring">This is the main class of CNB. </tt> </tt>
+<a name="L6"></a><tt class="py-lineno">  6</tt>  <tt class="py-line"><tt class="py-docstring">'''</tt> </tt>
+<a name="L7"></a><tt class="py-lineno">  7</tt>  <tt class="py-line"> </tt>
+<a name="L8"></a><tt class="py-lineno">  8</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">os</tt> </tt>
+<a name="L9"></a><tt class="py-lineno">  9</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">logging</tt> </tt>
+<a name="L10"></a><tt class="py-lineno"> 10</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt class="py-name">logging</tt><tt class="py-op">.</tt><tt class="py-name">handlers</tt> <tt class="py-keyword">import</tt> <tt class="py-name">TimedRotatingFileHandler</tt> </tt>
+<a name="L11"></a><tt class="py-lineno"> 11</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-0" class="py-name" targets="Module cnb.singleton=cnb.singleton-module.html"><a title="cnb.singleton" class="py-name" href="#" onclick="return doclink('link-0', 'singleton', 'link-0');">singleton</a></tt> <tt class="py-keyword">import</tt> <tt id="link-1" class="py-name" targets="Class cnb.singleton.Singleton=cnb.singleton.Singleton-class.html"><a title="cnb.singleton.Singleton" class="py-name" href="#" onclick="return doclink('link-1', 'Singleton', 'link-1');">Singleton</a></tt> </tt>
+<a name="L12"></a><tt class="py-lineno"> 12</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-2" class="py-name" targets="Module cnb.cnbCore=cnb.cnbCore-module.html"><a title="cnb.cnbCore" class="py-name" href="#" onclick="return doclink('link-2', 'cnbCore', 'link-2');">cnbCore</a></tt> <tt class="py-keyword">import</tt> <tt id="link-3" class="py-name" targets="Class cnb.cnbCore.CNBCore=cnb.cnbCore.CNBCore-class.html"><a title="cnb.cnbCore.CNBCore" class="py-name" href="#" onclick="return doclink('link-3', 'CNBCore', 'link-3');">CNBCore</a></tt> </tt>
+<a name="L13"></a><tt class="py-lineno"> 13</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-4" class="py-name" targets="Module cnb.cnbConfig=cnb.cnbConfig-module.html"><a title="cnb.cnbConfig" class="py-name" href="#" onclick="return doclink('link-4', 'cnbConfig', 'link-4');">cnbConfig</a></tt> <tt class="py-keyword">import</tt> <tt id="link-5" class="py-name" targets="Variable cnb.cnbConfig.CNBConfig=cnb.cnbConfig-module.html#CNBConfig"><a title="cnb.cnbConfig.CNBConfig" class="py-name" href="#" onclick="return doclink('link-5', 'CNBConfig', 'link-5');">CNBConfig</a></tt> </tt>
+<a name="L14"></a><tt class="py-lineno"> 14</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-6" class="py-name" targets="Module cnb.cnbManager=cnb.cnbManager-module.html"><a title="cnb.cnbManager" class="py-name" href="#" onclick="return doclink('link-6', 'cnbManager', 'link-6');">cnbManager</a></tt> <tt class="py-keyword">import</tt> <tt id="link-7" class="py-name" targets="Variable cnb.cnbManager.CNBManager=cnb.cnbManager-module.html#CNBManager"><a title="cnb.cnbManager.CNBManager" class="py-name" href="#" onclick="return doclink('link-7', 'CNBManager', 'link-7');">CNBManager</a></tt> </tt>
+<a name="L15"></a><tt class="py-lineno"> 15</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-8" class="py-name" targets="Module cnb.cnbConnectorManager=cnb.cnbConnectorManager-module.html"><a title="cnb.cnbConnectorManager" class="py-name" href="#" onclick="return doclink('link-8', 'cnbConnectorManager', 'link-8');">cnbConnectorManager</a></tt> <tt class="py-keyword">import</tt> <tt id="link-9" class="py-name" targets="Class cnb.cnbConnectorManager.CNBConnectorManager=cnb.cnbConnectorManager.CNBConnectorManager-class.html"><a title="cnb.cnbConnectorManager.CNBConnectorManager" class="py-name" href="#" onclick="return doclink('link-9', 'CNBConnectorManager', 'link-9');">CNBConnectorManager</a></tt> </tt>
+<a name="L16"></a><tt class="py-lineno"> 16</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-10" class="py-name" targets="Module cnb.cnbSessionManager=cnb.cnbSessionManager-module.html"><a title="cnb.cnbSessionManager" class="py-name" href="#" onclick="return doclink('link-10', 'cnbSessionManager', 'link-10');">cnbSessionManager</a></tt> <tt class="py-keyword">import</tt> <tt id="link-11" class="py-name" targets="Variable cnb.cnbSessionManager.CNBSessionManager=cnb.cnbSessionManager-module.html#CNBSessionManager"><a title="cnb.cnbSessionManager.CNBSessionManager" class="py-name" href="#" onclick="return doclink('link-11', 'CNBSessionManager', 'link-11');">CNBSessionManager</a></tt> </tt>
+<a name="L17"></a><tt class="py-lineno"> 17</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-12" class="py-name" targets="Module cnb.cnbConsole=cnb.cnbConsole-module.html"><a title="cnb.cnbConsole" class="py-name" href="#" onclick="return doclink('link-12', 'cnbConsole', 'link-12');">cnbConsole</a></tt> <tt class="py-keyword">import</tt> <tt id="link-13" class="py-name" targets="Class cnb.cnbConsole.CNBConsole=cnb.cnbConsole.CNBConsole-class.html"><a title="cnb.cnbConsole.CNBConsole" class="py-name" href="#" onclick="return doclink('link-13', 'CNBConsole', 'link-13');">CNBConsole</a></tt> </tt>
+<a name="L18"></a><tt class="py-lineno"> 18</tt>  <tt class="py-line"> </tt>
+<a name="CNB"></a><div id="CNB-def"><a name="L19"></a><tt class="py-lineno"> 19</tt> <a class="py-toggle" href="#" id="CNB-toggle" onclick="return toggle('CNB');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="cnb.cnb.CNB-class.html">CNB</a><tt class="py-op">(</tt><tt class="py-base-class">CNBCore</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="CNB-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="CNB-expanded"><a name="L20"></a><tt class="py-lineno"> 20</tt>  <tt class="py-line">    <tt class="py-docstring">"""</tt> </tt>
+<a name="L21"></a><tt class="py-lineno"> 21</tt>  <tt class="py-line"><tt class="py-docstring">    Once this class is instanciated, connections are initiated, console is started and the Matrix powered on. </tt> </tt>
+<a name="L22"></a><tt class="py-lineno"> 22</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L23"></a><tt class="py-lineno"> 23</tt>  <tt class="py-line"><tt class="py-docstring">    This class mainly contain config and high level functions to interact with the bot. Most of the "back-end" code is in CNBCore class.</tt> </tt>
+<a name="L24"></a><tt class="py-lineno"> 24</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="L25"></a><tt class="py-lineno"> 25</tt>  <tt class="py-line"> </tt>
+<a name="L26"></a><tt class="py-lineno"> 26</tt>  <tt class="py-line">    <tt id="link-14" class="py-name" targets="Variable cnb.cnb.CNB._bEnableShellConsole=cnb.cnb.CNB-class.html#_bEnableShellConsole"><a title="cnb.cnb.CNB._bEnableShellConsole" class="py-name" href="#" onclick="return doclink('link-14', '_bEnableShellConsole', 'link-14');">_bEnableShellConsole</a></tt> <tt class="py-op">=</tt> <tt class="py-name">True</tt> </tt>
+<a name="L27"></a><tt class="py-lineno"> 27</tt>  <tt class="py-line">    <tt class="py-string">""" </tt> </tt>
+<a name="L28"></a><tt class="py-lineno"> 28</tt>  <tt class="py-line"><tt class="py-string">    @ivar: This let you choose if you start the console or not (daemon mode should not need it) </tt> </tt>
+<a name="L29"></a><tt class="py-lineno"> 29</tt>  <tt class="py-line"><tt class="py-string">    @type: bool</tt> </tt>
+<a name="L30"></a><tt class="py-lineno"> 30</tt>  <tt class="py-line"><tt class="py-string">    @todo: Make the console work</tt> </tt>
+<a name="L31"></a><tt class="py-lineno"> 31</tt>  <tt class="py-line"><tt class="py-string">    """</tt> </tt>
+<a name="L32"></a><tt class="py-lineno"> 32</tt>  <tt class="py-line"> </tt>
+<a name="L33"></a><tt class="py-lineno"> 33</tt>  <tt class="py-line">    <tt id="link-15" class="py-name" targets="Variable cnb.cnb.CNB._bEnableInstanceConsole=cnb.cnb.CNB-class.html#_bEnableInstanceConsole"><a title="cnb.cnb.CNB._bEnableInstanceConsole" class="py-name" href="#" onclick="return doclink('link-15', '_bEnableInstanceConsole', 'link-15');">_bEnableInstanceConsole</a></tt> <tt class="py-op">=</tt> <tt class="py-name">False</tt> </tt>
+<a name="L34"></a><tt class="py-lineno"> 34</tt>  <tt class="py-line">    <tt class="py-string">""" </tt> </tt>
+<a name="L35"></a><tt class="py-lineno"> 35</tt>  <tt class="py-line"><tt class="py-string">    @ivar: This enable the console from an instance (Ex: The bot would be manageable from IRC). </tt> </tt>
+<a name="L36"></a><tt class="py-lineno"> 36</tt>  <tt class="py-line"><tt class="py-string">    @note: Currently not working.</tt> </tt>
+<a name="L37"></a><tt class="py-lineno"> 37</tt>  <tt class="py-line"><tt class="py-string">    @type: bool</tt> </tt>
+<a name="L38"></a><tt class="py-lineno"> 38</tt>  <tt class="py-line"><tt class="py-string">    @todo: Make Proto Console work</tt> </tt>
+<a name="L39"></a><tt class="py-lineno"> 39</tt>  <tt class="py-line"><tt class="py-string">    """</tt> </tt>
+<a name="L40"></a><tt class="py-lineno"> 40</tt>  <tt class="py-line"> </tt>
+<a name="L41"></a><tt class="py-lineno"> 41</tt>  <tt class="py-line">    <tt id="link-16" class="py-name" targets="Variable cnb.cnb.CNB._bAutoConnect=cnb.cnb.CNB-class.html#_bAutoConnect"><a title="cnb.cnb.CNB._bAutoConnect" class="py-name" href="#" onclick="return doclink('link-16', '_bAutoConnect', 'link-16');">_bAutoConnect</a></tt> <tt class="py-op">=</tt> <tt class="py-name">True</tt> </tt>
+<a name="L42"></a><tt class="py-lineno"> 42</tt>  <tt class="py-line">    <tt class="py-string">""" </tt> </tt>
+<a name="L43"></a><tt class="py-lineno"> 43</tt>  <tt class="py-line"><tt class="py-string">    @ivar: This make Chuck auto connect to all instances when started. Note that this is can be overwritten by user at startup. </tt> </tt>
+<a name="L44"></a><tt class="py-lineno"> 44</tt>  <tt class="py-line"><tt class="py-string">    @type: bool</tt> </tt>
+<a name="L45"></a><tt class="py-lineno"> 45</tt>  <tt class="py-line"><tt class="py-string">    """</tt> </tt>
+<a name="L46"></a><tt class="py-lineno"> 46</tt>  <tt class="py-line"> </tt>
+<a name="L47"></a><tt class="py-lineno"> 47</tt>  <tt class="py-line">    <tt id="link-17" class="py-name" targets="Variable cnb.cnb.CNB._bAutoReconnect=cnb.cnb.CNB-class.html#_bAutoReconnect"><a title="cnb.cnb.CNB._bAutoReconnect" class="py-name" href="#" onclick="return doclink('link-17', '_bAutoReconnect', 'link-17');">_bAutoReconnect</a></tt> <tt class="py-op">=</tt> <tt class="py-name">True</tt> </tt>
+<a name="L48"></a><tt class="py-lineno"> 48</tt>  <tt class="py-line">    <tt class="py-string">""" </tt> </tt>
+<a name="L49"></a><tt class="py-lineno"> 49</tt>  <tt class="py-line"><tt class="py-string">    @ivar: This make the bot reconnect an instance if this one fail/drop/disconnect. </tt> </tt>
+<a name="L50"></a><tt class="py-lineno"> 50</tt>  <tt class="py-line"><tt class="py-string">    @type: bool</tt> </tt>
+<a name="L51"></a><tt class="py-lineno"> 51</tt>  <tt class="py-line"><tt class="py-string">    """</tt> </tt>
+<a name="L52"></a><tt class="py-lineno"> 52</tt>  <tt class="py-line"> </tt>
+<a name="CNB.__init__"></a><div id="CNB.__init__-def"><a name="L53"></a><tt class="py-lineno"> 53</tt> <a class="py-toggle" href="#" id="CNB.__init__-toggle" onclick="return toggle('CNB.__init__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="cnb.cnb.CNB-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="CNB.__init__-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="CNB.__init__-expanded"><a name="L54"></a><tt class="py-lineno"> 54</tt>  <tt class="py-line">        <tt id="link-18" class="py-name"><a title="cnb.cnbCore.CNBCore" class="py-name" href="#" onclick="return doclink('link-18', 'CNBCore', 'link-3');">CNBCore</a></tt><tt class="py-op">.</tt><tt id="link-19" class="py-name" targets="Method cnb.cnb.CNB.__init__()=cnb.cnb.CNB-class.html#__init__,Method cnb.cnbCon.CNBCon.__init__()=cnb.cnbCon.CNBCon-class.html#__init__,Method cnb.cnbConnectorManager.CNBConnectorManager.__init__()=cnb.cnbConnectorManager.CNBConnectorManager-class.html#__init__,Method cnb.cnbConsole.CNBConsole.__init__()=cnb.cnbConsole.CNBConsole-class.html#__init__,Method cnb.cnbCore.CNBCore.__init__()=cnb.cnbCore.CNBCore-class.html#__init__,Method cnb.cnbIrcCon.CNBIRCCon.__init__()=cnb.cnbIrcCon.CNBIRCCon-class.html#__init__,Method cnb.cnbMatrixModule.CNBMatrixModule.__init__()=cnb.cnbMatrixModule.CNBMatrixModule-class.html#__init__,Method cnb.cnbMessage.CNBMessage.__init__()=cnb.cnbMessage.CNBMessage-class.html#__init__,Method cnb.cnbXmppCon.CNBXMPPCon.__init__()=cnb.cnbXmppCon.CNBXMPPCon-class.html#__init__,Method cnb.singleton.Singleton.__init__()=cnb.singleton.Singleton-class.html#__init__"><a title="cnb.cnb.CNB.__init__
+cnb.cnbCon.CNBCon.__init__
+cnb.cnbConnectorManager.CNBConnectorManager.__init__
+cnb.cnbConsole.CNBConsole.__init__
+cnb.cnbCore.CNBCore.__init__
+cnb.cnbIrcCon.CNBIRCCon.__init__
+cnb.cnbMatrixModule.CNBMatrixModule.__init__
+cnb.cnbMessage.CNBMessage.__init__
+cnb.cnbXmppCon.CNBXMPPCon.__init__
+cnb.singleton.Singleton.__init__" class="py-name" href="#" onclick="return doclink('link-19', '__init__', 'link-19');">__init__</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L55"></a><tt class="py-lineno"> 55</tt>  <tt class="py-line"> </tt>
+<a name="CNB.__del__"></a><div id="CNB.__del__-def"><a name="L56"></a><tt class="py-lineno"> 56</tt> <a class="py-toggle" href="#" id="CNB.__del__-toggle" onclick="return toggle('CNB.__del__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="cnb.cnb.CNB-class.html#__del__">__del__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="CNB.__del__-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="CNB.__del__-expanded"><a name="L57"></a><tt class="py-lineno"> 57</tt>  <tt class="py-line">        <tt id="link-20" class="py-name"><a title="cnb.cnbCore.CNBCore" class="py-name" href="#" onclick="return doclink('link-20', 'CNBCore', 'link-3');">CNBCore</a></tt><tt class="py-op">.</tt><tt id="link-21" class="py-name" targets="Method cnb.cnb.CNB.__del__()=cnb.cnb.CNB-class.html#__del__,Method cnb.cnbCon.CNBCon.__del__()=cnb.cnbCon.CNBCon-class.html#__del__,Method cnb.cnbConnectorManager.CNBConnectorManager.__del__()=cnb.cnbConnectorManager.CNBConnectorManager-class.html#__del__,Method cnb.cnbConsole.CNBConsole.__del__()=cnb.cnbConsole.CNBConsole-class.html#__del__,Method cnb.cnbCore.CNBCore.__del__()=cnb.cnbCore.CNBCore-class.html#__del__,Method cnb.cnbIrcCon.CNBIRCCon.__del__()=cnb.cnbIrcCon.CNBIRCCon-class.html#__del__,Method cnb.cnbMatrixModule.CNBMatrixModule.__del__()=cnb.cnbMatrixModule.CNBMatrixModule-class.html#__del__,Method cnb.cnbMessage.CNBMessage.__del__()=cnb.cnbMessage.CNBMessage-class.html#__del__,Method cnb.cnbXmppCon.CNBXMPPCon.__del__()=cnb.cnbXmppCon.CNBXMPPCon-class.html#__del__"><a title="cnb.cnb.CNB.__del__
+cnb.cnbCon.CNBCon.__del__
+cnb.cnbConnectorManager.CNBConnectorManager.__del__
+cnb.cnbConsole.CNBConsole.__del__
+cnb.cnbCore.CNBCore.__del__
+cnb.cnbIrcCon.CNBIRCCon.__del__
+cnb.cnbMatrixModule.CNBMatrixModule.__del__
+cnb.cnbMessage.CNBMessage.__del__
+cnb.cnbXmppCon.CNBXMPPCon.__del__" class="py-name" href="#" onclick="return doclink('link-21', '__del__', 'link-21');">__del__</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L58"></a><tt class="py-lineno"> 58</tt>  <tt class="py-line"> </tt>
+<a name="CNB.joinCNB"></a><div id="CNB.joinCNB-def"><a name="L59"></a><tt class="py-lineno"> 59</tt> <a class="py-toggle" href="#" id="CNB.joinCNB-toggle" onclick="return toggle('CNB.joinCNB');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="cnb.cnb.CNB-class.html#joinCNB">joinCNB</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt><tt class="py-param">conId</tt><tt class="py-op">,</tt><tt class="py-param">chan</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="CNB.joinCNB-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="CNB.joinCNB-expanded"><a name="L60"></a><tt class="py-lineno"> 60</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L61"></a><tt class="py-lineno"> 61</tt>  <tt class="py-line"><tt class="py-docstring">        This method let you connect a specific instance to a chan/room. </tt> </tt>
+<a name="L62"></a><tt class="py-lineno"> 62</tt>  <tt class="py-line"><tt class="py-docstring">        @param conId: a connection ID (auto generated).</tt> </tt>
+<a name="L63"></a><tt class="py-lineno"> 63</tt>  <tt class="py-line"><tt class="py-docstring">        @type conId: int</tt> </tt>
+<a name="L64"></a><tt class="py-lineno"> 64</tt>  <tt class="py-line"><tt class="py-docstring">        @param chan: a chan or a room (ex: on irc = #something, on xmpp = something@xmpp.server.com)</tt> </tt>
+<a name="L65"></a><tt class="py-lineno"> 65</tt>  <tt class="py-line"><tt class="py-docstring">        @type chan: string</tt> </tt>
+<a name="L66"></a><tt class="py-lineno"> 66</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L67"></a><tt class="py-lineno"> 67</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-22" class="py-name" targets="Variable cnb.cnbCore.CNBCore.oConMgr=cnb.cnbCore.CNBCore-class.html#oConMgr"><a title="cnb.cnbCore.CNBCore.oConMgr" class="py-name" href="#" onclick="return doclink('link-22', 'oConMgr', 'link-22');">oConMgr</a></tt><tt class="py-op">.</tt><tt id="link-23" class="py-name" targets="Method cnb.cnbConnectorManager.CNBConnectorManager.joinChan()=cnb.cnbConnectorManager.CNBConnectorManager-class.html#joinChan,Method cnb.cnbIrcCon.CNBIRCCon.joinChan()=cnb.cnbIrcCon.CNBIRCCon-class.html#joinChan"><a title="cnb.cnbConnectorManager.CNBConnectorManager.joinChan
+cnb.cnbIrcCon.CNBIRCCon.joinChan" class="py-name" href="#" onclick="return doclink('link-23', 'joinChan', 'link-23');">joinChan</a></tt><tt class="py-op">(</tt><tt class="py-name">conId</tt><tt class="py-op">,</tt><tt class="py-name">chan</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L68"></a><tt class="py-lineno"> 68</tt>  <tt class="py-line"> </tt>
+<a name="CNB.inviteCNB"></a><div id="CNB.inviteCNB-def"><a name="L69"></a><tt class="py-lineno"> 69</tt> <a class="py-toggle" href="#" id="CNB.inviteCNB-toggle" onclick="return toggle('CNB.inviteCNB');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="cnb.cnb.CNB-class.html#inviteCNB">inviteCNB</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt><tt class="py-param">conId</tt><tt class="py-op">,</tt><tt class="py-param">users</tt><tt class="py-op">,</tt><tt class="py-param">chan</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="CNB.inviteCNB-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="CNB.inviteCNB-expanded"><a name="L70"></a><tt class="py-lineno"> 70</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L71"></a><tt class="py-lineno"> 71</tt>  <tt class="py-line"><tt class="py-docstring">        This method let you invite someone to a chan/room on a specific instance.</tt> </tt>
+<a name="L72"></a><tt class="py-lineno"> 72</tt>  <tt class="py-line"><tt class="py-docstring">        @param conId: a connection ID (auto generated).</tt> </tt>
+<a name="L73"></a><tt class="py-lineno"> 73</tt>  <tt class="py-line"><tt class="py-docstring">        @type conId: int</tt> </tt>
+<a name="L74"></a><tt class="py-lineno"> 74</tt>  <tt class="py-line"><tt class="py-docstring">        @param users: a list of users to invite</tt> </tt>
+<a name="L75"></a><tt class="py-lineno"> 75</tt>  <tt class="py-line"><tt class="py-docstring">        @type users: array</tt> </tt>
+<a name="L76"></a><tt class="py-lineno"> 76</tt>  <tt class="py-line"><tt class="py-docstring">        @param chan: a chan or a room (ex: on irc = #something, on xmpp = something@xmpp.server.com)</tt> </tt>
+<a name="L77"></a><tt class="py-lineno"> 77</tt>  <tt class="py-line"><tt class="py-docstring">        @type chan: string</tt> </tt>
+<a name="L78"></a><tt class="py-lineno"> 78</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L79"></a><tt class="py-lineno"> 79</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-24" class="py-name"><a title="cnb.cnbCore.CNBCore.oConMgr" class="py-name" href="#" onclick="return doclink('link-24', 'oConMgr', 'link-22');">oConMgr</a></tt><tt class="py-op">.</tt><tt id="link-25" class="py-name" targets="Method cnb.cnbConnectorManager.CNBConnectorManager.inviteChan()=cnb.cnbConnectorManager.CNBConnectorManager-class.html#inviteChan"><a title="cnb.cnbConnectorManager.CNBConnectorManager.inviteChan" class="py-name" href="#" onclick="return doclink('link-25', 'inviteChan', 'link-25');">inviteChan</a></tt><tt class="py-op">(</tt><tt class="py-name">conId</tt><tt class="py-op">,</tt><tt id="link-26" class="py-name" targets="Variable cnb.cnbMatrixModule.CNBMatrixModule.users=cnb.cnbMatrixModule.CNBMatrixModule-class.html#users"><a title="cnb.cnbMatrixModule.CNBMatrixModule.users" class="py-name" href="#" onclick="return doclink('link-26', 'users', 'link-26');">users</a></tt><tt class="py-op">,</tt><tt class="py-name">chan</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L80"></a><tt class="py-lineno"> 80</tt>  <tt class="py-line"> </tt>
+<a name="CNB.sayCNB"></a><div id="CNB.sayCNB-def"><a name="L81"></a><tt class="py-lineno"> 81</tt> <a class="py-toggle" href="#" id="CNB.sayCNB-toggle" onclick="return toggle('CNB.sayCNB');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="cnb.cnb.CNB-class.html#sayCNB">sayCNB</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt><tt class="py-param">conId</tt><tt class="py-op">,</tt><tt class="py-param">dest</tt><tt class="py-op">,</tt><tt class="py-param">msg</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="CNB.sayCNB-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="CNB.sayCNB-expanded"><a name="L82"></a><tt class="py-lineno"> 82</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L83"></a><tt class="py-lineno"> 83</tt>  <tt class="py-line"><tt class="py-docstring">        This method let you say something to a specific destination.</tt> </tt>
+<a name="L84"></a><tt class="py-lineno"> 84</tt>  <tt class="py-line"><tt class="py-docstring">        @param conId: a connection ID (auto generated).</tt> </tt>
+<a name="L85"></a><tt class="py-lineno"> 85</tt>  <tt class="py-line"><tt class="py-docstring">        @type conId: int</tt> </tt>
+<a name="L86"></a><tt class="py-lineno"> 86</tt>  <tt class="py-line"><tt class="py-docstring">        @param dest: a user, a chan or a room (irc = #chan, irc = user, xmpp = room@xmpp.server.com, xmpp = user@xmpp.server.com</tt> </tt>
+<a name="L87"></a><tt class="py-lineno"> 87</tt>  <tt class="py-line"><tt class="py-docstring">        @type dest: string</tt> </tt>
+<a name="L88"></a><tt class="py-lineno"> 88</tt>  <tt class="py-line"><tt class="py-docstring">        @param msg: a message to say</tt> </tt>
+<a name="L89"></a><tt class="py-lineno"> 89</tt>  <tt class="py-line"><tt class="py-docstring">        @type msg: string</tt> </tt>
+<a name="L90"></a><tt class="py-lineno"> 90</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L91"></a><tt class="py-lineno"> 91</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-27" class="py-name"><a title="cnb.cnbCore.CNBCore.oConMgr" class="py-name" href="#" onclick="return doclink('link-27', 'oConMgr', 'link-22');">oConMgr</a></tt><tt class="py-op">.</tt><tt id="link-28" class="py-name" targets="Method cnb.cnbConnectorManager.CNBConnectorManager.sendMsg()=cnb.cnbConnectorManager.CNBConnectorManager-class.html#sendMsg,Method cnb.cnbIrcCon.CNBIRCCon.sendMsg()=cnb.cnbIrcCon.CNBIRCCon-class.html#sendMsg"><a title="cnb.cnbConnectorManager.CNBConnectorManager.sendMsg
+cnb.cnbIrcCon.CNBIRCCon.sendMsg" class="py-name" href="#" onclick="return doclink('link-28', 'sendMsg', 'link-28');">sendMsg</a></tt><tt class="py-op">(</tt><tt class="py-name">conId</tt><tt class="py-op">,</tt><tt class="py-name">dest</tt><tt class="py-op">,</tt><tt class="py-name">msg</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L92"></a><tt class="py-lineno"> 92</tt>  <tt class="py-line"> </tt>
+<a name="CNB.getConfigCNB"></a><div id="CNB.getConfigCNB-def"><a name="L93"></a><tt class="py-lineno"> 93</tt> <a class="py-toggle" href="#" id="CNB.getConfigCNB-toggle" onclick="return toggle('CNB.getConfigCNB');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="cnb.cnb.CNB-class.html#getConfigCNB">getConfigCNB</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt><tt class="py-param">conId</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="CNB.getConfigCNB-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="CNB.getConfigCNB-expanded"><a name="L94"></a><tt class="py-lineno"> 94</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L95"></a><tt class="py-lineno"> 95</tt>  <tt class="py-line"><tt class="py-docstring">        This method let you resolve a config object from a connection ID.</tt> </tt>
+<a name="L96"></a><tt class="py-lineno"> 96</tt>  <tt class="py-line"><tt class="py-docstring">        @param conId: a connection ID (auto generated).</tt> </tt>
+<a name="L97"></a><tt class="py-lineno"> 97</tt>  <tt class="py-line"><tt class="py-docstring">        @type conId: int</tt> </tt>
+<a name="L98"></a><tt class="py-lineno"> 98</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L99"></a><tt class="py-lineno"> 99</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-29" class="py-name"><a title="cnb.cnbCore.CNBCore.oConMgr" class="py-name" href="#" onclick="return doclink('link-29', 'oConMgr', 'link-22');">oConMgr</a></tt><tt class="py-op">.</tt><tt id="link-30" class="py-name" targets="Method cnb.cnbConnectorManager.CNBConnectorManager.getConfigFromId()=cnb.cnbConnectorManager.CNBConnectorManager-class.html#getConfigFromId"><a title="cnb.cnbConnectorManager.CNBConnectorManager.getConfigFromId" class="py-name" href="#" onclick="return doclink('link-30', 'getConfigFromId', 'link-30');">getConfigFromId</a></tt><tt class="py-op">(</tt><tt class="py-name">conId</tt><tt class="py-op">)</tt> </tt>
+</div></div><a name="L100"></a><tt class="py-lineno">100</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="cnb-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Wed Mar 27 22:22:30 2013
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

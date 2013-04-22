@@ -1,0 +1,12 @@
+0;What’s the name of this operation in batch: %0|%0 ?;forkbomb;flag-cvkuinqaf98^132^ngq<rtgap23hn-^gu
+1;Who was the 1st indicted DDoS kiddie in Quebec?;Mafiaboy;flag-gndloiszdognasoiguqwn3^8t90n2
+2;What’s the max length of a password with oclHashCat?;15;flag-olqi8p32ign^083qno4gn^0q
+3;Name of the biggest unencrypted password leak that is now widely used as a wordlist?;[rockyou:rockyou.txt];flag-kif7bqp29og92bupi92b34qot
+4;Some hashes of the LinkedIn leak were corrupted, what was their signature?;00000;flag-riq2bhro2ng0onwauo9tng9owntg
+5;What does Wikileaks’ insurance file name does imply for the encryption type?;[AES-256:AES256:aes-256:aes256];flag-klahjw3tntrontoO*RN:ORNRTw3
+6;What’s the name of the tool used to steal access to GMail, YMail, Facebook and others over WiFi when the guests are connecting with http?;firesheep;flag-w8hto8lwthjotwgnpw8npggon
+7;In TV series Prison Break, all the data of The Company was backuped on a 7-piece device, what was its name?;Scylla;flag-LIRHP(*N(TNnt*)(H%*)h5trnO*rfr
+8;What is a quite efficient antispam solution for backscatter and more, but isn’t widely used in production/businesses because of the inconvenients?;greylisting;flag-LJKIFHNIW*Rh0run29085r
+9;What’s the name of the “malware” that needs ALL devices to be flashed simultaneously in order to disinfect the system?;Rakshasa;flag-RRFLIKNFRD*)(H%$n PRIN*)
+10;Coke machines have a menu, what’s the code to access it?;4231;flag-DKUNedujHER(&*RNOPIINR
+11;What type of vulnerability “Little Bobby Tables” references to?;[sqli:sqlinjection];flag-LOIPOFRPOIFN()*debnfrn3289f

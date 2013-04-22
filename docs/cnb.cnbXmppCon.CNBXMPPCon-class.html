@@ -1,0 +1,1994 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>cnb.cnbXmppCon.CNBXMPPCon</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="cnb-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="cnb-module.html">Package&nbsp;cnb</a> ::
+        <a href="cnb.cnbXmppCon-module.html">Module&nbsp;cnbXmppCon</a> ::
+        Class&nbsp;CNBXMPPCon
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="cnb.cnbXmppCon.CNBXMPPCon-class.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS DESCRIPTION ==================== -->
+<h1 class="epydoc">Class CNBXMPPCon</h1><p class="nomargin-top"><span class="codelink"><a href="cnb.cnbXmppCon-pysrc.html#CNBXMPPCon">source&nbsp;code</a></span></p>
+<center>
+<center>  <map id="uml_class_diagram_for_cnb_cnbx" name="uml_class_diagram_for_cnb_cnbx">
+<area shape="rect" id="node24" href="cnb.cnbXmppCon.CNBXMPPCon-class.html#GMAIL_MUC_DOMAIN" title="cnb.cnbXmppCon.CNBXMPPCon.GMAIL_MUC_DOMAIN" alt="" coords="17,593,469,612"/>
+<area shape="rect" id="node24" href="cnb.cnbXmppCon.CNBXMPPCon-class.html#HF_MUC_DOMAIN" title="cnb.cnbXmppCon.CNBXMPPCon.HF_MUC_DOMAIN" alt="" coords="17,612,469,631"/>
+<area shape="rect" id="node24" href="cnb.cnbXmppCon.CNBXMPPCon-class.html#MSG_AUTHORIZE_ME" title="cnb.cnbXmppCon.CNBXMPPCon.MSG_AUTHORIZE_ME" alt="" coords="17,631,469,649"/>
+<area shape="rect" id="node24" href="cnb.cnbXmppCon.CNBXMPPCon-class.html#MSG_NOT_AUTHORIZED" title="cnb.cnbXmppCon.CNBXMPPCon.MSG_NOT_AUTHORIZED" alt="" coords="17,649,469,668"/>
+<area shape="rect" id="node24" href="cnb.cnbXmppCon.CNBXMPPCon-class.html#MSG_UNKNOWN_COMMAND" title="cnb.cnbXmppCon.CNBXMPPCon.MSG_UNKNOWN_COMMAND" alt="" coords="17,668,469,687"/>
+<area shape="rect" id="node24" href="cnb.cnbXmppCon.CNBXMPPCon-class.html#PING_FREQUENCY" title="cnb.cnbXmppCon.CNBXMPPCon.PING_FREQUENCY" alt="" coords="17,687,469,705"/>
+<area shape="rect" id="node24" href="cnb.cnbXmppCon.CNBXMPPCon-class.html#PING_TIMEOUT" title="cnb.cnbXmppCon.CNBXMPPCon.PING_TIMEOUT" alt="" coords="17,705,469,724"/>
+<area shape="rect" id="node24" href="cnb.cnbXmppCon.CNBXMPPCon-class.html#jid" title="JID of the current user" alt="" coords="17,724,469,743"/>
+<area shape="rect" id="node24" href="cnb.cnbXmppCon.CNBXMPPCon-class.html#contacts" title="Dictionnary of contacts (friends) for the current account" alt="" coords="17,743,469,761"/>
+<area shape="rect" id="node24" href="cnb.cnbXmppCon.CNBXMPPCon-class.html#roster" title="Contact list of the bot" alt="" coords="17,761,469,780"/>
+<area shape="rect" id="node24" href="cnb.cnbXmppCon.CNBXMPPCon-class.html#conn" title="Connection Handler" alt="" coords="17,780,469,799"/>
+<area shape="rect" id="node24" href="cnb.cnbXmppCon.CNBXMPPCon-class.html#AVAILABLE" title="cnb.cnbXmppCon.CNBXMPPCon.AVAILABLE" alt="" coords="17,799,469,817"/>
+<area shape="rect" id="node24" href="cnb.cnbXmppCon.CNBXMPPCon-class.html#AWAY" title="cnb.cnbXmppCon.CNBXMPPCon.AWAY" alt="" coords="17,817,469,836"/>
+<area shape="rect" id="node24" href="cnb.cnbXmppCon.CNBXMPPCon-class.html#XMPP_GROUPCHAT" title="cnb.cnbXmppCon.CNBXMPPCon.XMPP_GROUPCHAT" alt="" coords="17,855,469,873"/>
+<area shape="rect" id="node24" href="cnb.cnbXmppCon.CNBXMPPCon-class.html#__init__" title="x.__init__(...) initializes x; see x.__class__.__doc__ for signature" alt="" coords="17,876,469,895"/>
+<area shape="rect" id="node24" href="cnb.cnbXmppCon.CNBXMPPCon-class.html#__del__" title="cnb.cnbXmppCon.CNBXMPPCon.__del__" alt="" coords="17,895,469,913"/>
+<area shape="rect" id="node24" href="cnb.cnbXmppCon.CNBXMPPCon-class.html#run" title="Bot main thread &#45; Process xmpp messages and trigger the right events &#160;depending on the registered handlers" alt="" coords="17,913,469,932"/>
+<area shape="rect" id="node24" href="cnb.cnbXmppCon.CNBXMPPCon-class.html#updateRosters" title="This method update the bot roster (contact list)" alt="" coords="17,932,469,951"/>
+<area shape="rect" id="node24" href="cnb.cnbXmppCon.CNBXMPPCon-class.html#joinRoom" title="Join the specified multi&#45;user chat room (muc)" alt="" coords="17,951,469,969"/>
+<area shape="rect" id="node24" href="cnb.cnbXmppCon.CNBXMPPCon-class.html#inviteToRoom" title="Invite a user to a room" alt="" coords="17,969,469,988"/>
+<area shape="rect" id="node24" href="cnb.cnbXmppCon.CNBXMPPCon-class.html#getRoomMembers" title="Query a server to obtain the list of members in a room" alt="" coords="17,988,469,1007"/>
+<area shape="rect" id="node24" href="cnb.cnbXmppCon.CNBXMPPCon-class.html#send_message" title="Send an XMPP message" alt="" coords="17,1007,469,1025"/>
+<area shape="rect" id="node24" href="cnb.cnbXmppCon.CNBXMPPCon-class.html#send_tune" title="Set information about the currently played tune Song is a dictionary with &#160;keys: file, title, artist, album, pos, track, length, uri." alt="" coords="17,1025,469,1044"/>
+<area shape="rect" id="node24" href="cnb.cnbXmppCon.CNBXMPPCon-class.html#send" title="Sends a simple message to the specified user, in private." alt="" coords="17,1044,469,1063"/>
+<area shape="rect" id="node24" href="cnb.cnbXmppCon.CNBXMPPCon-class.html#send_simple_reply" title="Send a simple response to a message" alt="" coords="17,1063,469,1081"/>
+<area shape="rect" id="node24" href="cnb.cnbXmppCon.CNBXMPPCon-class.html#build_reply" title="Build a message for responding to another message." alt="" coords="17,1081,469,1100"/>
+<area shape="rect" id="node24" href="cnb.cnbXmppCon.CNBXMPPCon-class.html#build_message" title="Builds an xhtml message without attributes." alt="" coords="17,1100,469,1119"/>
+<area shape="rect" id="node24" href="cnb.cnbXmppCon.CNBXMPPCon-class.html#idle_proc" title="This function will be called in the main loop." alt="" coords="17,1137,469,1156"/>
+<area shape="rect" id="node1" href="cnb.cnbXmppCon.CNBXMPPCon-class.html" title="This class manage every communication with a xmpp server using xmpp python library" alt="" coords="5,569,480,1162"/>
+<area shape="rect" id="node25" href="cnb.cnbCon.CNBCon-class.html#autoReconnect" title="Determine if the connector must auto&#45;reconnect on disconnect/failure" alt="" coords="180,372,308,391"/>
+<area shape="rect" id="node25" href="cnb.cnbCon.CNBCon-class.html#log" title="Logging Object" alt="" coords="180,391,308,409"/>
+<area shape="rect" id="node25" href="cnb.cnbCon.CNBCon-class.html#getConfig" title="This method return the bot config object." alt="" coords="180,412,308,431"/>
+<area shape="rect" id="node25" href="cnb.cnbCon.CNBCon-class.html#getState" title="This method return the current state of the connector" alt="" coords="180,431,308,449"/>
+<area shape="rect" id="node25" href="cnb.cnbCon.CNBCon-class.html#isRunning" title="This method return True if the bot is running." alt="" coords="180,449,308,468"/>
+<area shape="rect" id="node25" href="cnb.cnbCon.CNBCon-class.html#killBot" title="This method kill the bot by terminating the thread." alt="" coords="180,468,308,487"/>
+<area shape="rect" id="node25" href="cnb.cnbCon.CNBCon-class.html#setState" title="This method change the state of the bot." alt="" coords="180,487,308,505"/>
+<area shape="rect" id="node25" href="cnb.cnbCon.CNBCon-class.html#startBot" title="This method connect the bot" alt="" coords="180,505,308,524"/>
+<area shape="rect" id="node25" href="cnb.cnbCon.CNBCon-class.html#stopBot" title="This method disconnect the bot" alt="" coords="180,524,308,543"/>
+<area shape="rect" id="node2" href="cnb.cnbCon.CNBCon-class.html" title="A &quot;connector&quot; is a connection made to a chat server such as IRC or XMPP." alt="" coords="168,347,320,549"/>
+<area shape="rect" id="node3" href="javascript:void(0);" title="threading._Verbose" alt="" coords="175,6,313,50"/>
+<area shape="rect" id="node26" href="javascript:void(0);" title="threading.Thread.name" alt="" coords="160,95,328,113"/>
+<area shape="rect" id="node26" href="javascript:void(0);" title="threading.Thread.ident" alt="" coords="160,113,328,132"/>
+<area shape="rect" id="node26" href="javascript:void(0);" title="threading.Thread.daemon" alt="" coords="160,132,328,151"/>
+<area shape="rect" id="node26" href="javascript:void(0);" title="repr(x)" alt="" coords="160,153,328,172"/>
+<area shape="rect" id="node26" href="javascript:void(0);" title="threading.Thread.start" alt="" coords="160,172,328,191"/>
+<area shape="rect" id="node26" href="javascript:void(0);" title="threading.Thread.join" alt="" coords="160,191,328,209"/>
+<area shape="rect" id="node26" href="javascript:void(0);" title="threading.Thread.isAlive" alt="" coords="160,209,328,228"/>
+<area shape="rect" id="node26" href="javascript:void(0);" title="threading.Thread.is_alive" alt="" coords="160,228,328,247"/>
+<area shape="rect" id="node26" href="javascript:void(0);" title="threading.Thread.isDaemon" alt="" coords="160,247,328,265"/>
+<area shape="rect" id="node26" href="javascript:void(0);" title="threading.Thread.setDaemon" alt="" coords="160,265,328,284"/>
+<area shape="rect" id="node26" href="javascript:void(0);" title="threading.Thread.getName" alt="" coords="160,284,328,303"/>
+<area shape="rect" id="node26" href="javascript:void(0);" title="threading.Thread.setName" alt="" coords="160,303,328,321"/>
+<area shape="rect" id="node4" href="javascript:void(0);" title="threading.Thread" alt="" coords="148,70,340,327"/>
+</map>
+  <img src="uml_class_diagram_for_cnb_cnbx.gif" alt='' usemap="#uml_class_diagram_for_cnb_cnbx" ismap="ismap" class="graph-without-title" />
+</center>
+</center>
+<hr />
+<p>This class manage every communication with a xmpp server using xmpp 
+  python library</p>
+
+<hr />
+<div class="fields">      <p><strong>Note:</strong>
+        The protocol is not exactly the same between gmail and a custom 
+        xmpp server (tested with ejabberd).
+      </p>
+</div><!-- ==================== INSTANCE METHODS ==================== -->
+<a name="section-InstanceMethods"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Instance Methods</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-InstanceMethods"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cnb.cnbXmppCon.CNBXMPPCon-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">botConfig</span>)</span><br />
+      x.__init__(...) initializes x; see x.__class__.__doc__ for signature</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cnb.cnbXmppCon-pysrc.html#CNBXMPPCon.__init__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cnb.cnbXmppCon.CNBXMPPCon-class.html#__del__" class="summary-sig-name">__del__</a>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cnb.cnbXmppCon-pysrc.html#CNBXMPPCon.__del__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cnb.cnbXmppCon.CNBXMPPCon-class.html#_callback_message" class="summary-sig-name" onclick="show_private();">_callback_message</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">conn</span>,
+        <span class="summary-sig-arg">mess</span>)</span><br />
+      Changes the behaviour of the JabberBot in order to allow it to answer
+      direct messages.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cnb.cnbXmppCon-pysrc.html#CNBXMPPCon._callback_message">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cnb.cnbXmppCon.CNBXMPPCon-class.html#_callback_presence" class="summary-sig-name" onclick="show_private();">_callback_presence</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">conn</span>,
+        <span class="summary-sig-arg">presence</span>)</span><br />
+      Presence callback function.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cnb.cnbXmppCon-pysrc.html#CNBXMPPCon._callback_presence">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cnb.cnbXmppCon.CNBXMPPCon-class.html#_callback_iq" class="summary-sig-name" onclick="show_private();">_callback_iq</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">conn</span>,
+        <span class="summary-sig-arg">iq_node</span>)</span><br />
+      IQ callback function.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cnb.cnbXmppCon-pysrc.html#CNBXMPPCon._callback_iq">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cnb.cnbXmppCon.CNBXMPPCon-class.html#_status_type_changed" class="summary-sig-name" onclick="show_private();">_status_type_changed</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">jid</span>,
+        <span class="summary-sig-arg">new_status_type</span>)</span><br />
+      Callback for tracking status types (available, away, offline, ...)</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cnb.cnbXmppCon-pysrc.html#CNBXMPPCon._status_type_changed">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cnb.cnbXmppCon.CNBXMPPCon-class.html#_status_message_changed" class="summary-sig-name" onclick="show_private();">_status_message_changed</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">jid</span>,
+        <span class="summary-sig-arg">new_status_message</span>)</span><br />
+      Callback for tracking status messages (the free-form status text)</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cnb.cnbXmppCon-pysrc.html#CNBXMPPCon._status_message_changed">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cnb.cnbXmppCon.CNBXMPPCon-class.html#_unknown_command" class="summary-sig-name" onclick="show_private();">_unknown_command</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">mess</span>,
+        <span class="summary-sig-arg">cmd</span>,
+        <span class="summary-sig-arg">args</span>)</span><br />
+      Default handler for unknown commands</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cnb.cnbXmppCon-pysrc.html#CNBXMPPCon._unknown_command">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="_send_status"></a><span class="summary-sig-name">_send_status</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Send the bot status to the server</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cnb.cnbXmppCon-pysrc.html#CNBXMPPCon._send_status">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="__get_status"></a><span class="summary-sig-name">__get_status</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Get the bot status</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cnb.cnbXmppCon-pysrc.html#CNBXMPPCon.__get_status">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cnb.cnbXmppCon.CNBXMPPCon-class.html#__set_show" class="summary-sig-name" onclick="show_private();">__set_show</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">value</span>)</span><br />
+      Set the bot show</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cnb.cnbXmppCon-pysrc.html#CNBXMPPCon.__set_show">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="__get_show"></a><span class="summary-sig-name">__get_show</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Get the bot show</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cnb.cnbXmppCon-pysrc.html#CNBXMPPCon.__get_show">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cnb.cnbXmppCon.CNBXMPPCon-class.html#_shutdown" class="summary-sig-name" onclick="show_private();">_shutdown</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      This function will be called when the bot is done serving.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cnb.cnbXmppCon-pysrc.html#CNBXMPPCon._shutdown">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cnb.cnbXmppCon.CNBXMPPCon-class.html#_connect" class="summary-sig-name" onclick="show_private();">_connect</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      This method is called when the bot is ready to connect a xmpp server 
+      (called by &quot;connecting&quot; state).</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cnb.cnbXmppCon-pysrc.html#CNBXMPPCon._connect">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cnb.cnbXmppCon.CNBXMPPCon-class.html#_disconnect" class="summary-sig-name" onclick="show_private();">_disconnect</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      This method is called when the bot can disconnect.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cnb.cnbXmppCon-pysrc.html#CNBXMPPCon._disconnect">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cnb.cnbXmppCon.CNBXMPPCon-class.html#_idle_ping" class="summary-sig-name" onclick="show_private();">_idle_ping</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Pings the server, calls _on_ping_timeout() on no response.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cnb.cnbXmppCon-pysrc.html#CNBXMPPCon._idle_ping">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cnb.cnbXmppCon.CNBXMPPCon-class.html#_on_ping_timeout" class="summary-sig-name" onclick="show_private();">_on_ping_timeout</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Timeout handler This function is called when timeout occur.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cnb.cnbXmppCon-pysrc.html#CNBXMPPCon._on_ping_timeout">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cnb.cnbXmppCon.CNBXMPPCon-class.html#run" class="summary-sig-name">run</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Bot main thread - Process xmpp messages and trigger the right events 
+      depending on the registered handlers</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cnb.cnbXmppCon-pysrc.html#CNBXMPPCon.run">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="updateRosters"></a><span class="summary-sig-name">updateRosters</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      This method update the bot roster (contact list)</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cnb.cnbXmppCon-pysrc.html#CNBXMPPCon.updateRosters">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cnb.cnbXmppCon.CNBXMPPCon-class.html#joinRoom" class="summary-sig-name">joinRoom</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">room</span>,
+        <span class="summary-sig-arg">username</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">password</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Join the specified multi-user chat room (muc)</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cnb.cnbXmppCon-pysrc.html#CNBXMPPCon.joinRoom">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cnb.cnbXmppCon.CNBXMPPCon-class.html#inviteToRoom" class="summary-sig-name">inviteToRoom</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">users</span>,
+        <span class="summary-sig-arg">room</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">username</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">msg</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">Hello there!</code><code class="variable-quote">'</code></span>)</span><br />
+      Invite a user to a room</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cnb.cnbXmppCon-pysrc.html#CNBXMPPCon.inviteToRoom">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cnb.cnbXmppCon.CNBXMPPCon-class.html#getRoomMembers" class="summary-sig-name">getRoomMembers</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">room</span>)</span><br />
+      Query a server to obtain the list of members in a room</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cnb.cnbXmppCon-pysrc.html#CNBXMPPCon.getRoomMembers">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cnb.cnbXmppCon.CNBXMPPCon-class.html#send_message" class="summary-sig-name">send_message</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">mess</span>)</span><br />
+      Send an XMPP message</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cnb.cnbXmppCon-pysrc.html#CNBXMPPCon.send_message">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cnb.cnbXmppCon.CNBXMPPCon-class.html#send_tune" class="summary-sig-name">send_tune</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">song</span>,
+        <span class="summary-sig-arg">debug</span>=<span class="summary-sig-default">False</span>)</span><br />
+      Set information about the currently played tune Song is a dictionary 
+      with keys: file, title, artist, album, pos, track, length, uri.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cnb.cnbXmppCon-pysrc.html#CNBXMPPCon.send_tune">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cnb.cnbXmppCon.CNBXMPPCon-class.html#send" class="summary-sig-name">send</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">user</span>,
+        <span class="summary-sig-arg">text</span>,
+        <span class="summary-sig-arg">in_reply_to</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">message_type</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">chat</code><code class="variable-quote">'</code></span>)</span><br />
+      Sends a simple message to the specified user, in private.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cnb.cnbXmppCon-pysrc.html#CNBXMPPCon.send">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cnb.cnbXmppCon.CNBXMPPCon-class.html#send_simple_reply" class="summary-sig-name">send_simple_reply</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">mess</span>,
+        <span class="summary-sig-arg">text</span>,
+        <span class="summary-sig-arg">private</span>=<span class="summary-sig-default">False</span>)</span><br />
+      Send a simple response to a message</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cnb.cnbXmppCon-pysrc.html#CNBXMPPCon.send_simple_reply">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cnb.cnbXmppCon.CNBXMPPCon-class.html#build_reply" class="summary-sig-name">build_reply</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">mess</span>,
+        <span class="summary-sig-arg">text</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">private</span>=<span class="summary-sig-default">False</span>)</span><br />
+      Build a message for responding to another message.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cnb.cnbXmppCon-pysrc.html#CNBXMPPCon.build_reply">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cnb.cnbXmppCon.CNBXMPPCon-class.html#build_message" class="summary-sig-name">build_message</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">text</span>)</span><br />
+      Builds an xhtml message without attributes.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cnb.cnbXmppCon-pysrc.html#CNBXMPPCon.build_message">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cnb.cnbXmppCon.CNBXMPPCon-class.html#get_sender_username" class="summary-sig-name">get_sender_username</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">mess</span>)</span><br />
+      Extract the sender's user name from a message</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cnb.cnbXmppCon-pysrc.html#CNBXMPPCon.get_sender_username">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cnb.cnbXmppCon.CNBXMPPCon-class.html#broadcast" class="summary-sig-name">broadcast</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">message</span>,
+        <span class="summary-sig-arg">only_available</span>=<span class="summary-sig-default">False</span>)</span><br />
+      Broadcast a message to all users 'seen' by this bot.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cnb.cnbXmppCon-pysrc.html#CNBXMPPCon.broadcast">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="idle_proc"></a><span class="summary-sig-name">idle_proc</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      This function will be called in the main loop.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cnb.cnbXmppCon-pysrc.html#CNBXMPPCon.idle_proc">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="cnb.cnbCon.CNBCon-class.html">cnbCon.CNBCon</a></code></b>:
+      <code><a href="cnb.cnbCon.CNBCon-class.html#getConfig">getConfig</a></code>,
+      <code><a href="cnb.cnbCon.CNBCon-class.html#getState">getState</a></code>,
+      <code><a href="cnb.cnbCon.CNBCon-class.html#isRunning">isRunning</a></code>,
+      <code><a href="cnb.cnbCon.CNBCon-class.html#killBot">killBot</a></code>,
+      <code><a href="cnb.cnbCon.CNBCon-class.html#setState">setState</a></code>,
+      <code><a href="cnb.cnbCon.CNBCon-class.html#startBot">startBot</a></code>,
+      <code><a href="cnb.cnbCon.CNBCon-class.html#stopBot">stopBot</a></code>
+      </p>
+    <div class="private">    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="cnb.cnbCon.CNBCon-class.html">cnbCon.CNBCon</a></code></b> (private):
+      <code><a href="cnb.cnbCon.CNBCon-class.html#_configLogs" onclick="show_private();">_configLogs</a></code>,
+      <code><a href="cnb.cnbCon.CNBCon-class.html#_quit" onclick="show_private();">_quit</a></code>
+      </p></div>
+    <p class="indent-wrapped-lines"><b>Inherited from <code>threading.Thread</code></b>:
+      <code>__repr__</code>,
+      <code>getName</code>,
+      <code>isAlive</code>,
+      <code>isDaemon</code>,
+      <code>is_alive</code>,
+      <code>join</code>,
+      <code>setDaemon</code>,
+      <code>setName</code>,
+      <code>start</code>
+      </p>
+    <div class="private">    <p class="indent-wrapped-lines"><b>Inherited from <code>threading.Thread</code></b> (private):
+      <code>_set_daemon</code>,
+      <code>_set_ident</code>
+      </p></div>
+    <div class="private">    <p class="indent-wrapped-lines"><b>Inherited from <code>threading._Verbose</code></b> (private):
+      <code>_note</code>
+      </p></div>
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__delattr__</code>,
+      <code>__format__</code>,
+      <code>__getattribute__</code>,
+      <code>__hash__</code>,
+      <code>__new__</code>,
+      <code>__reduce__</code>,
+      <code>__reduce_ex__</code>,
+      <code>__setattr__</code>,
+      <code>__sizeof__</code>,
+      <code>__str__</code>,
+      <code>__subclasshook__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS VARIABLES ==================== -->
+<a name="section-ClassVariables"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Class Variables</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-ClassVariables"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="GMAIL_MUC_DOMAIN"></a><span class="summary-name">GMAIL_MUC_DOMAIN</span> = <code title="'talk.google.com'"><code class="variable-quote">'</code><code class="variable-string">talk.google.com</code><code class="variable-quote">'</code></code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="HF_MUC_DOMAIN"></a><span class="summary-name">HF_MUC_DOMAIN</span> = <code title="'conference.hackfest.ca'"><code class="variable-quote">'</code><code class="variable-string">conference.hackfest.ca</code><code class="variable-quote">'</code></code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="cnb.cnbXmppCon.CNBXMPPCon-class.html#MSG_AUTHORIZE_ME" class="summary-name">MSG_AUTHORIZE_ME</a> = <code title="'Hey there. You are not yet on my roster. Authorize my request and I w\
+ill do the same.'"><code class="variable-quote">'</code><code class="variable-string">Hey there. You are not yet on my roster. A</code><code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="cnb.cnbXmppCon.CNBXMPPCon-class.html#MSG_NOT_AUTHORIZED" class="summary-name">MSG_NOT_AUTHORIZED</a> = <code title="'You did not authorize my subscription request. Access denied.'"><code class="variable-quote">'</code><code class="variable-string">You did not authorize my subscription re</code><code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="cnb.cnbXmppCon.CNBXMPPCon-class.html#MSG_UNKNOWN_COMMAND" class="summary-name">MSG_UNKNOWN_COMMAND</a> = <code title="'Unknown command: &quot;%(command)s&quot;. Type &quot;.help&quot; for available commands.'"><code class="variable-quote">'</code><code class="variable-string">Unknown command: &quot;%(command)s&quot;. Type &quot;.</code><code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PING_FREQUENCY"></a><span class="summary-name">PING_FREQUENCY</span> = <code title="30">30</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PING_TIMEOUT"></a><span class="summary-name">PING_TIMEOUT</span> = <code title="10">10</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="AVAILABLE"></a><span class="summary-name">AVAILABLE</span> = <code title="None">None</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="AWAY"></a><span class="summary-name">AWAY</span> = <code title="'away'"><code class="variable-quote">'</code><code class="variable-string">away</code><code class="variable-quote">'</code></code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="CHAT"></a><span class="summary-name">CHAT</span> = <code title="'chat'"><code class="variable-quote">'</code><code class="variable-string">chat</code><code class="variable-quote">'</code></code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="DND"></a><span class="summary-name">DND</span> = <code title="'dnd'"><code class="variable-quote">'</code><code class="variable-string">dnd</code><code class="variable-quote">'</code></code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="OFFLINE"></a><span class="summary-name">OFFLINE</span> = <code title="'unavailable'"><code class="variable-quote">'</code><code class="variable-string">unavailable</code><code class="variable-quote">'</code></code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="XA"></a><span class="summary-name">XA</span> = <code title="'xa'"><code class="variable-quote">'</code><code class="variable-string">xa</code><code class="variable-quote">'</code></code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="XMPP_CHAT"></a><span class="summary-name">XMPP_CHAT</span> = <code title="'chat'"><code class="variable-quote">'</code><code class="variable-string">chat</code><code class="variable-quote">'</code></code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="XMPP_GROUPCHAT"></a><span class="summary-name">XMPP_GROUPCHAT</span> = <code title="'groupchat'"><code class="variable-quote">'</code><code class="variable-string">groupchat</code><code class="variable-quote">'</code></code>
+    </td>
+  </tr>
+</table>
+<!-- ==================== INSTANCE VARIABLES ==================== -->
+<a name="section-InstanceVariables"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Instance Variables</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-InstanceVariables"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">List</span>
+    </td><td class="summary">
+        <a name="_joinedRooms"></a><span class="summary-name">_joinedRooms</span> = <code title="[]"><code class="variable-group">[</code><code class="variable-group">]</code></code><br />
+      list of joined chat rooms
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">string</span>
+    </td><td class="summary">
+        <a name="_username"></a><span class="summary-name">_username</span> = <code title="''"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></code><br />
+      Username of the current account
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">string</span>
+    </td><td class="summary">
+        <a name="_password"></a><span class="summary-name">_password</span> = <code title="''"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></code><br />
+      Password of the current account
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">string</span>
+    </td><td class="summary">
+        <a href="cnb.cnbXmppCon.CNBXMPPCon-class.html#_privatedomain" class="summary-name" onclick="show_private();">_privatedomain</a> = <code title="False">False</code><br />
+      Specify a private domain.
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">bool</span>
+    </td><td class="summary">
+        <a href="cnb.cnbXmppCon.CNBXMPPCon-class.html#_acceptownmsgs" class="summary-name" onclick="show_private();">_acceptownmsgs</a> = <code title="False">False</code><br />
+      Accept own messages.
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">bool</span>
+    </td><td class="summary">
+        <a name="_debug"></a><span class="summary-name">_debug</span> = <code title="False">False</code><br />
+      connect the bot in debug mode (xmpp python library feature)
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">string</span>
+    </td><td class="summary">
+        <a name="_show"></a><span class="summary-name">_show</span> = <code title="None">None</code><br />
+      The &quot;show&quot; message (part of the status)
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">string</span>
+    </td><td class="summary">
+        <a name="_status"></a><span class="summary-name">_status</span> = <code title="None">None</code><br />
+      Status of the bot
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">dictionnary</span>
+    </td><td class="summary">
+        <a name="_seen"></a><span class="summary-name">_seen</span> = <code title="{}"><code class="variable-group">{</code><code class="variable-group">}</code></code><br />
+      Dictionnary of (show,status) for all seen users
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">dictionnary</span>
+    </td><td class="summary">
+        <a name="_threads"></a><span class="summary-name">_threads</span> = <code title="{}"><code class="variable-group">{</code><code class="variable-group">}</code></code><br />
+      Keep a list of threads (people the bot talk to) to facilitate reply
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">time</span>
+    </td><td class="summary">
+        <a name="_lastping"></a><span class="summary-name">_lastping</span> = <code title="1364437349.14">1364437349.14</code><br />
+      Keep the last ping time
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">List</span>
+    </td><td class="summary">
+        <a href="cnb.cnbXmppCon.CNBXMPPCon-class.html#_rooms" class="summary-name" onclick="show_private();">_rooms</a> = <code title="[]"><code class="variable-group">[</code><code class="variable-group">]</code></code><br />
+      List of rooms to join to by default.
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">string</span>
+    </td><td class="summary">
+        <a name="_res"></a><span class="summary-name">_res</span> = <code title="None">None</code><br />
+      Optionnal ressource name
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">JID</span>
+    </td><td class="summary">
+        <a name="jid"></a><span class="summary-name">jid</span> = <code title="None">None</code><br />
+      JID of the current user
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">dictionnary</span>
+    </td><td class="summary">
+        <a name="contacts"></a><span class="summary-name">contacts</span> = <code title="{}"><code class="variable-group">{</code><code class="variable-group">}</code></code><br />
+      Dictionnary of contacts (friends) for the current account
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">Object</span>
+    </td><td class="summary">
+        <a href="cnb.cnbXmppCon.CNBXMPPCon-class.html#roster" class="summary-name">roster</a> = <code title="None">None</code><br />
+      Contact list of the bot
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">Object</span>
+    </td><td class="summary">
+        <a name="conn"></a><span class="summary-name">conn</span> = <code title="None">None</code><br />
+      Connection Handler
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="cnb.cnbCon.CNBCon-class.html">cnbCon.CNBCon</a></code></b>:
+      <code><a href="cnb.cnbCon.CNBCon-class.html#autoReconnect">autoReconnect</a></code>,
+      <code><a href="cnb.cnbCon.CNBCon-class.html#log">log</a></code>
+      </p>
+    <div class="private">    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="cnb.cnbCon.CNBCon-class.html">cnbCon.CNBCon</a></code></b> (private):
+      <code><a href="cnb.cnbCon.CNBCon-class.html#_bState" onclick="show_private();">_bState</a></code>,
+      <code><a href="cnb.cnbCon.CNBCon-class.html#_botConfig" onclick="show_private();">_botConfig</a></code>
+      </p></div>
+    </td>
+  </tr>
+</table>
+<!-- ==================== PROPERTIES ==================== -->
+<a name="section-Properties"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Properties</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Properties"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>threading.Thread</code></b>:
+      <code>daemon</code>,
+      <code>ident</code>,
+      <code>name</code>
+      </p>
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__class__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== METHOD DETAILS ==================== -->
+<a name="section-MethodDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Method Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-MethodDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="__init__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">botConfig</span>)</span>
+    <br /><em class="fname">(Constructor)</em>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cnb.cnbXmppCon-pysrc.html#CNBXMPPCon.__init__">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>x.__init__(...) initializes x; see x.__class__.__doc__ for 
+  signature</p>
+  <dl class="fields">
+    <dt>Overrides:
+        object.__init__
+        <dd><em class="note">(inherited documentation)</em></dd>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="__del__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__del__</span>(<span class="sig-arg">self</span>)</span>
+    <br /><em class="fname">(Destructor)</em>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cnb.cnbXmppCon-pysrc.html#CNBXMPPCon.__del__">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  
+  <dl class="fields">
+    <dt>Overrides:
+        <a href="cnb.cnbCon.CNBCon-class.html#__del__">cnbCon.CNBCon.__del__</a>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="_callback_message"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_callback_message</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">conn</span>,
+        <span class="sig-arg">mess</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cnb.cnbXmppCon-pysrc.html#CNBXMPPCon._callback_message">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Changes the behaviour of the JabberBot in order to allow it to answer 
+  direct messages. This is used often when it is connected in MUCs 
+  (multiple users chatroom).</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>conn</code></strong> (Object) - Connection handle</li>
+        <li><strong class="pname"><code>mess</code></strong> (Object) - Message sent to the bot</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="_callback_presence"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_callback_presence</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">conn</span>,
+        <span class="sig-arg">presence</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cnb.cnbXmppCon-pysrc.html#CNBXMPPCon._callback_presence">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Presence callback function. useful to trigger events based on 
+  presence</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>conn</code></strong> (Object) - Connection handle</li>
+        <li><strong class="pname"><code>presence</code></strong> (Object) - Presence notification</li>
+    </ul></dd>
+  </dl>
+<div class="fields">      <p><strong>To Do:</strong>
+        manage more presence status
+      </p>
+</div></td></tr></table>
+</div>
+<a name="_callback_iq"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_callback_iq</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">conn</span>,
+        <span class="sig-arg">iq_node</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cnb.cnbXmppCon-pysrc.html#CNBXMPPCon._callback_iq">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>IQ callback function. A IQ query is a way to query a xmpp server for 
+  some informations (ex: get list of members in a room). IQ Response are 
+  handled here.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>conn</code></strong> (Object) - Connection handle</li>
+        <li><strong class="pname"><code>iq_node</code></strong> (Object) - IQ Node</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="_status_type_changed"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_status_type_changed</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">jid</span>,
+        <span class="sig-arg">new_status_type</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cnb.cnbXmppCon-pysrc.html#CNBXMPPCon._status_type_changed">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Callback for tracking status types (available, away, offline, ...)</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>jid</code></strong> (JID) - JID of the user who changed status type</li>
+        <li><strong class="pname"><code>new_status_type</code></strong> (string) - The new status type</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="_status_message_changed"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_status_message_changed</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">jid</span>,
+        <span class="sig-arg">new_status_message</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cnb.cnbXmppCon-pysrc.html#CNBXMPPCon._status_message_changed">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Callback for tracking status messages (the free-form status text)</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>jid</code></strong> (JID) - JID of the user who changed status message</li>
+        <li><strong class="pname"><code>new_status_message</code></strong> (string) - The new status message</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="_unknown_command"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_unknown_command</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">mess</span>,
+        <span class="sig-arg">cmd</span>,
+        <span class="sig-arg">args</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cnb.cnbXmppCon-pysrc.html#CNBXMPPCon._unknown_command">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Default handler for unknown commands</p>
+  <p>Override this method in derived class if you want to trap some 
+  unrecognized commands.  If 'cmd' is handled, you must return some 
+  non-false value, else some helpful text will be sent back to the 
+  sender.</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="__set_show"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__set_show</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">value</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cnb.cnbXmppCon-pysrc.html#CNBXMPPCon.__set_show">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Set the bot show</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>value</code></strong> (string) - Name of the show</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="_shutdown"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_shutdown</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cnb.cnbXmppCon-pysrc.html#CNBXMPPCon._shutdown">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>This function will be called when the bot is done serving.</p>
+  <dl class="fields">
+    <dt>Overrides:
+        <a href="cnb.cnbCon.CNBCon-class.html#_shutdown" onclick="show_private();">cnbCon.CNBCon._shutdown</a>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="_connect"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_connect</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cnb.cnbXmppCon-pysrc.html#CNBXMPPCon._connect">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>This method is called when the bot is ready to connect a xmpp server 
+  (called by &quot;connecting&quot; state). This part manage SASL, TLS and 
+  such things.</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="_disconnect"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_disconnect</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cnb.cnbXmppCon-pysrc.html#CNBXMPPCon._disconnect">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>This method is called when the bot can disconnect.</p>
+  <dl class="fields">
+  </dl>
+<div class="fields">      <p><strong>Note:</strong>
+        This is not called when there's a timeout, otherwise it freeze.
+      </p>
+</div></td></tr></table>
+</div>
+<a name="_idle_ping"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_idle_ping</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cnb.cnbXmppCon-pysrc.html#CNBXMPPCon._idle_ping">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Pings the server, calls _on_ping_timeout() on no response. To enable 
+  set self.PING_FREQUENCY to a value higher than zero.</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="_on_ping_timeout"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_on_ping_timeout</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cnb.cnbXmppCon-pysrc.html#CNBXMPPCon._on_ping_timeout">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Timeout handler This function is called when timeout occur. Important:
+  The _disconnect() function must not be called from here because it 
+  freeze.</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="run"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">run</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cnb.cnbXmppCon-pysrc.html#CNBXMPPCon.run">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Bot main thread - Process xmpp messages and trigger the right events 
+  depending on the registered handlers</p>
+  <dl class="fields">
+    <dt>Overrides:
+        threading.Thread.run
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="joinRoom"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">joinRoom</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">room</span>,
+        <span class="sig-arg">username</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">password</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cnb.cnbXmppCon-pysrc.html#CNBXMPPCon.joinRoom">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Join the specified multi-user chat room (muc)</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>room</code></strong> (string) - Name of the muc</li>
+        <li><strong class="pname"><code>username</code></strong> (string) - Username to use as room member</li>
+        <li><strong class="pname"><code>password</code></strong> (string) - Password to use when the muc is password protected</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="inviteToRoom"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">inviteToRoom</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">users</span>,
+        <span class="sig-arg">room</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">username</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">msg</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">Hello there!</code><code class="variable-quote">'</code></span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cnb.cnbXmppCon-pysrc.html#CNBXMPPCon.inviteToRoom">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Invite a user to a room</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>users</code></strong> (List) - List of users to invite</li>
+        <li><strong class="pname"><code>room</code></strong> (string) - Room to join</li>
+        <li><strong class="pname"><code>username</code></strong> (string) - Username to use once in the room (for the bot)</li>
+        <li><strong class="pname"><code>msg</code></strong></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getRoomMembers"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getRoomMembers</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">room</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cnb.cnbXmppCon-pysrc.html#CNBXMPPCon.getRoomMembers">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Query a server to obtain the list of members in a room</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>room</code></strong> (string) - room to query members</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="send_message"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">send_message</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">mess</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cnb.cnbXmppCon-pysrc.html#CNBXMPPCon.send_message">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Send an XMPP message</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>mess</code></strong> (Object) - A message</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="send_tune"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">send_tune</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">song</span>,
+        <span class="sig-arg">debug</span>=<span class="sig-default">False</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cnb.cnbXmppCon-pysrc.html#CNBXMPPCon.send_tune">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Set information about the currently played tune Song is a dictionary 
+  with keys: file, title, artist, album, pos, track, length, uri. For 
+  details see &lt;http://xmpp.org/protocols/tune/&gt;.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>song</code></strong> (Dictionnary) - Song information to display</li>
+        <li><strong class="pname"><code>debug</code></strong> (bool) - Debug flag</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="send"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">send</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">user</span>,
+        <span class="sig-arg">text</span>,
+        <span class="sig-arg">in_reply_to</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">message_type</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">chat</code><code class="variable-quote">'</code></span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cnb.cnbXmppCon-pysrc.html#CNBXMPPCon.send">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Sends a simple message to the specified user, in private.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>user</code></strong> (string) - User to send the message</li>
+        <li><strong class="pname"><code>text</code></strong> (string) - Message to send</li>
+        <li><strong class="pname"><code>in_reply_to</code></strong> (string) - [optional] If the message is a reply, this var should contain the
+          username to send back</li>
+        <li><strong class="pname"><code>message_type</code></strong> (string) - [optional] Determine if this is a chat or groupchat message</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="send_simple_reply"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">send_simple_reply</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">mess</span>,
+        <span class="sig-arg">text</span>,
+        <span class="sig-arg">private</span>=<span class="sig-default">False</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cnb.cnbXmppCon-pysrc.html#CNBXMPPCon.send_simple_reply">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Send a simple response to a message</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>mess</code></strong> (Object) - Message Object</li>
+        <li><strong class="pname"><code>text</code></strong> (string) - Message sent, triggering a reply</li>
+        <li><strong class="pname"><code>private</code></strong> (bool) - Determine if the reply is private. A private answer is sent to a 
+          user only, not a groupchat</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="build_reply"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">build_reply</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">mess</span>,
+        <span class="sig-arg">text</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">private</span>=<span class="sig-default">False</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cnb.cnbXmppCon-pysrc.html#CNBXMPPCon.build_reply">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Build a message for responding to another message.  Message is NOT 
+  sent</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>mess</code></strong> (Object) - Message Object</li>
+        <li><strong class="pname"><code>text</code></strong> (string) - Message sent, triggering a reply</li>
+        <li><strong class="pname"><code>private</code></strong> (bool) - Determine if the reply is private. A private answer is sent to a 
+          user only, not a groupchat</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="build_message"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">build_message</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">text</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cnb.cnbXmppCon-pysrc.html#CNBXMPPCon.build_message">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Builds an xhtml message without attributes. If input is not valid 
+  xhtml-im fallback to normal.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>text</code></strong> (string) - Text to use as message body</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="get_sender_username"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_sender_username</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">mess</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cnb.cnbXmppCon-pysrc.html#CNBXMPPCon.get_sender_username">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Extract the sender's user name from a message</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>mess</code></strong> (Object) - Message Object</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="broadcast"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">broadcast</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">message</span>,
+        <span class="sig-arg">only_available</span>=<span class="sig-default">False</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cnb.cnbXmppCon-pysrc.html#CNBXMPPCon.broadcast">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Broadcast a message to all users 'seen' by this bot. If the parameter 
+  'only_available' is True, the broadcast will not go to users whose status
+  is not 'Available'.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>message</code></strong> (string) - Message to broadcast</li>
+        <li><strong class="pname"><code>only_available</code></strong> (bool) - [optional] Determine if the message must be sent only to 
+          available users.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== CLASS VARIABLE DETAILS ==================== -->
+<a name="section-ClassVariableDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Class Variable Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-ClassVariableDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="MSG_AUTHORIZE_ME"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">MSG_AUTHORIZE_ME</h3>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+<code class="variable-quote">'</code><code class="variable-string">Hey there. You are not yet on my roster. Authorize my request and I w</code><span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
+<code class="variable-string">ill do the same.</code><code class="variable-quote">'</code>
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="MSG_NOT_AUTHORIZED"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">MSG_NOT_AUTHORIZED</h3>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+<code class="variable-quote">'</code><code class="variable-string">You did not authorize my subscription request. Access denied.</code><code class="variable-quote">'</code>
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="MSG_UNKNOWN_COMMAND"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">MSG_UNKNOWN_COMMAND</h3>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+<code class="variable-quote">'</code><code class="variable-string">Unknown command: &quot;%(command)s&quot;. Type &quot;.help&quot; for available commands.</code><code class="variable-quote">'</code>
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== INSTANCE VARIABLE DETAILS ==================== -->
+<a name="section-InstanceVariableDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Instance Variable Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-InstanceVariableDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="_privatedomain"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">_privatedomain</h3>
+  Specify a private domain. Useful if the domain can't be resolved from the
+  DNS (ex: _client-xmpp._tcp.domain.com)
+  <dl class="fields">
+    <dt>Type:</dt>
+      <dd>string</dd>
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+False
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="_acceptownmsgs"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">_acceptownmsgs</h3>
+  Accept own messages. False by default. Never tested with True (I guess it
+  would be weird or just fuck the bot)
+  <dl class="fields">
+    <dt>Type:</dt>
+      <dd>bool</dd>
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+False
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="_rooms"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">_rooms</h3>
+  List of rooms to join to by default. They are defined in the config file.
+  <dl class="fields">
+    <dt>Type:</dt>
+      <dd>List</dd>
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+<code class="variable-group">[</code><code class="variable-group">]</code>
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="roster"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">roster</h3>
+  Contact list of the bot
+  <dl class="fields">
+    <dt>Type:</dt>
+      <dd>Object</dd>
+  </dl>
+<div class="fields">      <p><strong>See Also:</strong>
+        http://xmpp.org/rfcs/rfc3921.html#intro-requirements
+      </p>
+</div>  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+None
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="cnb-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Wed Mar 27 22:22:30 2013
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+[bot]
+#id = <int> (dynamically added)
+#config-file = <string> (dynamically added)
+#monday-suck-room = <string> (dynamically added)
+type = xmpp-gtalk
+log-file = gmail.xmpp.log
+username = <insert username here>
+password = <insert password here>
+server = 
+rooms = []
+nickname = <insert nick name here>
+auto-join = 1
+auto-start = 1
+auto-reconnect = 1
+verbose = 0
+admins = [<list of admins>]

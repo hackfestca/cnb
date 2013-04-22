@@ -1,0 +1,1787 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>cnb.cnbConsole.CNBConsole</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="cnb-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="cnb-module.html">Package&nbsp;cnb</a> ::
+        <a href="cnb.cnbConsole-module.html">Module&nbsp;cnbConsole</a> ::
+        Class&nbsp;CNBConsole
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="cnb.cnbConsole.CNBConsole-class.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS DESCRIPTION ==================== -->
+<h1 class="epydoc">Class CNBConsole</h1><p class="nomargin-top"><span class="codelink"><a href="cnb.cnbConsole-pysrc.html#CNBConsole">source&nbsp;code</a></span></p>
+<center>
+<center>  <map id="uml_class_diagram_for_cnb_cnbc_2" name="uml_class_diagram_for_cnb_cnbc_2">
+<area shape="rect" id="node11" href="cnb.cnbConsole.CNBConsole-class.html#MSG_HELP_TAIL" title="cnb.cnbConsole.CNBConsole.MSG_HELP_TAIL" alt="" coords="17,372,261,391"/>
+<area shape="rect" id="node11" href="cnb.cnbConsole.CNBConsole-class.html#MSG_HELP_UNDEFINED_COMMAND" title="cnb.cnbConsole.CNBConsole.MSG_HELP_UNDEFINED_COMMAND" alt="" coords="17,391,261,409"/>
+<area shape="rect" id="node11" href="cnb.cnbConsole.CNBConsole-class.html#MSG_TOP_OF_HELP" title="cnb.cnbConsole.CNBConsole.MSG_TOP_OF_HELP" alt="" coords="17,409,261,428"/>
+<area shape="rect" id="node11" href="cnb.cnbConsole.CNBConsole-class.html#MSG_BOTTOM_OF_HELP" title="cnb.cnbConsole.CNBConsole.MSG_BOTTOM_OF_HELP" alt="" coords="17,428,261,447"/>
+<area shape="rect" id="node11" href="cnb.cnbConsole.CNBConsole-class.html#__init__" title="x.__init__(...) initializes x; see x.__class__.__doc__ for signature" alt="" coords="17,449,261,468"/>
+<area shape="rect" id="node11" href="cnb.cnbConsole.CNBConsole-class.html#__del__" title="cnb.cnbConsole.CNBConsole.__del__" alt="" coords="17,468,261,487"/>
+<area shape="rect" id="node11" href="cnb.cnbConsole.CNBConsole-class.html#run" title="Console main loop" alt="" coords="17,487,261,505"/>
+<area shape="rect" id="node11" href="cnb.cnbConsole.CNBConsole-class.html#getState" title="This method return the current state of the console" alt="" coords="17,505,261,524"/>
+<area shape="rect" id="node11" href="cnb.cnbConsole.CNBConsole-class.html#setState" title="This method set the current state of the console" alt="" coords="17,524,261,543"/>
+<area shape="rect" id="node11" href="cnb.cnbConsole.CNBConsole-class.html#isRunning" title="Determine if the console is running" alt="" coords="17,543,261,561"/>
+<area shape="rect" id="node11" href="cnb.cnbConsole.CNBConsole-class.html#startConsole" title="Start the console" alt="" coords="17,561,261,580"/>
+<area shape="rect" id="node11" href="cnb.cnbConsole.CNBConsole-class.html#stopConsole" title="Stop the console" alt="" coords="17,580,261,599"/>
+<area shape="rect" id="node11" href="cnb.cnbConsole.CNBConsole-class.html#killConsole" title="This method kill the console." alt="" coords="17,599,261,617"/>
+<area shape="rect" id="node11" href="cnb.cnbConsole.CNBConsole-class.html#processUserInput" title="This method wait for raw_input() and process the user command" alt="" coords="17,617,261,636"/>
+<area shape="rect" id="node1" href="cnb.cnbConsole.CNBConsole-class.html" title="This class is the cli admin console of CNB" alt="" coords="5,347,272,642"/>
+<area shape="rect" id="node12" href="javascript:void(0);" title="threading.Thread.name" alt="" coords="56,95,224,113"/>
+<area shape="rect" id="node12" href="javascript:void(0);" title="threading.Thread.ident" alt="" coords="56,113,224,132"/>
+<area shape="rect" id="node12" href="javascript:void(0);" title="threading.Thread.daemon" alt="" coords="56,132,224,151"/>
+<area shape="rect" id="node12" href="javascript:void(0);" title="repr(x)" alt="" coords="56,153,224,172"/>
+<area shape="rect" id="node12" href="javascript:void(0);" title="threading.Thread.start" alt="" coords="56,172,224,191"/>
+<area shape="rect" id="node12" href="javascript:void(0);" title="threading.Thread.join" alt="" coords="56,191,224,209"/>
+<area shape="rect" id="node12" href="javascript:void(0);" title="threading.Thread.isAlive" alt="" coords="56,209,224,228"/>
+<area shape="rect" id="node12" href="javascript:void(0);" title="threading.Thread.is_alive" alt="" coords="56,228,224,247"/>
+<area shape="rect" id="node12" href="javascript:void(0);" title="threading.Thread.isDaemon" alt="" coords="56,247,224,265"/>
+<area shape="rect" id="node12" href="javascript:void(0);" title="threading.Thread.setDaemon" alt="" coords="56,265,224,284"/>
+<area shape="rect" id="node12" href="javascript:void(0);" title="threading.Thread.getName" alt="" coords="56,284,224,303"/>
+<area shape="rect" id="node12" href="javascript:void(0);" title="threading.Thread.setName" alt="" coords="56,303,224,321"/>
+<area shape="rect" id="node2" href="javascript:void(0);" title="threading.Thread" alt="" coords="44,70,236,327"/>
+<area shape="rect" id="node3" href="javascript:void(0);" title="threading._Verbose" alt="" coords="71,6,209,50"/>
+</map>
+  <img src="uml_class_diagram_for_cnb_cnbc_2.gif" alt='' usemap="#uml_class_diagram_for_cnb_cnbc_2" ismap="ismap" class="graph-without-title" />
+</center>
+</center>
+<hr />
+<p>This class is the cli admin console of CNB</p>
+
+<!-- ==================== INSTANCE METHODS ==================== -->
+<a name="section-InstanceMethods"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Instance Methods</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-InstanceMethods"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cnb.cnbConsole.CNBConsole-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      x.__init__(...) initializes x; see x.__class__.__doc__ for signature</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cnb.cnbConsole-pysrc.html#CNBConsole.__init__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="__del__"></a><span class="summary-sig-name">__del__</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cnb.cnbConsole-pysrc.html#CNBConsole.__del__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="_shutdown"></a><span class="summary-sig-name">_shutdown</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      This method is called when the console is killed.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cnb.cnbConsole-pysrc.html#CNBConsole._shutdown">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cnb.cnbConsole.CNBConsole-class.html#_configLogs" class="summary-sig-name" onclick="show_private();">_configLogs</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">sFile</span>)</span><br />
+      This method configure the logs for this object.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cnb.cnbConsole-pysrc.html#CNBConsole._configLogs">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cnb.cnbConsole.CNBConsole-class.html#run" class="summary-sig-name">run</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Console main loop</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cnb.cnbConsole-pysrc.html#CNBConsole.run">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getState"></a><span class="summary-sig-name">getState</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      This method return the current state of the console</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cnb.cnbConsole-pysrc.html#CNBConsole.getState">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="setState"></a><span class="summary-sig-name">setState</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">state</span>)</span><br />
+      This method set the current state of the console</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cnb.cnbConsole-pysrc.html#CNBConsole.setState">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="isRunning"></a><span class="summary-sig-name">isRunning</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Determine if the console is running</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cnb.cnbConsole-pysrc.html#CNBConsole.isRunning">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="startConsole"></a><span class="summary-sig-name">startConsole</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Start the console</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cnb.cnbConsole-pysrc.html#CNBConsole.startConsole">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="stopConsole"></a><span class="summary-sig-name">stopConsole</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Stop the console</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cnb.cnbConsole-pysrc.html#CNBConsole.stopConsole">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cnb.cnbConsole.CNBConsole-class.html#killConsole" class="summary-sig-name">killConsole</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      This method kill the console.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cnb.cnbConsole-pysrc.html#CNBConsole.killConsole">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="processUserInput"></a><span class="summary-sig-name">processUserInput</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      This method wait for raw_input() and process the user command</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cnb.cnbConsole-pysrc.html#CNBConsole.processUserInput">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cnb.cnbConsole.CNBConsole-class.html#_createInstance" class="summary-sig-name" onclick="show_private();">_createInstance</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">cmd</span>,
+        <span class="summary-sig-arg">args</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cnb.cnbConsole-pysrc.html#CNBConsole._createInstance">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cnb.cnbConsole.CNBConsole-class.html#_deleteInstance" class="summary-sig-name" onclick="show_private();">_deleteInstance</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">cmd</span>,
+        <span class="summary-sig-arg">args</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cnb.cnbConsole-pysrc.html#CNBConsole._deleteInstance">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cnb.cnbConsole.CNBConsole-class.html#_startInstance" class="summary-sig-name" onclick="show_private();">_startInstance</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">cmd</span>,
+        <span class="summary-sig-arg">args</span>)</span><br />
+      Start an instance of the bot Usage: startInstance INSTANCE_ID 
+      Details:</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cnb.cnbConsole-pysrc.html#CNBConsole._startInstance">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cnb.cnbConsole.CNBConsole-class.html#_stopInstance" class="summary-sig-name" onclick="show_private();">_stopInstance</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">cmd</span>,
+        <span class="summary-sig-arg">args</span>)</span><br />
+      Stop an instance of the bot Usage: stopInstance INSTANCE_ID Details:</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cnb.cnbConsole-pysrc.html#CNBConsole._stopInstance">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cnb.cnbConsole.CNBConsole-class.html#_saveInstance" class="summary-sig-name" onclick="show_private();">_saveInstance</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">cmd</span>,
+        <span class="summary-sig-arg">args</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cnb.cnbConsole-pysrc.html#CNBConsole._saveInstance">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cnb.cnbConsole.CNBConsole-class.html#_loadInstance" class="summary-sig-name" onclick="show_private();">_loadInstance</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">cmd</span>,
+        <span class="summary-sig-arg">args</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cnb.cnbConsole-pysrc.html#CNBConsole._loadInstance">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cnb.cnbConsole.CNBConsole-class.html#_setInstance" class="summary-sig-name" onclick="show_private();">_setInstance</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">cmd</span>,
+        <span class="summary-sig-arg">args</span>)</span><br />
+      Set an instance of the bot to manage it Usage: setInstance 
+      INSTANCE_ID Details:</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cnb.cnbConsole-pysrc.html#CNBConsole._setInstance">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cnb.cnbConsole.CNBConsole-class.html#_listInstances" class="summary-sig-name" onclick="show_private();">_listInstances</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">cmd</span>,
+        <span class="summary-sig-arg">args</span>)</span><br />
+      List instances Usage: listInstances Details: Print a list of 
+      instances and their status</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cnb.cnbConsole-pysrc.html#CNBConsole._listInstances">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cnb.cnbConsole.CNBConsole-class.html#_setVar" class="summary-sig-name" onclick="show_private();">_setVar</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">cmd</span>,
+        <span class="summary-sig-arg">args</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cnb.cnbConsole-pysrc.html#CNBConsole._setVar">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cnb.cnbConsole.CNBConsole-class.html#_startChuck" class="summary-sig-name" onclick="show_private();">_startChuck</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">cmd</span>,
+        <span class="summary-sig-arg">args</span>)</span><br />
+      Start CNB Usage: start Details: Start this program</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cnb.cnbConsole-pysrc.html#CNBConsole._startChuck">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cnb.cnbConsole.CNBConsole-class.html#_stopChuck" class="summary-sig-name" onclick="show_private();">_stopChuck</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">cmd</span>,
+        <span class="summary-sig-arg">args</span>)</span><br />
+      Stop CNB Usage: stop Details: Stop this program (become idle)</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cnb.cnbConsole-pysrc.html#CNBConsole._stopChuck">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cnb.cnbConsole.CNBConsole-class.html#_exitChuck" class="summary-sig-name" onclick="show_private();">_exitChuck</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">cmd</span>,
+        <span class="summary-sig-arg">args</span>)</span><br />
+      Exit the console Usage: exit Details: Exit this program</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cnb.cnbConsole-pysrc.html#CNBConsole._exitChuck">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cnb.cnbConsole.CNBConsole-class.html#_forceExitChuck" class="summary-sig-name" onclick="show_private();">_forceExitChuck</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">cmd</span>,
+        <span class="summary-sig-arg">args</span>)</span><br />
+      Exit the console Usage: exit Details: Exit this program</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cnb.cnbConsole-pysrc.html#CNBConsole._forceExitChuck">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cnb.cnbConsole.CNBConsole-class.html#_sayMUCChuck" class="summary-sig-name" onclick="show_private();">_sayMUCChuck</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">cmd</span>,
+        <span class="summary-sig-arg">args</span>)</span><br />
+      Make ChuckNorris say something to a Multi-User Chat...</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cnb.cnbConsole-pysrc.html#CNBConsole._sayMUCChuck">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cnb.cnbConsole.CNBConsole-class.html#_joinRoomChuck" class="summary-sig-name" onclick="show_private();">_joinRoomChuck</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">cmd</span>,
+        <span class="summary-sig-arg">args</span>)</span><br />
+      Make ChuckNorris join a room Usage: join ROOM Details: Make the bot 
+      join a room so he can talk with people</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cnb.cnbConsole-pysrc.html#CNBConsole._joinRoomChuck">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cnb.cnbConsole.CNBConsole-class.html#_autoJoinRoomChuck" class="summary-sig-name" onclick="show_private();">_autoJoinRoomChuck</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">cmd</span>,
+        <span class="summary-sig-arg">args</span>)</span><br />
+      Make ChuckNorris join a room automaticaly Usage: autojoin Details: 
+      Make the bot automaticaly join a room on invitation so he can talk 
+      with people</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cnb.cnbConsole-pysrc.html#CNBConsole._autoJoinRoomChuck">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cnb.cnbConsole.CNBConsole-class.html#_verboseChuck" class="summary-sig-name" onclick="show_private();">_verboseChuck</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">cmd</span>,
+        <span class="summary-sig-arg">args</span>)</span><br />
+      Change the loglevel of the bot Usage: verbose on|off Details: Change 
+      the loglevel between logging.INFO (off) and logging.DEBUG (on)</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cnb.cnbConsole-pysrc.html#CNBConsole._verboseChuck">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cnb.cnbConsole.CNBConsole-class.html#_contactChuck" class="summary-sig-name" onclick="show_private();">_contactChuck</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">cmd</span>,
+        <span class="summary-sig-arg">args</span>)</span><br />
+      View/update contact list Usage: contact list|update Details:</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cnb.cnbConsole-pysrc.html#CNBConsole._contactChuck">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cnb.cnbConsole.CNBConsole-class.html#_exitXMPP" class="summary-sig-name" onclick="show_private();">_exitXMPP</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">cmd</span>,
+        <span class="summary-sig-arg">args</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cnb.cnbConsole-pysrc.html#CNBConsole._exitXMPP">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cnb.cnbConsole.CNBConsole-class.html#_sayXmppChuck" class="summary-sig-name" onclick="show_private();">_sayXmppChuck</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">cmd</span>,
+        <span class="summary-sig-arg">args</span>)</span><br />
+      Make ChuckNorris say something to someone...</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cnb.cnbConsole-pysrc.html#CNBConsole._sayXmppChuck">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cnb.cnbConsole.CNBConsole-class.html#_joinXmppChuck" class="summary-sig-name" onclick="show_private();">_joinXmppChuck</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">cmd</span>,
+        <span class="summary-sig-arg">args</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cnb.cnbConsole-pysrc.html#CNBConsole._joinXmppChuck">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cnb.cnbConsole.CNBConsole-class.html#_contactXmppChuck" class="summary-sig-name" onclick="show_private();">_contactXmppChuck</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">cmd</span>,
+        <span class="summary-sig-arg">args</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cnb.cnbConsole-pysrc.html#CNBConsole._contactXmppChuck">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cnb.cnbConsole.CNBConsole-class.html#_help" class="summary-sig-name" onclick="show_private();">_help</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">cmd</span>,
+        <span class="summary-sig-arg">args</span>)</span><br />
+      Returns a help string listing available options Usage: help 
+      [commands] Details:</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cnb.cnbConsole-pysrc.html#CNBConsole._help">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cnb.cnbConsole.CNBConsole-class.html#_exitIRC" class="summary-sig-name" onclick="show_private();">_exitIRC</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">cmd</span>,
+        <span class="summary-sig-arg">args</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cnb.cnbConsole-pysrc.html#CNBConsole._exitIRC">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>threading.Thread</code></b>:
+      <code>__repr__</code>,
+      <code>getName</code>,
+      <code>isAlive</code>,
+      <code>isDaemon</code>,
+      <code>is_alive</code>,
+      <code>join</code>,
+      <code>setDaemon</code>,
+      <code>setName</code>,
+      <code>start</code>
+      </p>
+    <div class="private">    <p class="indent-wrapped-lines"><b>Inherited from <code>threading.Thread</code></b> (private):
+      <code>_set_daemon</code>,
+      <code>_set_ident</code>
+      </p></div>
+    <div class="private">    <p class="indent-wrapped-lines"><b>Inherited from <code>threading._Verbose</code></b> (private):
+      <code>_note</code>
+      </p></div>
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__delattr__</code>,
+      <code>__format__</code>,
+      <code>__getattribute__</code>,
+      <code>__hash__</code>,
+      <code>__new__</code>,
+      <code>__reduce__</code>,
+      <code>__reduce_ex__</code>,
+      <code>__setattr__</code>,
+      <code>__sizeof__</code>,
+      <code>__str__</code>,
+      <code>__subclasshook__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS VARIABLES ==================== -->
+<a name="section-ClassVariables"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Class Variables</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-ClassVariables"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="cnb.cnbConsole.CNBConsole-class.html#MSG_HELP_TAIL" class="summary-name">MSG_HELP_TAIL</a> = <code title="'Type help &lt;command name&gt; to get more info about that specific command\
+.'"><code class="variable-quote">'</code><code class="variable-string">Type help &lt;command name&gt; to get more info abo</code><code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="MSG_HELP_UNDEFINED_COMMAND"></a><span class="summary-name">MSG_HELP_UNDEFINED_COMMAND</span> = <code title="'That command is not defined.'"><code class="variable-quote">'</code><code class="variable-string">That command is not defined.</code><code class="variable-quote">'</code></code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="MSG_TOP_OF_HELP"></a><span class="summary-name">MSG_TOP_OF_HELP</span> = <code title="''"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="MSG_BOTTOM_OF_HELP"></a><span class="summary-name">MSG_BOTTOM_OF_HELP</span> = <code title="''"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></code>
+    </td>
+  </tr>
+</table>
+<!-- ==================== INSTANCE VARIABLES ==================== -->
+<a name="section-InstanceVariables"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Instance Variables</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-InstanceVariables"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">hashtable</span>
+    </td><td class="summary">
+        <a name="_cmds"></a><span class="summary-name">_cmds</span> = <code title="{}"><code class="variable-group">{</code><code class="variable-group">}</code></code><br />
+      This hash table contains the list of commands the console can handle 
+      in main mode
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">hashtable</span>
+    </td><td class="summary">
+        <a name="_cmdsXmpp"></a><span class="summary-name">_cmdsXmpp</span> = <code title="{}"><code class="variable-group">{</code><code class="variable-group">}</code></code><br />
+      This hash table contains the list of commands the console can handle 
+      in XMPP mode
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">hashtable</span>
+    </td><td class="summary">
+        <a name="_cmdsIrc"></a><span class="summary-name">_cmdsIrc</span> = <code title="{}"><code class="variable-group">{</code><code class="variable-group">}</code></code><br />
+      This hash table contains the list of commands the console can handle 
+      in IRC mode
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">List</span>
+    </td><td class="summary">
+        <a name="_conList"></a><span class="summary-name">_conList</span> = <code title="[]"><code class="variable-group">[</code><code class="variable-group">]</code></code><br />
+      This array contains the list of manageable connectors
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">int</span>
+    </td><td class="summary">
+        <a name="_curConId"></a><span class="summary-name">_curConId</span> = <code title="None">None</code><br />
+      This is the currently managed connector ID
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">String</span>
+    </td><td class="summary">
+        <a name="_bState"></a><span class="summary-name">_bState</span> = <code title="'notstarted'"><code class="variable-quote">'</code><code class="variable-string">notstarted</code><code class="variable-quote">'</code></code><br />
+      State of the console
+    </td>
+  </tr>
+</table>
+<!-- ==================== PROPERTIES ==================== -->
+<a name="section-Properties"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Properties</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Properties"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>threading.Thread</code></b>:
+      <code>daemon</code>,
+      <code>ident</code>,
+      <code>name</code>
+      </p>
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__class__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== METHOD DETAILS ==================== -->
+<a name="section-MethodDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Method Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-MethodDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="__init__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>)</span>
+    <br /><em class="fname">(Constructor)</em>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cnb.cnbConsole-pysrc.html#CNBConsole.__init__">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>x.__init__(...) initializes x; see x.__class__.__doc__ for 
+  signature</p>
+  <dl class="fields">
+    <dt>Overrides:
+        object.__init__
+        <dd><em class="note">(inherited documentation)</em></dd>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="_configLogs"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_configLogs</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">sFile</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cnb.cnbConsole-pysrc.html#CNBConsole._configLogs">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>This method configure the logs for this object.</p>
+  <p>Two handlers are used, one to print to stdout and one to log in a 
+  file. For file, TimedRotatingFileHandler is used to rotate the log file 
+  every day.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>sFile</code></strong> (string) - Log File</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="run"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">run</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cnb.cnbConsole-pysrc.html#CNBConsole.run">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Console main loop</p>
+  <dl class="fields">
+    <dt>Overrides:
+        threading.Thread.run
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="killConsole"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">killConsole</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cnb.cnbConsole-pysrc.html#CNBConsole.killConsole">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>This method kill the console. Note: kill = the thread is terminated. 
+  This may close the program.</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="_createInstance"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_createInstance</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">cmd</span>,
+        <span class="sig-arg">args</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cnb.cnbConsole-pysrc.html#CNBConsole._createInstance">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  
+  <dl class="fields">
+    <dt>Decorators:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code>@consolecmd(name= CMD_PREFIX+ "createInstance")</code></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="_deleteInstance"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_deleteInstance</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">cmd</span>,
+        <span class="sig-arg">args</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cnb.cnbConsole-pysrc.html#CNBConsole._deleteInstance">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  
+  <dl class="fields">
+    <dt>Decorators:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code>@consolecmd(name= CMD_PREFIX+ "deleteInstance")</code></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="_startInstance"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_startInstance</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">cmd</span>,
+        <span class="sig-arg">args</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cnb.cnbConsole-pysrc.html#CNBConsole._startInstance">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Start an instance of the bot Usage: startInstance INSTANCE_ID 
+  Details:</p>
+  <dl class="fields">
+    <dt>Decorators:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code>@consolecmd(name= CMD_PREFIX+ "startInstance")</code></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="_stopInstance"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_stopInstance</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">cmd</span>,
+        <span class="sig-arg">args</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cnb.cnbConsole-pysrc.html#CNBConsole._stopInstance">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Stop an instance of the bot Usage: stopInstance INSTANCE_ID 
+  Details:</p>
+  <dl class="fields">
+    <dt>Decorators:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code>@consolecmd(name= CMD_PREFIX+ "stopInstance")</code></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="_saveInstance"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_saveInstance</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">cmd</span>,
+        <span class="sig-arg">args</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cnb.cnbConsole-pysrc.html#CNBConsole._saveInstance">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  
+  <dl class="fields">
+    <dt>Decorators:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code>@consolecmd(name= CMD_PREFIX+ "saveInstance")</code></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="_loadInstance"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_loadInstance</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">cmd</span>,
+        <span class="sig-arg">args</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cnb.cnbConsole-pysrc.html#CNBConsole._loadInstance">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  
+  <dl class="fields">
+    <dt>Decorators:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code>@consolecmd(name= CMD_PREFIX+ "loadInstance")</code></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="_setInstance"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_setInstance</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">cmd</span>,
+        <span class="sig-arg">args</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cnb.cnbConsole-pysrc.html#CNBConsole._setInstance">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Set an instance of the bot to manage it Usage: setInstance INSTANCE_ID
+  Details:</p>
+  <dl class="fields">
+    <dt>Decorators:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code>@consolecmd(name= CMD_PREFIX+ "setInstance")</code></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="_listInstances"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_listInstances</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">cmd</span>,
+        <span class="sig-arg">args</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cnb.cnbConsole-pysrc.html#CNBConsole._listInstances">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>List instances Usage: listInstances Details: Print a list of instances
+  and their status</p>
+  <dl class="fields">
+    <dt>Decorators:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code>@consolecmd(name= CMD_PREFIX+ "listInstances")</code></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="_setVar"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_setVar</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">cmd</span>,
+        <span class="sig-arg">args</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cnb.cnbConsole-pysrc.html#CNBConsole._setVar">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  
+  <dl class="fields">
+    <dt>Decorators:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code>@consolecmd(name= CMD_PREFIX+ "setVar")</code></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="_startChuck"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_startChuck</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">cmd</span>,
+        <span class="sig-arg">args</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cnb.cnbConsole-pysrc.html#CNBConsole._startChuck">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Start CNB Usage: start Details: Start this program</p>
+  <dl class="fields">
+    <dt>Decorators:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code>@consolecmd(name= CMD_PREFIX+ "start")</code></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="_stopChuck"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_stopChuck</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">cmd</span>,
+        <span class="sig-arg">args</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cnb.cnbConsole-pysrc.html#CNBConsole._stopChuck">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Stop CNB Usage: stop Details: Stop this program (become idle)</p>
+  <dl class="fields">
+    <dt>Decorators:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code>@consolecmd(name= CMD_PREFIX+ "stop")</code></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="_exitChuck"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_exitChuck</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">cmd</span>,
+        <span class="sig-arg">args</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cnb.cnbConsole-pysrc.html#CNBConsole._exitChuck">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Exit the console Usage: exit Details: Exit this program</p>
+  <dl class="fields">
+    <dt>Decorators:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code>@consolecmd(name= CMD_PREFIX+ "exit")</code></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="_forceExitChuck"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_forceExitChuck</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">cmd</span>,
+        <span class="sig-arg">args</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cnb.cnbConsole-pysrc.html#CNBConsole._forceExitChuck">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Exit the console Usage: exit Details: Exit this program</p>
+  <dl class="fields">
+    <dt>Decorators:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code>@consolecmd(name= CMD_PREFIX+ "forceexit")</code></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="_sayMUCChuck"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_sayMUCChuck</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">cmd</span>,
+        <span class="sig-arg">args</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cnb.cnbConsole-pysrc.html#CNBConsole._sayMUCChuck">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Make ChuckNorris say something to a Multi-User Chat
+Usage: say USER|ID MESSAGE
+Details: Make the bot say something to a muc
+  USER: Email address of the user
+  ID: Auto generated id starting with a '$'
+  MESSAGE: Anything
+
+</pre>
+  <dl class="fields">
+    <dt>Decorators:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code>@consolecmd(name= CMD_PREFIX+ "saymuc")</code></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="_joinRoomChuck"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_joinRoomChuck</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">cmd</span>,
+        <span class="sig-arg">args</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cnb.cnbConsole-pysrc.html#CNBConsole._joinRoomChuck">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Make ChuckNorris join a room Usage: join ROOM Details: Make the bot 
+  join a room so he can talk with people</p>
+  <dl class="fields">
+    <dt>Decorators:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code>@consolecmd(name= CMD_PREFIX+ "join")</code></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="_autoJoinRoomChuck"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_autoJoinRoomChuck</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">cmd</span>,
+        <span class="sig-arg">args</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cnb.cnbConsole-pysrc.html#CNBConsole._autoJoinRoomChuck">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Make ChuckNorris join a room automaticaly Usage: autojoin Details: 
+  Make the bot automaticaly join a room on invitation so he can talk with 
+  people</p>
+  <dl class="fields">
+    <dt>Decorators:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code>@consolecmd(name= CMD_PREFIX+ "aujoin")</code></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="_verboseChuck"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_verboseChuck</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">cmd</span>,
+        <span class="sig-arg">args</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cnb.cnbConsole-pysrc.html#CNBConsole._verboseChuck">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Change the loglevel of the bot Usage: verbose on|off Details: Change 
+  the loglevel between logging.INFO (off) and logging.DEBUG (on)</p>
+  <dl class="fields">
+    <dt>Decorators:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code>@consolecmd(name= CMD_PREFIX+ "verbose")</code></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="_contactChuck"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_contactChuck</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">cmd</span>,
+        <span class="sig-arg">args</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cnb.cnbConsole-pysrc.html#CNBConsole._contactChuck">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>View/update contact list Usage: contact list|update Details:</p>
+  <ul>
+    <li>
+      list: Show a list of constacts with their IDs
+    </li>
+    <li>
+      update: Get the result of self.conn.Roster.getRoster() and update 
+      self.roster &amp; self.contacts arrays
+    </li>
+  </ul>
+  <dl class="fields">
+    <dt>Decorators:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code>@consolecmd(name= CMD_PREFIX+ "contact")</code></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="_exitXMPP"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_exitXMPP</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">cmd</span>,
+        <span class="sig-arg">args</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cnb.cnbConsole-pysrc.html#CNBConsole._exitXMPP">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  
+  <dl class="fields">
+    <dt>Decorators:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code>@consolecmd(name= CMD_PREFIX+ 'exit', hidden= True, type= 'xmpp')</code></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="_sayXmppChuck"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_sayXmppChuck</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">cmd</span>,
+        <span class="sig-arg">args</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cnb.cnbConsole-pysrc.html#CNBConsole._sayXmppChuck">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Make ChuckNorris say something to someone
+Usage: say USER|ID MESSAGE
+Details: Make the bot say something to someone
+  USER: Email address of the user
+  ID: Auto generated id starting with a '$'
+  MESSAGE: Anything
+
+</pre>
+  <dl class="fields">
+    <dt>Decorators:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code>@consolecmd(name= CMD_PREFIX+ "say", type= 'xmpp')</code></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="_joinXmppChuck"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_joinXmppChuck</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">cmd</span>,
+        <span class="sig-arg">args</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cnb.cnbConsole-pysrc.html#CNBConsole._joinXmppChuck">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  
+  <dl class="fields">
+    <dt>Decorators:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code>@consolecmd(name= CMD_PREFIX+ "join", type= 'xmpp')</code></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="_contactXmppChuck"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_contactXmppChuck</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">cmd</span>,
+        <span class="sig-arg">args</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cnb.cnbConsole-pysrc.html#CNBConsole._contactXmppChuck">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  
+  <dl class="fields">
+    <dt>Decorators:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code>@consolecmd(name= CMD_PREFIX+ "contact", type= 'xmpp')</code></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="_help"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_help</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">cmd</span>,
+        <span class="sig-arg">args</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cnb.cnbConsole-pysrc.html#CNBConsole._help">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Returns a help string listing available options Usage: help [commands]
+  Details:</p>
+  <dl class="fields">
+    <dt>Decorators:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code>@consolecmd(name= CMD_PREFIX+ 'help', type= 'irc')</code></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="_exitIRC"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_exitIRC</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">cmd</span>,
+        <span class="sig-arg">args</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cnb.cnbConsole-pysrc.html#CNBConsole._exitIRC">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  
+  <dl class="fields">
+    <dt>Decorators:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code>@consolecmd(name= CMD_PREFIX+ 'exit', hidden= True, type= 'irc')</code></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== CLASS VARIABLE DETAILS ==================== -->
+<a name="section-ClassVariableDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Class Variable Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-ClassVariableDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="MSG_HELP_TAIL"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">MSG_HELP_TAIL</h3>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+<code class="variable-quote">'</code><code class="variable-string">Type help &lt;command name&gt; to get more info about that specific command</code><span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
+<code class="variable-string">.</code><code class="variable-quote">'</code>
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="cnb-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Wed Mar 27 22:22:30 2013
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>
