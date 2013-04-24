@@ -46,11 +46,12 @@ First, go to */etc/cnb/ folder and copy the *cnb.conf.default* to *cnb.conf*. Th
 file. Most of this should not have to change, except for the **connectors** and 
 **smtp** sections. Here is an example of a *cnb.conf* file. Simply fill the
 <...> fields.
-| [global]
-| #root-dir = <string>  (dynamically added)
-| #bin-dir = <string>  (dynamically added)
-| #config-dir = <string> (dynamically added)
-| #log-dir = <string>  (dynamically added)
+
+    | [global]
+    | #root-dir = <string>  (dynamically added)
+    | #bin-dir = <string>  (dynamically added)
+    | #config-dir = <string> (dynamically added)
+    | #log-dir = <string>  (dynamically added)
 | #tp-dir = <string>  (dynamically added)
 | #pid-file = <string>  (dynamically added if started as a daemon)
 | version = 0.20
@@ -75,6 +76,7 @@ Setting up a connection config file
 
 The bot will import files specified in *cnb.conf* file. Here's
 the syntax of an IRC connection file. Again, simply fill the <...> fields. 
+
 | [bot]
 | type = irc
 | log-file = freenode.irc.log
@@ -134,7 +136,7 @@ Some principle
 Bot Hardening
 -----------------
 
-By default, running Chuck as a service will run it as the user "chuck". It 
+By default, running Chuck as a service will run it as the user "cnb". It 
 is always a good idea to run the bot as a user with limited privileges.
 
 Disabling modules can also reduce attack vectors. Disable modules by removing 
@@ -144,7 +146,7 @@ symbolic links in the cnb/modEnabled folder (apache style).
 Contributors
 ============
 This bot was created by Martin Dubé as a Hackfest Project (See:
-<http://hackfest.ca>). Martin is still the main collaborator and reviser but 
+http://hackfest.ca). Martin is still the main collaborator and reviser but 
 a lot of ideas came from Hackfest crew and community.
 
 For any comment, questions, insult: martin d0t dube at hackfest d0t com. 
