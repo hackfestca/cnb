@@ -46,24 +46,24 @@ First, go to */etc/cnb/ folder and copy the *cnb.conf.default* to *cnb.conf*. Th
 file. Most of this should not have to change, except for the **connectors** and 
 **smtp** sections. Here is an example of a *cnb.conf* file. Simply fill the
 <...> fields.
-    [global]
-    #root-dir = <string>  (dynamically added)
-    #bin-dir = <string>  (dynamically added)
-    #config-dir = <string> (dynamically added)
-    #log-dir = <string>  (dynamically added)
-    #tp-dir = <string>  (dynamically added)
-    #pid-file = <string>  (dynamically added if started as a daemon)
-    version = 0.20
-    log-format = %(asctime)s - %(name)s - %(levelname)s - %(message)s
-    
-    [connectors]
-    auto = [freenode.irc.conf, gmail.xmpp.conf]
-    
-    [smtp]
-    smtp-user = <an email address>
-    smtp-pass = <a password>
-    smtp-host = <a smtp server>
-    smtp-port = <a smtp port>
+|    [global]
+|    #root-dir = <string>  (dynamically added)
+|    #bin-dir = <string>  (dynamically added)
+|    #config-dir = <string> (dynamically added)
+|    #log-dir = <string>  (dynamically added)
+|    #tp-dir = <string>  (dynamically added)
+|    #pid-file = <string>  (dynamically added if started as a daemon)
+|    version = 0.20
+|    log-format = %(asctime)s - %(name)s - %(levelname)s - %(message)s
+|    
+|    [connectors]
+|    auto = [freenode.irc.conf, gmail.xmpp.conf]
+|    
+|    [smtp]
+|    smtp-user = <an email address>
+|    smtp-pass = <a password>
+|    smtp-host = <a smtp server>
+|    smtp-port = <a smtp port>
 
 As you can see in the **connectors** section, there are two more config files. 
 These filse contain all necessary information to connect to a chat 
@@ -75,37 +75,37 @@ Setting up a connection config file
 
 The bot will import files specified in *cnb.conf* file. Here's
 the syntax of an IRC connection file. Again, simply fill the <...> fields. 
-    [bot]
-    type = irc
-    log-file = freenode.irc.log
-    username = <an irc username>
-    password = <a password>
-    server = <an irc server>
-    channels = [<a list of chan to connect (Syntax: chan:[password],...)>]
-    auto-join = 1
-    auto-start = 1
-    auto-reconnect = 1
-    verbose = 0
-    admins = [<a list of admins (Syntax: nick1,...). WARNING: THIS IS NOT SECURE>]
+|    [bot]
+|    type = irc
+|    log-file = freenode.irc.log
+|    username = <an irc username>
+|    password = <a password>
+|    server = <an irc server>
+|    channels = [<a list of chan to connect (Syntax: chan:[password],...)>]
+|    auto-join = 1
+|    auto-start = 1
+|    auto-reconnect = 1
+|    verbose = 0
+|    admins = [<a list of admins (Syntax: nick1,...). WARNING: THIS IS NOT SECURE>]
 
 And this is a XMPP connection file
-    [bot]
-    #id = <int> (dynamically added)
-    #config-file = <string> (dynamically added)
-    #monday-suck-room = <string> (dynamically added)
-    type = xmpp|xmpp-gtalk  //xmpp for custom xmpp, xmpp-gtalk for gmail chat
-    log-file = gmail.xmpp.log
-    username = <insert username here>
-    password = <insert password here>
-    server = <overwrite only if the server can't be resolved from SRV lookup.
-    See <http://tools.ietf.org/html/rfc6120#section-3.2.1> >
-    rooms = [<a list of default rooms to join (Syntax: room1,...)>]
-    nickname = <insert nick name here>
-    auto-join = 1
-    auto-start = 1
-    auto-reconnect = 1
-    verbose = 0
-    admins = [<a list of admins (Syntax: email1,...)>]
+|    [bot]
+|    #id = <int> (dynamically added)
+|    #config-file = <string> (dynamically added)
+|    #monday-suck-room = <string> (dynamically added)
+|    type = xmpp|xmpp-gtalk  //xmpp for custom xmpp, xmpp-gtalk for gmail chat
+|    log-file = gmail.xmpp.log
+|    username = <insert username here>
+|    password = <insert password here>
+|    server = <overwrite only if the server can't be resolved from SRV lookup.
+|    See <http://tools.ietf.org/html/rfc6120#section-3.2.1> >
+|    rooms = [<a list of default rooms to join (Syntax: room1,...)>]
+|    nickname = <insert nick name here>
+|    auto-join = 1
+|    auto-start = 1
+|    auto-reconnect = 1
+|    verbose = 0
+|    admins = [<a list of admins (Syntax: email1,...)>]
 
 
 Running the bot
@@ -153,6 +153,7 @@ Thanks also to
 --------------
 Authors and maintainers of the following projects, which make this bot fun and
 useful:
+
 * findmyhash
 * nmap
 * eliza
