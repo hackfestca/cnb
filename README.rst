@@ -42,7 +42,7 @@ How to use
 Setting up the main config file
 -------------------------------
 
-First, go to */etc/cnb/ folder and copy the *cnb.conf.default* to *cnb.conf*. This is the main config
+First, go to */etc/cnba*/ folder and copy the *cnb.conf.default* to *cnb.conf*. This is the main config
 file. Most of this should not have to change, except for the **connectors** and 
 **smtp** sections. Here is an example of a *cnb.conf* file. Simply fill the
 <...> fields.
@@ -135,6 +135,7 @@ Some principle
 * Set up admin list correctly
     * You don't want anybody to run nmaps from your home?
 
+
 Bot Hardening
 -----------------
 
@@ -143,6 +144,15 @@ is always a good idea to run the bot as a user with limited privileges.
 
 Disabling modules can also reduce attack vectors. Disable modules by removing 
 symbolic links in the cnb/modEnabled folder (apache style).
+
+
+Docs
+====
+
+If you are interested to know more about the code, the documentation is in 
+*docs/* folder, generated with epydoc.
+
+It is also accessible here: http://htmlpreview.github.io/?https://github.com/hackfestca/cnb/blob/master/docs/index.html
 
 
 Contributors
