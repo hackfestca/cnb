@@ -1,0 +1,1 @@
+../modAvailable/CNBMMAutoJoin.py

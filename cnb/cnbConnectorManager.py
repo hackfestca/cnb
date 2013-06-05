@@ -230,7 +230,7 @@ class CNBConnectorManager():
         if protocol == 'irc':
             c.joinChan(chan)
 
-        return 'OK'
+        return ''
 
     def inviteChan(self,conId,users,chan):
         """
@@ -249,7 +249,7 @@ class CNBConnectorManager():
             #
             pass
 
-        return 'OK'
+        return ''
 
     def sendMsg(self,conId,dest,msg):
         """
@@ -270,7 +270,7 @@ class CNBConnectorManager():
         if protocol == 'irc':
             c.sendMsg(dest,msg)
 
-        return 'OK'
+        return ''
 
     def sendFile(self,conId,dest,f):
         """
@@ -288,7 +288,7 @@ class CNBConnectorManager():
         if protocol.startswith('xmpp'):
             c.sendFile(dest, f)
 
-        return 'OK'
+        return ''
 
     def getConfigFromId(self,conId):
         """

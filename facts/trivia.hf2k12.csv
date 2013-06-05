@@ -1,0 +1,32 @@
+0,"ceci est un test","[reponse,answer]",flag,1,1
+1,"..., Hoagie & Laverne?  Full name","Bernoulli",a5f2aedd194298669003,1,3
+3,An obscene word started the feud between LoD and MoD.  What's the second nickname of the hacker it was supposedly directed to?,netw1z,01b85c8879162efdce17,2,5
+4,"Before browsers even existed, and when people got fed up with FTP to remotely access files, what is/was the master search engine for that protocol?",Veronica,6c9cd736e908b6249b2e,1,3
+5,"Forensic minitrack @ http://scoreboard.hf/forensic-minitrack (no time limit, submit the flag on the scoreboard!)",b2xkIHRpbWVzIHdlcmUgdGhlIGJlc3QuLi5yZW1lbWJlciBCQVNJQz8=,"Submit that flag on the scoreboard.",5,1
+6,From which version is the Linux kernel supporting multiple ARM SoCs?,"3.7",b594166b7e1f9c3bb5a3,1,2
+7,How are/were bulgarians calling the computer virus playing a US patriotic song at 5 PM?,TP44VIR,e650d6b46a9dd3f826ea,2,6
+8,How much power did you need in the OG Myst to access mechanical age?,"[59 volts,59V, 59 V]",3b0d1ad50f478b10bc87,1,4
+9,"In Matrix II, what is the model of the cellphone used?",SPH-N270,10851a8cdd4d09c9620c,1,3
+10,"In Tom Clancy's book, there's a mention of videogames Jack Ryan used to play that are compared to the intelligence analysis business, Ultima and...?",Zork,47991173f726b4cb22b3,2,4
+11,"On 46.787183,-71.278664 @ 1257562800, what happened?","[hackfest,Hackfest Reloaded]",fc3347fe21bdcc648b62,3,12
+12,"On the RPi model B, what is the power limit per USB port by the way of poly fuses?",140mA,7256b982782a4e4bd89d,1,3
+14,"That game released in 1991 was one of the rare times Microsoft publicized some source  code and the main weapon is a banana bomb.  What was the MSDOS command to run it, supposing everything is in the actual directory?","[qbasic /run gorilla.bas,qbasic.exe /run gorilla.bas]",b5d19b20cf5cfc32def4,2,5
+15,That meta search engine was created in 1994 to study the semantic structure on the Web.,MetaCrawler,559b28319d1d8a927e17,1,3
+16,What 'recently found' technique was used in the ariel.sdsc.edu hack of Xmas 1994 that has been previously conceptualized by Robert Morris?,IP spoofing,c33347311734db1408bc,2,7
+17,What feature helps to prevent the use of rainbow tables?,"[salt,salting]",8dabe1bece1029bb02ca,1,2
+18,What is the angry sysadmin story reference?  Another usenet native.,BOFH,dc12c6a93e40f212b114,1,3
+19,What is the nickname of the reseller of the data Segvec stole?  Real name initials are MY,Maksik,51bb36aadc46cffd5d99,1,4
+20,What mythology is the term used to designate the program designed to counter Asherah from?,sumerian,f64af64d7a171e37e394,3,7
+21,What service gave access to anybody else's account for some time in 2001 only by crafting an URL?,Hotmail,6841731dc87c52742a53,2,4
+22,What was the name of the major pay-to-surf program back in the days?  It could be easily fooled with click automation and mouse movement.,AllAdvantage,6621832e1438133381d4,1,3
+23,What's the acronym for that antivirus software that was founded in 1988 and was sold to Norman to be merged with their product?,TBAV,37354b1fa6adff13c5ba,1,3
+24,"What's the acronym'd name for the version of Android that finally allowed automatic big file transfer over BT auto-sync via NFC, Knowing that NFC only handles small file transfers?",JB,d6a5bde009349085a419,1,2
+25,What's the name of the animal coming in the software suite that included Dr Sbaitso?,Prody,386f9d88f86add929b50,1,4
+26,"What's the name of the attack on a webapp allowing the attacker to reset a password, considering there is no vulnerability in the said webapp?",CSRF,50ce541897704cb8f97c,2,4
+27,What's the root password used over SSH for 10.2.2.2?,Z1ON101,a31583182bae3967e4f2,1,3
+28,Which hash function offers "memory-hard" problems to counteract cracking?,scrypt,9f1fdae63e1ba62cb769,3,7
+29,Which version of windows was specifically aimed at the chinese market?,"[Windows 3.12,3.12]",be04091f302d5d463947,1,4
+30,Who asked : "BYX HVYFN HDDJKI H UMX OYCM OMIH VTNMA YU CHO JK TYFC QYOLFNMC?","[Dr. Sbaitso,Dr Sbaitso,Doctor Sbaitso]",7f136656aab79ed4b996,3,30
+31,Who's the author of the text used as constant phrase in sun-md5 hashes?,Shakespeare,2c435a58fe5e303056ec,3,5
+32,shimanigashi # ch. in 33101737?,20,36eb3df6b725280d2b98,3,15
+33,"what is the resulting VMSPurdy hash of the password adm1nr00t for the user SUSR with the salt 1612 in hex, in crypt() format?",$VMS3$16126C4984C68BFD1D27SUSR,8871429c64c19e19132a,4,30

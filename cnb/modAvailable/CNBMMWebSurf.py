@@ -2,10 +2,9 @@
 # -*- coding: utf-8 -*-
 
 '''
-CNB Matrix Module
+CNB Matrix Module - websurf
 '''
 
-# System imports
 import os
 import re
 import sys
@@ -20,37 +19,20 @@ class CNBMMWebSurf(CNBMatrixModule):
 
     """
 
-    # Bot vars
     name = 'surf'
     usage = 'surf URL'
     desc = 'Cmd used to dump web pages as text\
              URL: http://...'
-    aliases = []
+    aliases = ['websurf']
 
     LYNX_CMD = ['lynx', '--dump']
 
-    #
-    # Function: __init__()
-    # Description: 
-    #
     def __init__(self,log):
         CNBMatrixModule.__init__(self,log)
         
-
-    #
-    # Function: __del__()
-    # Description: 
-    #
     def __del__(self):
         pass
 
-####################
-# Public Functions #
-####################
-    #
-    # Function: process(oMsg)
-    # Description: 
-    #
     def processCmd(self, oMsg):
 
         result = ''

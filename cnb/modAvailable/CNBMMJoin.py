@@ -5,7 +5,6 @@
 CNB Matrix Module - join
 '''
 
-# System imports
 from cnb.cnbManager import CNBManager
 from cnb.cnbMatrixModule import CNBMatrixModule
 
@@ -15,11 +14,10 @@ class CNBMMJoin(CNBMatrixModule):
     """
 
     name = 'join'
-    usage = 'join <CHAN|ROOM>'
+    usage = 'join CHAN|ROOM'
     desc = 'This cmd let Chuck join a chan/room'
     aliases = []
     isAdmin = True
-
 
     def __init__(self,log):
         CNBMatrixModule.__init__(self,log)

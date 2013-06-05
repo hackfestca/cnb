@@ -7,9 +7,11 @@ Chuck Norris Bot Matrix (his brain)
 
 # System imports
 import os
+import sys
 import logging
-from logging.handlers import TimedRotatingFileHandler
 import modEnabled
+import collections
+from logging.handlers import TimedRotatingFileHandler
 from singleton import Singleton
 from cnbConfig import CNBConfig
 from cnbManager import CNBManager
@@ -105,7 +107,7 @@ class CNBMatrix():
         oMod = self.getModuleFromCmd(oMsg.cmd)
         if oMod:
             # check for allowed users
-            if len(oMod.users) == 0 or (len(oMod.users) > 0 and oMsg.domain in oMod.users and oMsg.username in oMod.users[oMsg.domain]):
+            if self.isAllowed(oMod.users, oMsg.username, oMsg.domain):
 
                 # check for admin modules
                 if not oMod.isAdmin or (oMod.isAdmin and oMsg.username in aAdminUsers):
@@ -150,22 +152,28 @@ class CNBMatrix():
         dirList = os.listdir(modDir)
         for fname in dirList:
             if fname != '..' and fname[0] != '.' and fname[:8] != '__init__' and fname[-3::] != 'pyc':
-                sClass = fname.split('.')[0]
                 try:
-                    oMod = __import__(self.MODULE_FROM + '.' + sClass, None, None, [self.MODULE_FROM])
-                    cClass = getattr(oMod,sClass)
-                    oMatrixModule = cClass(self.log)
-                    self.registerMod(oMatrixModule)
+                    self.registerMod(fname)
                 except Exception, e:
-                    self.log.error('Could not register "' + sClass + '"')
+                    self.log.error('Could not register "' + fname + '"')
                     self.log.exception(e)
 
-    def registerMod(self, oMatrixModule):
+    def registerMod(self, modFileName):
         """
-        This method enable a single module
+        This method register a single module
         @param oMatrixModule: Matrix module to import
-        @type oMatrixModule: CNBMatrixModule
+        @type modFileName: string
         """
+        sClass = modFileName.split('.')[0]
+        try:
+            oMod = __import__(self.MODULE_FROM + '.' + sClass, None, None, [self.MODULE_FROM])
+        except ImportError, e:
+            self.log.info('Failed to register module')
+            self.log.exception(e)
+            return 'Failed to register module'
+        cClass = getattr(oMod,sClass)
+        oMatrixModule = cClass(self.log)
+        oMatrixModule.fileName = modFileName
         self._mods[oMatrixModule.name] = oMatrixModule
 
         # Bind process commands modules
@@ -173,7 +181,7 @@ class CNBMatrix():
             self.log.info('Registered a command module: %s' % oMatrixModule.getFullName())
 
             for a in oMatrixModule.getAliases():
-                self.log.info('Registered a command module %s (alias of: %s)' % (a, oMatrixModule.getFullName()))
+                self.log.info('Registered a command module: %s (alias of: %s)' % (a, oMatrixModule.getFullName()))
             
         # Bind pattern modules
         if oMatrixModule.enProcessPattern:
@@ -184,6 +192,49 @@ class CNBMatrix():
         if oMatrixModule.enProcessAlways:
             self._always.append(oMatrixModule.processAlways)
             self.log.info('Registered an "always" module: %s' % oMatrixModule.getFullName())
+
+        return 'Registered successfuly'
+
+    def reloadMod(self, modFileName):
+        sClass = modFileName.split('.')[0]
+        reload(sys.modules[self.MODULE_FROM + '.' + sClass])
+
+    def unregisterMod(self, modFileName):
+        """
+        This method unregister a single module
+        @param oMatrixModule: Matrix module to unload
+        @type modFileName: string
+        """
+        sClass = modFileName.split('.')[0]
+        fullModName = self.MODULE_FROM + '.' + sClass
+        i = self.getModuleIndex(sClass)
+        oMatrixModule = self.getModule(sClass)
+        if i:
+            self.log.info('Unregistered a module: %s' % oMatrixModule.getFullName())
+    
+            if oMatrixModule.enProcessCmd:
+                self.log.info('Unregistered a command module: %s' % oMatrixModule.getFullName())
+            if oMatrixModule.enProcessPattern:
+                i = self.getPatternIndex(sClass)
+                self._pattern.pop(i)
+                self.log.info('Unregistered a pattern module: %s' % oMatrixModule.getFullName())
+            if oMatrixModule.enProcessAlways:
+                i = self.getAlwaysIndex(sClass)
+                self._pattern.pop(i)
+                self.log.info('Unregistered an always module: %s' % oMatrixModule.getFullName())
+   
+            del self._mods[oMatrixModule.name]
+            del oMatrixModule 
+            oMatrixModule = None
+
+            if fullModName in sys.modules:  
+                self.log.info('Deleting sys.modules')
+                del(sys.modules[fullModName]) 
+
+            return 'Unregistered successfuly'
+        else:
+            self.log.info('Failed to unregister module: %s' % modFileName)
+            return 'Module does not exist'
 
     def processXmppMod(self, oMsg):
         """
@@ -248,6 +299,12 @@ class CNBMatrix():
                 return True
         return False
 
+    def isAllowed(self, acl, user, domain):
+        if len(acl) == 0 or (len(acl) > 0 and domain in acl and user in acl[domain]):
+            return True
+        else:
+            return False
+
     def getModule(self,name):
         """
         Get a module from its name
@@ -257,6 +314,45 @@ class CNBMatrix():
         for sName,oMod in self._mods.iteritems():
             if name == oMod.name or name in oMod.aliases:
                 return oMod
+        return None
+
+    def getModuleIndex(self,name):
+        """
+        Get a module index from its name
+        @param name: Name of a module to return
+        @type name: string
+        """
+        i = 0
+        for sName,oMod in self._mods.iteritems():
+            if name == oMod.name or name in oMod.aliases:
+                return i
+            i = i + 1
+        return None
+
+    def getPatternIndex(self,name):
+        """
+        Get a module index from its name
+        @param name: Name of a module to return
+        @type name: string
+        """
+        i = 0
+        for oMod in self._pattern:
+            if name == oMod.name or name in oMod.aliases:
+                return i
+            i = i + 1
+        return None
+
+    def getAlwaysIndex(self,name):
+        """
+        Get a module index from its name
+        @param name: Name of a module to return
+        @type name: string
+        """
+        i = 0
+        for oMod in self._always:
+            if name == oMod.name or name in oMod.aliases:
+                return i
+            i = i + 1
         return None
 
     def getModuleFromCmd(self,cmd):
@@ -279,11 +375,12 @@ class CNBMatrix():
         if len(oMsg.args) == 0:
             helpMsg = self.MSG_HELP_HEAD + "\n"
             for (sModName, oModule) in self._mods.iteritems():
+                desc = str(oModule.desc).split("\n")[0]
                 if not oModule.hidden and oModule.enProcessCmd:
                     if oModule.isAdmin:
-                        helpMsg += "\t %s: \t\t [admin]%s\n" % (sModName, oModule.desc)
+                        helpMsg += "\t %s: \t\t [admin]%s\n" % (sModName, desc)
                     else:
-                        helpMsg += "\t %s: \t\t [ std ]%s\n" % (sModName, oModule.desc)
+                        helpMsg += "\t %s: \t\t [ std ]%s\n" % (sModName, desc)
             helpMsg += self.MSG_HELP_TAIL
         else:
             helpMsg = "Command Help Page: \n"
@@ -303,12 +400,13 @@ class CNBMatrix():
         """
         helpMsg = self.MSG_HELP_HEAD + "\n"
         for (sModName, oModule) in self._mods.iteritems():
+            desc = str(oModule.desc).split("\n")[0]
             if oModule.enProcessCmd:
-                helpMsg += "\t %s: \t\t [  cmd  ]%s\n" % (sModName, oModule.desc)
+                helpMsg += "\t %s: \t\t [  cmd  ]%s\n" % (sModName, desc)
             elif oModule.enProcessPattern:
-                helpMsg += "\t %s: \t\t [pattern]%s\n" % (sModName, oModule.desc)
+                helpMsg += "\t %s: \t\t [pattern]%s\n" % (sModName, desc)
             elif oModule.enProcessAlways:
-                helpMsg += "\t %s: \t\t [always ]%s\n" % (sModName, oModule.desc)
+                helpMsg += "\t %s: \t\t [always ]%s\n" % (sModName, desc)
         helpMsg += self.MSG_HELP_TAIL
         return helpMsg
 

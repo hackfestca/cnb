@@ -5,7 +5,6 @@
 CNB Matrix Module - weather
 '''
 
-# System imports
 import string
 import warnings
 from cnb.cnbMatrixModule import CNBMatrixModule

@@ -5,7 +5,6 @@
 CNB Matrix Module - bot info
 '''
 
-# System imports
 import os
 from datetime import datetime
 from cnb.cnbMatrixModule import CNBMatrixModule
@@ -19,6 +18,7 @@ class CNBMMBotInfo(CNBMatrixModule):
     usage = 'botinfo [arg]'
     desc = 'Print some information about the bot (current datetime, current user, OS, etc.)'
     aliases = []
+    isAdmin = True
 
 
     def __init__(self,log):
@@ -26,7 +26,6 @@ class CNBMMBotInfo(CNBMatrixModule):
 
     def __del__(self):
         pass
-
 
     def processCmd(self, oMsg):
         result = ''

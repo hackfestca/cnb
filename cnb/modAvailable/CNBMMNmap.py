@@ -5,7 +5,6 @@
 CNB Matrix Module - nmap
 '''
 
-# System imports
 import subprocess
 from copy import copy
 from time import sleep, strftime
@@ -15,10 +14,11 @@ from cnb.cnbMatrixModule import CNBMatrixModule
 class CNBMMNmap(CNBMatrixModule):
     """
     @todo: Validate hostsnames before launching
+    @todo: Make all arguments possible
     """
 
     name = 'nmap'
-    usage = 'nmap <TARGET1> <TARGET2> <TARGETX>'
+    usage = 'nmap TARGET1 [TARGET2 [TARGET]]>'
     desc = 'This cmd launch a nmap -A -P0 -iL on the specified target'
     aliases = []
     isAdmin = True

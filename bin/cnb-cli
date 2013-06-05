@@ -36,11 +36,13 @@ from cnb.cnbConfig import CNBConfig
 from cnb.cnb import CNB
 
 # Some constants
-#ROOT_DIR = '/home/martin/share/git/cnb/'                # 
+#ROOT_DIR = '/home/martin/share/git/cnb-dev/'                # 
 #BIN_DIR = ROOT_DIR + 'bin/'                             # Should be /usr/bin/cnb/
 #CONFIG_DIR = ROOT_DIR + 'config/'                       # Should be /etc/cnb/config
 #LOG_DIR = ROOT_DIR + 'log/'                             # Should be /var/log/cnb/
-#TP_DIR = ROOT_DIR + 'thirdParties/'                     # Should be /usr/lib/pymodules/python2.6/cnb/thirdParties
+#TP_DIR = ROOT_DIR + 'thirdParties/'                     # Should be /usr/lib/pymodules/python2.7/cnb/thirdParties
+#FACT_DIR = ROOT_DIR + 'facts/'
+#TRIVIA_DIR = ROOT_DIR + 'facts/'
 
 ROOT_DIR = '/tmp/'
 BIN_DIR = '/usr/local/bin/'

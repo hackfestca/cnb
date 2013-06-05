@@ -7,7 +7,8 @@ CNB Matrix Module
 
 import sys
 from StringIO import StringIO
-from optparse import OptionParser
+import argparse 
+#from optparse import OptionParser
 
 class CNBMatrixModule():
     """
@@ -68,6 +69,12 @@ class CNBMatrixModule():
     @type: String
     """
 
+    fileName = ''
+    """
+    @ivar: Module file name (including .py)
+    @type: string
+    """
+
     usage = ''
     """ 
     @ivar: Module usage help page
@@ -118,8 +125,8 @@ class CNBMatrixModule():
                 return False
     
             # A usage must be set
-            if self.usage == '':
-                return False
+            #if self.usage == '':
+            #    return False
     
             # A description must be set
             if self.desc == '':
@@ -134,13 +141,25 @@ class CNBMatrixModule():
         #    return False
         return True
 
-    def _initOptParser(self):
+    def _initOptParser(self, bHelpOption=True):
         """
         Initialize the option parser. Call this method only if you want to manage arguments with OptionParser
         Note that it also overwrite the usage attribute.
         """
-        usage = 'usage: ' + self.prefix + self.usage
-        self.parser = OptionParser(usage=usage)
+        #usage = 'usage: ' + self.prefix + self.usage
+        #self.parser = CNBArgumentParser(usage=usage, add_help=bHelpOption)
+        self.parser = CNBArgumentParser(prog=self.prefix+self.name,add_help=bHelpOption)
+
+    def getParsedArgs(self, args):
+        strIO = StringIO()
+        sys.stdout = strIO
+        try:
+            args = self.parser.parse_args(args)
+        except TypeError:
+            self.log.info('Type Error')
+        res = strIO.getvalue()
+        sys.stdout = sys.__stdout__
+        return (args, res)
 
     def getFullName(self):
         """
@@ -156,11 +175,12 @@ class CNBMatrixModule():
         Get usage of a module (including prefix)
         """
         if self.parser:
-            old_stdout = sys.stdout
-            sys.stdout = mystdout = StringIO()
+            strIO = StringIO()
+            sys.stdout = strIO
             self.parser.print_help()
-            sys.stdout = old_stdout
-            return mystdout.getvalue()
+            res = strIO.getvalue()
+            sys.stdout = sys.__stdout__
+            return res
         else:
             return self.prefix + self.usage
 
@@ -205,3 +225,10 @@ class CNBMatrixModule():
         """
         return ''
 
+class CNBArgumentParser(argparse.ArgumentParser):
+    """
+    Source: http://stackoverflow.com/questions/1885161/how-can-i-get-optparses-optionparser-to-ignore-invalid-options
+    """
+    def error(self, msg):
+        print msg
+        pass

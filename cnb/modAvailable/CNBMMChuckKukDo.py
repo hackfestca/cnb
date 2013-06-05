@@ -5,7 +5,6 @@
 CNB Matrix Module - chuckkukdo
 '''
 
-# System imports
 from cnb.cnbMatrixModule import CNBMatrixModule
 
 class CNBMMChuckKukDo(CNBMatrixModule):

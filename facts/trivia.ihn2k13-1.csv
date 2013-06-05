@@ -1,0 +1,19 @@
+#ID,QUESTION,ANSWERS,FLAG,FLAG_VALUE,DURATION
+#FOR MULTIPLE ANSWERS: "[ANSWER1,ANSWER2]" (no spaces between answers)
+#
+0,"Alright here's a test. You have 5 minutes to submit answer: ihackrock",ihackrock,SOUND_LIKE_YOU_UNDERSTOOD__GOOD_LUCK,0,5
+1,"If you’re in Swakopmund with a leo card and dial *100*1#, it’s called a ________ code?",USSD,FLAG-fqk9t714p9oy0pmvcpw955h99g,4,15
+2,"In Ingress, you need a fair amount of XM to complete an action but you have none and the nearest source is very far.  What item would be useful in your inventory right now?",powercube,FLAG-jfps2lqd6hkddzn65p2wriyiqy,3,15
+3,"Quelle est le nom de famille de celui qui a initié le piratage téléphonique","[draper,john draper,captain crunch]",FLAG-mpuoioxnakuvhq5o7bm6ueqjmo,1,15
+4,"What is the name of the ex-torrent tracker that has been recently “cloned” and hosted malware shortly after being “revived”?",demonoid,FLAG-wop721n9i50sja6qlswd1zpxyr,2,15
+5,"On magstripe cards, what is the number of the track that can contain alphabetic text?","1",FLAG-7tj8ki9ffqs5hsvgh7yzz7r5w9,2,15
+6,"What was the filename of the computer game with canons on Windows 3.11","[bangbang,bangbang.exe]",FLAG-fxqgnwb8i2nypsf2f1t60nidr9,1,15
+7,"Quel unité de mesure informatique a fait la réputation de Ron Jeremy ?","[bit,a. bit]",FLAG-ub5r4iyy2hvd94y3ikqwinx2lc,1,15
+8,"if someone configures SIPvicious for INVITE scans, what kind of product are they usually targetting?",PBX,FLAG-zzf4eclb1cgcco7uv3bs5dy4ed,2,15
+9,"You got a SOHO router and cannot connect to some services on Internet and you notice a change in the firewall rules.  As soon as you modify something, it is reverted.  What should you disable?",upnp,FLAG-9eu93mjw2yfht6jh46uqf6qwq7,2,15
+10,"What’s the hostname of the community where Elias Ladopoulos, Mark Abene and John Perry Barlow first met?",well.com,FLAG-6bcavsksmv6kaos157yyudsoyh,3,15
+11,"What’s the 3-char abbreviation representing a protection used on accounts for which the master password was stolen?",2fa,FLAG-7t7nslq4tbiyqb4i5qajtva38j,2,15
+12,"What's the name of the device for arduino that let you play and detect sound?",piezo,FLAG-pwqp5qh8a9jv7gzkwwzloqv13a,1,15
+13,"XKCD once mentioned a secure password easy to remember, stronger than a complex password, hard to remember.  What is the latter?",Tr0ub4dor&3,FLAG-wlapcj0go77kpdg1n3drlnnfpt,2,15
+14,"What is the optimal gpu loops setting when cracking bcrypt with oclhashcat-plus?","32",FLAG-reoh57rk88o81rxl6b6ngoodsp,4,15
+

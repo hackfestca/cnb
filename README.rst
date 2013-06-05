@@ -3,12 +3,12 @@ The Chuck Norris Bot Project
 ============================
 
 The Chuck Norris Bot (CNB) project is a multi-protocol chat bot. It currently
-support XMPP/Jabber and IRC. 
+supports XMPP/Jabber and IRC. 
 
 The concept is that the bot has a single "brain" but connect to multiple
 servers at once so beside responding to simple bot tasks such as saying
 hello, launching nmap, replying Chuck Norris facts and more, the bot can do
-some correlated tasks such as outputing text from an IRC channel to a XMPP room.
+some correlated tasks such as spying an IRC chan from an XMPP room.
 
 
 Prerequisite
@@ -25,7 +25,7 @@ The bot depends on the following packages:
 
 The XMPP/Jabber connector was tested on ejabberd and GTalk.
 The IRC connector was tested on freenode.net.
-The bot was tested on Debian Stable (squeeze atm).
+The bot was tested on Debian Stable (wheezy atm).
 
 Install
 =======
@@ -42,8 +42,8 @@ How to use
 Setting up the main config file
 -------------------------------
 
-First, go to */etc/cnba*/ folder and copy the *cnb.conf.default* to *cnb.conf*. This is the main config
-file. Most of this should not have to change, except for the **connectors** and 
+First, go to */etc/cnb*/ folder and copy the *cnb.conf.default* to *cnb.conf*. This is the main config
+file. Most of this should not be changed, except for the **connectors** and 
 **smtp** sections. Here is an example of a *cnb.conf* file. Simply fill the
 <...> fields.
 
@@ -67,8 +67,8 @@ file. Most of this should not have to change, except for the **connectors** and
     | smtp-port = <a smtp port>
 
 As you can see in the **connectors** section, there are two more config files. 
-These filse contain all necessary information to connect to a chat 
-server. The next section explain how to setup a connection config file. 
+These files contain all necessary information to connect a chat server.
+The next section explain how to setup a connection config file. 
 
 
 Setting up a connection config file
@@ -109,10 +109,14 @@ And this is a XMPP connection file
     | auto-reconnect = 1
     | verbose = 0
     | admins = [<a list of admins (Syntax: email1,...)>]
+    |
+    | muc-domain = <insert muc domain here>
+
 
 Running the bot
 -----------------
-It is recommended to start it as a shell script first to see errors if any 
+
+It is recommended to start it as a shell script first to see any errors
 and then start it as a service
 
 To run the bot as a shell script:
@@ -158,8 +162,8 @@ It is also accessible here: http://htmlpreview.github.io/?https://github.com/hac
 Contributors
 ============
 This bot was created by Martin Dubé as a Hackfest Project (See:
-http://hackfest.ca). Martin is still the main collaborator and reviser but 
-a lot of ideas came from Hackfest crew and community.
+http://hackfest.ca). Martin is not a developper but still the main collaborator and reviser.
+Furthermore, a lot of ideas came from Hackfest crew and community.
 
 For any comment, questions, insult: martin d0t dube at hackfest d0t com. 
 
@@ -169,8 +173,8 @@ Authors and maintainers of the following projects, which make this bot fun and
 useful:
 
 * findmyhash
+* Urban Dictionary
 * nmap
-* eliza
 * Trivia Game (vn at hackfest d0t ca)
 * Python
 * And every project I forgot

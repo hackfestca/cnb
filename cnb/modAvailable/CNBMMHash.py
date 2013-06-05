@@ -5,7 +5,6 @@
 CNB Matrix Module - hash
 '''
 
-# System imports
 import hashlib
 from cnb.cnbMatrixModule import CNBMatrixModule
 
@@ -15,7 +14,7 @@ class CNBMMHash(CNBMatrixModule):
     """
 
     name = 'hash'
-    usage = 'hash <TYPE> <PLAIN_TEXT>'
+    usage = 'hash TYPE PLAIN_TEXT'
     desc = 'Hash any plain text into a hash (md5, sha1, sha224, sha256, sha384, sha512)'
     aliases = []
 
@@ -40,10 +39,9 @@ class CNBMMHash(CNBMatrixModule):
 
         elif len(oMsg.args) > 1:
             hashType = oMsg.args[0].lower()
-            stringList = oMsg.args[1::]
+            text = ' '.join(oMsg.args[1::])
             if hashType in supTypes:
-                for s in stringList:
-                    result = result + ' ' + supTypes[hashType](s).hexdigest()
+                result = result + ' ' + supTypes[hashType](text).hexdigest()
             else:
                 result = 'Type not supported'
         else:

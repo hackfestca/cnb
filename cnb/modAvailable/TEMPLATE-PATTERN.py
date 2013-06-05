@@ -9,7 +9,6 @@ Simply rename the class. Note that the class and the file name (excluding the .p
 must be the same.
 '''
 
-# System imports
 from cnb.cnbMatrixModule import CNBMatrixModule
 
 class CNBMMTemplatePattern(CNBMatrixModule): 
@@ -19,8 +18,7 @@ class CNBMMTemplatePattern(CNBMatrixModule):
 
     name = ''
     usage = ''
-    desc = 'This cmd do this and that\
-             LANG: fr|en (default: en)'
+    desc = 'This cmd do this and that'
     aliases = []
     enProcessPattern = True
 

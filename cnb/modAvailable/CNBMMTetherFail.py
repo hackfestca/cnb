@@ -5,9 +5,9 @@
 CNB Matrix Module - Tether Fail
 '''
 
-# System imports
 import collections
 from datetime import datetime
+from cnb.cnbManager import CNBManager
 from cnb.cnbMatrixModule import CNBMatrixModule
 
 class CNBMMTetherFail(CNBMatrixModule):
@@ -15,10 +15,10 @@ class CNBMMTetherFail(CNBMatrixModule):
 
     """
 
-    name = 'tether'
-    usage = 'tether'
+    name = 'tetherfail'
+    usage = 'tetherfail'
     desc = 'This module count the number of deconnection of a user in a day'
-    aliases = ['tetherfail']
+    aliases = ['tether']
     enProcessCmd = True
     enProcessPattern = True
 
@@ -43,11 +43,13 @@ class CNBMMTetherFail(CNBMatrixModule):
         return sl
 
     def checkPattern(self,oMsg):
-        if oMsg.presType == self.OFFLINE:
-            #print 'Type' + oMsg.presType
-            #print 'Show' + oMsg.presShow
-            #print 'Status' + oMsg.presStatus
-            #print 'From' + oMsg.jid
+        oMgr = CNBManager.getInstance()
+        if oMgr.getConfigCNB(oMsg.conId).has_option('bot', 'muc-domain'):
+            sMucDomain = oMgr.getConfigCNB(oMsg.conId).get('bot', 'muc-domain')
+        else:
+            sMucDomain = ''
+
+        if not oMsg.getSource().endswith(sMucDomain) and oMsg.presType == self.OFFLINE:
             return True
         else:
             return False

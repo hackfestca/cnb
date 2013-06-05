@@ -18,8 +18,8 @@ class cnbInstall(install):
 
         insDep = raw_input("Chuck need some dependencies such as python-xmpp, python-irclib, nmap and lynx. Some module might not work without these dependencies. Do you want the install script to attempt an aptitude install? [yN]")
         if insDep == 'y' or insDep == 'Y':
-            print 'Running: "aptitude install python-irclib python-xmpp nmap python-pywapi python-xmpp python-httplib2 python-libxml2 python-django lynx"'
-            os.system('aptitude install python-irclib python-xmpp nmap python-pywapi python-xmpp python-httplib2 python-libxml2 python-django lynx')
+            print 'Running: "aptitude install whois python-irclib python-xmpp nmap python-pywapi python-xmpp python-httplib2 python-libxml2 python-django lynx"'
+            os.system('aptitude install whois python-irclib python-xmpp nmap python-pywapi python-xmpp python-httplib2 python-libxml2 python-django lynx')
 
         print 'Generating password for cnb account'
         p = ''.join(random.choice(string.ascii_uppercase + string.digits) for x in range(100))
@@ -98,8 +98,8 @@ class cnbUninstall(Command):
         print 'Deleting /usr/local/cnb'
         os.system('rm -rf /usr/local/cnb/')
         
-        print 'Deleting /usr/local/lib/python2.6/dist-packages/cnb'
-        os.system('rm -rf /usr/local/lib/python2.6/dist-packages/cnb/')
+        print 'Deleting /usr/local/lib/python2.7/dist-packages/cnb'
+        os.system('rm -rf /usr/local/lib/python2.7/dist-packages/cnb/')
 
         print 'Deleting /var/run/cnb'
         os.system('rm -rf /var/run/cnb/')
@@ -118,7 +118,7 @@ setup(
     url='https://github.com/hackfestca/cnb',
     license='LICENSE.txt',
     description='Hackfest Chuck Norris XMPP/Jabber and IRC Bot',
-    long_description=open('README.txt').read(),
+    long_description=open('README.rst').read(),
     keywords = ('bot', 'xmpp', 'jabber', 'irc', 'hackfest'),
     classifiers=['Development Status :: 3 - Alpha',\
                  'Environment :: Console',\
@@ -142,10 +142,10 @@ setup(
     scripts=['bin/cnb-cli'],
     data_files=[('/etc/cnb', ['config/cnb.conf.default', 'config/freenode.irc.conf.default', 'config/gmail.xmpp.conf.default']),\
                 ('/etc/cnb/facts', ['facts/facts.en.txt', 'facts/facts.fr.txt', 'facts/facts.pr0n.txt', 'facts/tamere.txt']),\
-                ('/etc/cnb/trivia', ['facts/questions.txt', 'facts/trivia.hf2k12.txt']),\
+                ('/etc/cnb/trivia', ['facts/questions.txt', 'facts/trivia.csv', 'facts/trivia.hf2k12.csv', 'facts/trivia.ihn2k13.csv']),\
                 ('/etc/init.d', ['bin/init/cnb']),\
-                ('cnb/thirdParties', ['thirdParties/findmyhash/findmyhash_v1.1.2.py', 'thirdParties/gtranslate/gtranslate.py']),\
-                ('cnb/scripts', ['bin/misc/compile.en.sh', 'bin/misc/compile.fr.sh', 'bin/misc/gendoc.sh', 'bin/misc/inst-dep.sh']),\
+                ('cnb/thirdParties', ['thirdParties/findmyhash_v1.1.2.py', 'thirdParties/gtranslate.py']),\
+                ('cnb/scripts', ['bin/misc/compile.en.sh', 'bin/misc/compile.fr.sh', 'bin/misc/gendoc.sh']),\
                 ('/var/log/cnb', []),\
                 ('/var/log/cnb/findmyhash', []),\
                 ('/var/log/cnb/nmap', [])],

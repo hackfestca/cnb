@@ -14,9 +14,6 @@
 <table class="navbar" border="0" width="100%" cellpadding="0"
        bgcolor="#a0c0ff" cellspacing="0">
   <tr valign="middle">
-  <!-- Home link -->
-      <th>&nbsp;&nbsp;&nbsp;<a
-        href="cnb-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
 
   <!-- Tree link -->
       <th>&nbsp;&nbsp;&nbsp;<a
@@ -59,59 +56,59 @@
 <h1 class="epydoc">Class CNBXMPPCon</h1><p class="nomargin-top"><span class="codelink"><a href="cnb.cnbXmppCon-pysrc.html#CNBXMPPCon">source&nbsp;code</a></span></p>
 <center>
 <center>  <map id="uml_class_diagram_for_cnb_cnbx" name="uml_class_diagram_for_cnb_cnbx">
-<area shape="rect" id="node24" href="cnb.cnbXmppCon.CNBXMPPCon-class.html#GMAIL_MUC_DOMAIN" title="cnb.cnbXmppCon.CNBXMPPCon.GMAIL_MUC_DOMAIN" alt="" coords="17,593,469,612"/>
-<area shape="rect" id="node24" href="cnb.cnbXmppCon.CNBXMPPCon-class.html#HF_MUC_DOMAIN" title="cnb.cnbXmppCon.CNBXMPPCon.HF_MUC_DOMAIN" alt="" coords="17,612,469,631"/>
-<area shape="rect" id="node24" href="cnb.cnbXmppCon.CNBXMPPCon-class.html#MSG_AUTHORIZE_ME" title="cnb.cnbXmppCon.CNBXMPPCon.MSG_AUTHORIZE_ME" alt="" coords="17,631,469,649"/>
-<area shape="rect" id="node24" href="cnb.cnbXmppCon.CNBXMPPCon-class.html#MSG_NOT_AUTHORIZED" title="cnb.cnbXmppCon.CNBXMPPCon.MSG_NOT_AUTHORIZED" alt="" coords="17,649,469,668"/>
-<area shape="rect" id="node24" href="cnb.cnbXmppCon.CNBXMPPCon-class.html#MSG_UNKNOWN_COMMAND" title="cnb.cnbXmppCon.CNBXMPPCon.MSG_UNKNOWN_COMMAND" alt="" coords="17,668,469,687"/>
-<area shape="rect" id="node24" href="cnb.cnbXmppCon.CNBXMPPCon-class.html#PING_FREQUENCY" title="cnb.cnbXmppCon.CNBXMPPCon.PING_FREQUENCY" alt="" coords="17,687,469,705"/>
-<area shape="rect" id="node24" href="cnb.cnbXmppCon.CNBXMPPCon-class.html#PING_TIMEOUT" title="cnb.cnbXmppCon.CNBXMPPCon.PING_TIMEOUT" alt="" coords="17,705,469,724"/>
-<area shape="rect" id="node24" href="cnb.cnbXmppCon.CNBXMPPCon-class.html#jid" title="JID of the current user" alt="" coords="17,724,469,743"/>
-<area shape="rect" id="node24" href="cnb.cnbXmppCon.CNBXMPPCon-class.html#contacts" title="Dictionnary of contacts (friends) for the current account" alt="" coords="17,743,469,761"/>
-<area shape="rect" id="node24" href="cnb.cnbXmppCon.CNBXMPPCon-class.html#roster" title="Contact list of the bot" alt="" coords="17,761,469,780"/>
-<area shape="rect" id="node24" href="cnb.cnbXmppCon.CNBXMPPCon-class.html#conn" title="Connection Handler" alt="" coords="17,780,469,799"/>
-<area shape="rect" id="node24" href="cnb.cnbXmppCon.CNBXMPPCon-class.html#AVAILABLE" title="cnb.cnbXmppCon.CNBXMPPCon.AVAILABLE" alt="" coords="17,799,469,817"/>
-<area shape="rect" id="node24" href="cnb.cnbXmppCon.CNBXMPPCon-class.html#AWAY" title="cnb.cnbXmppCon.CNBXMPPCon.AWAY" alt="" coords="17,817,469,836"/>
-<area shape="rect" id="node24" href="cnb.cnbXmppCon.CNBXMPPCon-class.html#XMPP_GROUPCHAT" title="cnb.cnbXmppCon.CNBXMPPCon.XMPP_GROUPCHAT" alt="" coords="17,855,469,873"/>
-<area shape="rect" id="node24" href="cnb.cnbXmppCon.CNBXMPPCon-class.html#__init__" title="x.__init__(...) initializes x; see x.__class__.__doc__ for signature" alt="" coords="17,876,469,895"/>
-<area shape="rect" id="node24" href="cnb.cnbXmppCon.CNBXMPPCon-class.html#__del__" title="cnb.cnbXmppCon.CNBXMPPCon.__del__" alt="" coords="17,895,469,913"/>
-<area shape="rect" id="node24" href="cnb.cnbXmppCon.CNBXMPPCon-class.html#run" title="Bot main thread &#45; Process xmpp messages and trigger the right events &#160;depending on the registered handlers" alt="" coords="17,913,469,932"/>
-<area shape="rect" id="node24" href="cnb.cnbXmppCon.CNBXMPPCon-class.html#updateRosters" title="This method update the bot roster (contact list)" alt="" coords="17,932,469,951"/>
-<area shape="rect" id="node24" href="cnb.cnbXmppCon.CNBXMPPCon-class.html#joinRoom" title="Join the specified multi&#45;user chat room (muc)" alt="" coords="17,951,469,969"/>
-<area shape="rect" id="node24" href="cnb.cnbXmppCon.CNBXMPPCon-class.html#inviteToRoom" title="Invite a user to a room" alt="" coords="17,969,469,988"/>
-<area shape="rect" id="node24" href="cnb.cnbXmppCon.CNBXMPPCon-class.html#getRoomMembers" title="Query a server to obtain the list of members in a room" alt="" coords="17,988,469,1007"/>
-<area shape="rect" id="node24" href="cnb.cnbXmppCon.CNBXMPPCon-class.html#send_message" title="Send an XMPP message" alt="" coords="17,1007,469,1025"/>
-<area shape="rect" id="node24" href="cnb.cnbXmppCon.CNBXMPPCon-class.html#send_tune" title="Set information about the currently played tune Song is a dictionary with &#160;keys: file, title, artist, album, pos, track, length, uri." alt="" coords="17,1025,469,1044"/>
-<area shape="rect" id="node24" href="cnb.cnbXmppCon.CNBXMPPCon-class.html#send" title="Sends a simple message to the specified user, in private." alt="" coords="17,1044,469,1063"/>
-<area shape="rect" id="node24" href="cnb.cnbXmppCon.CNBXMPPCon-class.html#send_simple_reply" title="Send a simple response to a message" alt="" coords="17,1063,469,1081"/>
-<area shape="rect" id="node24" href="cnb.cnbXmppCon.CNBXMPPCon-class.html#build_reply" title="Build a message for responding to another message." alt="" coords="17,1081,469,1100"/>
-<area shape="rect" id="node24" href="cnb.cnbXmppCon.CNBXMPPCon-class.html#build_message" title="Builds an xhtml message without attributes." alt="" coords="17,1100,469,1119"/>
-<area shape="rect" id="node24" href="cnb.cnbXmppCon.CNBXMPPCon-class.html#idle_proc" title="This function will be called in the main loop." alt="" coords="17,1137,469,1156"/>
+<area shape="rect" id="node61" href="cnb.cnbXmppCon.CNBXMPPCon-class.html#MSG_AUTHORIZE_ME" title="cnb.cnbXmppCon.CNBXMPPCon.MSG_AUTHORIZE_ME" alt="" coords="17,593,469,612"/>
+<area shape="rect" id="node61" href="cnb.cnbXmppCon.CNBXMPPCon-class.html#MSG_NOT_AUTHORIZED" title="cnb.cnbXmppCon.CNBXMPPCon.MSG_NOT_AUTHORIZED" alt="" coords="17,612,469,631"/>
+<area shape="rect" id="node61" href="cnb.cnbXmppCon.CNBXMPPCon-class.html#MSG_UNKNOWN_COMMAND" title="cnb.cnbXmppCon.CNBXMPPCon.MSG_UNKNOWN_COMMAND" alt="" coords="17,631,469,649"/>
+<area shape="rect" id="node61" href="cnb.cnbXmppCon.CNBXMPPCon-class.html#PING_FREQUENCY" title="cnb.cnbXmppCon.CNBXMPPCon.PING_FREQUENCY" alt="" coords="17,649,469,668"/>
+<area shape="rect" id="node61" href="cnb.cnbXmppCon.CNBXMPPCon-class.html#PING_TIMEOUT" title="cnb.cnbXmppCon.CNBXMPPCon.PING_TIMEOUT" alt="" coords="17,668,469,687"/>
+<area shape="rect" id="node61" href="cnb.cnbXmppCon.CNBXMPPCon-class.html#MAX_REPLY_SIZE" title="cnb.cnbXmppCon.CNBXMPPCon.MAX_REPLY_SIZE" alt="" coords="17,687,469,705"/>
+<area shape="rect" id="node61" href="cnb.cnbXmppCon.CNBXMPPCon-class.html#SLEEP_TIME_BETWEEN_REPLY" title="cnb.cnbXmppCon.CNBXMPPCon.SLEEP_TIME_BETWEEN_REPLY" alt="" coords="17,705,469,724"/>
+<area shape="rect" id="node61" href="cnb.cnbXmppCon.CNBXMPPCon-class.html#jid" title="JID of the current user" alt="" coords="17,724,469,743"/>
+<area shape="rect" id="node61" href="cnb.cnbXmppCon.CNBXMPPCon-class.html#contacts" title="Dictionnary of contacts (friends) for the current account" alt="" coords="17,743,469,761"/>
+<area shape="rect" id="node61" href="cnb.cnbXmppCon.CNBXMPPCon-class.html#roster" title="Contact list of the bot" alt="" coords="17,761,469,780"/>
+<area shape="rect" id="node61" href="cnb.cnbXmppCon.CNBXMPPCon-class.html#conn" title="Connection Handler" alt="" coords="17,780,469,799"/>
+<area shape="rect" id="node61" href="cnb.cnbXmppCon.CNBXMPPCon-class.html#ibb" title="File Transfer Handler" alt="" coords="17,799,469,817"/>
+<area shape="rect" id="node61" href="cnb.cnbXmppCon.CNBXMPPCon-class.html#AVAILABLE" title="cnb.cnbXmppCon.CNBXMPPCon.AVAILABLE" alt="" coords="17,817,469,836"/>
+<area shape="rect" id="node61" href="cnb.cnbXmppCon.CNBXMPPCon-class.html#XMPP_GROUPCHAT" title="cnb.cnbXmppCon.CNBXMPPCon.XMPP_GROUPCHAT" alt="" coords="17,855,469,873"/>
+<area shape="rect" id="node61" href="cnb.cnbXmppCon.CNBXMPPCon-class.html#__init__" title="x.__init__(...) initializes x; see help(type(x)) for signature" alt="" coords="17,876,469,895"/>
+<area shape="rect" id="node61" href="cnb.cnbXmppCon.CNBXMPPCon-class.html#__del__" title="cnb.cnbXmppCon.CNBXMPPCon.__del__" alt="" coords="17,895,469,913"/>
+<area shape="rect" id="node61" href="cnb.cnbXmppCon.CNBXMPPCon-class.html#run" title="Bot main thread &#45; Process xmpp messages and trigger the right events &#160;depending on the registered handlers" alt="" coords="17,913,469,932"/>
+<area shape="rect" id="node61" href="cnb.cnbXmppCon.CNBXMPPCon-class.html#updateRosters" title="This method update the bot roster (contact list)" alt="" coords="17,932,469,951"/>
+<area shape="rect" id="node61" href="cnb.cnbXmppCon.CNBXMPPCon-class.html#joinRoom" title="Join the specified multi&#45;user chat room (muc)" alt="" coords="17,951,469,969"/>
+<area shape="rect" id="node61" href="cnb.cnbXmppCon.CNBXMPPCon-class.html#inviteToRoom" title="Invite a user to a room" alt="" coords="17,969,469,988"/>
+<area shape="rect" id="node61" href="cnb.cnbXmppCon.CNBXMPPCon-class.html#getRoomMembers" title="Query a server to obtain the list of members in a room" alt="" coords="17,988,469,1007"/>
+<area shape="rect" id="node61" href="cnb.cnbXmppCon.CNBXMPPCon-class.html#sendFile" title="Send a file to a user." alt="" coords="17,1007,469,1025"/>
+<area shape="rect" id="node61" href="cnb.cnbXmppCon.CNBXMPPCon-class.html#send_message" title="Send an XMPP message" alt="" coords="17,1025,469,1044"/>
+<area shape="rect" id="node61" href="cnb.cnbXmppCon.CNBXMPPCon-class.html#send_tune" title="Set information about the currently played tune Song is a dictionary with &#160;keys: file, title, artist, album, pos, track, length, uri." alt="" coords="17,1044,469,1063"/>
+<area shape="rect" id="node61" href="cnb.cnbXmppCon.CNBXMPPCon-class.html#send" title="Sends a simple message to the specified user, in private." alt="" coords="17,1063,469,1081"/>
+<area shape="rect" id="node61" href="cnb.cnbXmppCon.CNBXMPPCon-class.html#send_simple_reply" title="Send a simple response to a message" alt="" coords="17,1081,469,1100"/>
+<area shape="rect" id="node61" href="cnb.cnbXmppCon.CNBXMPPCon-class.html#build_reply" title="Build a message for responding to another message." alt="" coords="17,1100,469,1119"/>
+<area shape="rect" id="node61" href="cnb.cnbXmppCon.CNBXMPPCon-class.html#isValidDomain" title="Determine if a domain is valid for this connection (Ex: for xmpp, there are muc domains (gmail.com) and user domains (talk.google.com))" alt="" coords="17,1137,469,1156"/>
 <area shape="rect" id="node1" href="cnb.cnbXmppCon.CNBXMPPCon-class.html" title="This class manage every communication with a xmpp server using xmpp python library" alt="" coords="5,569,480,1162"/>
-<area shape="rect" id="node25" href="cnb.cnbCon.CNBCon-class.html#autoReconnect" title="Determine if the connector must auto&#45;reconnect on disconnect/failure" alt="" coords="180,372,308,391"/>
-<area shape="rect" id="node25" href="cnb.cnbCon.CNBCon-class.html#log" title="Logging Object" alt="" coords="180,391,308,409"/>
-<area shape="rect" id="node25" href="cnb.cnbCon.CNBCon-class.html#getConfig" title="This method return the bot config object." alt="" coords="180,412,308,431"/>
-<area shape="rect" id="node25" href="cnb.cnbCon.CNBCon-class.html#getState" title="This method return the current state of the connector" alt="" coords="180,431,308,449"/>
-<area shape="rect" id="node25" href="cnb.cnbCon.CNBCon-class.html#isRunning" title="This method return True if the bot is running." alt="" coords="180,449,308,468"/>
-<area shape="rect" id="node25" href="cnb.cnbCon.CNBCon-class.html#killBot" title="This method kill the bot by terminating the thread." alt="" coords="180,468,308,487"/>
-<area shape="rect" id="node25" href="cnb.cnbCon.CNBCon-class.html#setState" title="This method change the state of the bot." alt="" coords="180,487,308,505"/>
-<area shape="rect" id="node25" href="cnb.cnbCon.CNBCon-class.html#startBot" title="This method connect the bot" alt="" coords="180,505,308,524"/>
-<area shape="rect" id="node25" href="cnb.cnbCon.CNBCon-class.html#stopBot" title="This method disconnect the bot" alt="" coords="180,524,308,543"/>
+<area shape="rect" id="node62" href="cnb.cnbCon.CNBCon-class.html#autoReconnect" title="Determine if the connector must auto&#45;reconnect on disconnect/failure" alt="" coords="180,372,308,391"/>
+<area shape="rect" id="node62" href="cnb.cnbCon.CNBCon-class.html#log" title="Logging Object" alt="" coords="180,391,308,409"/>
+<area shape="rect" id="node62" href="cnb.cnbCon.CNBCon-class.html#getConfig" title="This method return the bot config object." alt="" coords="180,412,308,431"/>
+<area shape="rect" id="node62" href="cnb.cnbCon.CNBCon-class.html#getState" title="This method return the current state of the connector" alt="" coords="180,431,308,449"/>
+<area shape="rect" id="node62" href="cnb.cnbCon.CNBCon-class.html#isRunning" title="This method return True if the bot is running." alt="" coords="180,449,308,468"/>
+<area shape="rect" id="node62" href="cnb.cnbCon.CNBCon-class.html#killBot" title="This method kill the bot by terminating the thread." alt="" coords="180,468,308,487"/>
+<area shape="rect" id="node62" href="cnb.cnbCon.CNBCon-class.html#setState" title="This method change the state of the bot." alt="" coords="180,487,308,505"/>
+<area shape="rect" id="node62" href="cnb.cnbCon.CNBCon-class.html#startBot" title="This method connect the bot" alt="" coords="180,505,308,524"/>
+<area shape="rect" id="node62" href="cnb.cnbCon.CNBCon-class.html#stopBot" title="This method disconnect the bot" alt="" coords="180,524,308,543"/>
 <area shape="rect" id="node2" href="cnb.cnbCon.CNBCon-class.html" title="A &quot;connector&quot; is a connection made to a chat server such as IRC or XMPP." alt="" coords="168,347,320,549"/>
-<area shape="rect" id="node3" href="javascript:void(0);" title="threading._Verbose" alt="" coords="175,6,313,50"/>
-<area shape="rect" id="node26" href="javascript:void(0);" title="threading.Thread.name" alt="" coords="160,95,328,113"/>
-<area shape="rect" id="node26" href="javascript:void(0);" title="threading.Thread.ident" alt="" coords="160,113,328,132"/>
-<area shape="rect" id="node26" href="javascript:void(0);" title="threading.Thread.daemon" alt="" coords="160,132,328,151"/>
-<area shape="rect" id="node26" href="javascript:void(0);" title="repr(x)" alt="" coords="160,153,328,172"/>
-<area shape="rect" id="node26" href="javascript:void(0);" title="threading.Thread.start" alt="" coords="160,172,328,191"/>
-<area shape="rect" id="node26" href="javascript:void(0);" title="threading.Thread.join" alt="" coords="160,191,328,209"/>
-<area shape="rect" id="node26" href="javascript:void(0);" title="threading.Thread.isAlive" alt="" coords="160,209,328,228"/>
-<area shape="rect" id="node26" href="javascript:void(0);" title="threading.Thread.is_alive" alt="" coords="160,228,328,247"/>
-<area shape="rect" id="node26" href="javascript:void(0);" title="threading.Thread.isDaemon" alt="" coords="160,247,328,265"/>
-<area shape="rect" id="node26" href="javascript:void(0);" title="threading.Thread.setDaemon" alt="" coords="160,265,328,284"/>
-<area shape="rect" id="node26" href="javascript:void(0);" title="threading.Thread.getName" alt="" coords="160,284,328,303"/>
-<area shape="rect" id="node26" href="javascript:void(0);" title="threading.Thread.setName" alt="" coords="160,303,328,321"/>
-<area shape="rect" id="node4" href="javascript:void(0);" title="threading.Thread" alt="" coords="148,70,340,327"/>
+<area shape="rect" id="node63" href="javascript:void(0);" title="threading.Thread.name" alt="" coords="160,95,328,113"/>
+<area shape="rect" id="node63" href="javascript:void(0);" title="threading.Thread.ident" alt="" coords="160,113,328,132"/>
+<area shape="rect" id="node63" href="javascript:void(0);" title="threading.Thread.daemon" alt="" coords="160,132,328,151"/>
+<area shape="rect" id="node63" href="javascript:void(0);" title="repr(x)" alt="" coords="160,153,328,172"/>
+<area shape="rect" id="node63" href="javascript:void(0);" title="threading.Thread.start" alt="" coords="160,172,328,191"/>
+<area shape="rect" id="node63" href="javascript:void(0);" title="threading.Thread.join" alt="" coords="160,191,328,209"/>
+<area shape="rect" id="node63" href="javascript:void(0);" title="threading.Thread.isAlive" alt="" coords="160,209,328,228"/>
+<area shape="rect" id="node63" href="javascript:void(0);" title="threading.Thread.is_alive" alt="" coords="160,228,328,247"/>
+<area shape="rect" id="node63" href="javascript:void(0);" title="threading.Thread.isDaemon" alt="" coords="160,247,328,265"/>
+<area shape="rect" id="node63" href="javascript:void(0);" title="threading.Thread.setDaemon" alt="" coords="160,265,328,284"/>
+<area shape="rect" id="node63" href="javascript:void(0);" title="threading.Thread.getName" alt="" coords="160,284,328,303"/>
+<area shape="rect" id="node63" href="javascript:void(0);" title="threading.Thread.setName" alt="" coords="160,303,328,321"/>
+<area shape="rect" id="node3" href="javascript:void(0);" title="threading.Thread" alt="" coords="148,70,340,327"/>
+<area shape="rect" id="node4" href="javascript:void(0);" title="threading._Verbose" alt="" coords="175,6,313,50"/>
 </map>
   <img src="uml_class_diagram_for_cnb_cnbx.gif" alt='' usemap="#uml_class_diagram_for_cnb_cnbx" ismap="ismap" class="graph-without-title" />
 </center>
@@ -150,7 +147,7 @@
         <tr>
           <td><span class="summary-sig"><a href="cnb.cnbXmppCon.CNBXMPPCon-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">botConfig</span>)</span><br />
-      x.__init__(...) initializes x; see x.__class__.__doc__ for signature</td>
+      x.__init__(...) initializes x; see help(type(x)) for signature</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="cnb.cnbXmppCon-pysrc.html#CNBXMPPCon.__init__">source&nbsp;code</a></span>
             
@@ -169,6 +166,23 @@
           <td><span class="summary-sig"><a href="cnb.cnbXmppCon.CNBXMPPCon-class.html#__del__" class="summary-sig-name">__del__</a>(<span class="summary-sig-arg">self</span>)</span></td>
           <td align="right" valign="top">
             <span class="codelink"><a href="cnb.cnbXmppCon-pysrc.html#CNBXMPPCon.__del__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cnb.cnbXmppCon.CNBXMPPCon-class.html#_initMondaySuckRoom" class="summary-sig-name" onclick="show_private();">_initMondaySuckRoom</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Initialize the &quot;Monday suck&quot; room.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cnb.cnbXmppCon-pysrc.html#CNBXMPPCon._initMondaySuckRoom">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -447,6 +461,26 @@
       
     </td>
   </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cnb.cnbXmppCon.CNBXMPPCon-class.html#_splitByLine" class="summary-sig-name" onclick="show_private();">_splitByLine</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">txt</span>,
+        <span class="summary-sig-arg">maxl</span>)</span><br />
+      Split a string, with the 
+delimiter, into blocks that are smaller than maxl.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cnb.cnbXmppCon-pysrc.html#CNBXMPPCon._splitByLine">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
@@ -534,6 +568,26 @@
       Query a server to obtain the list of members in a room</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="cnb.cnbXmppCon-pysrc.html#CNBXMPPCon.getRoomMembers">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cnb.cnbXmppCon.CNBXMPPCon-class.html#sendFile" class="summary-sig-name">sendFile</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">jid</span>,
+        <span class="summary-sig-arg">sFile</span>,
+        <span class="summary-sig-arg">sData</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Send a file to a user.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cnb.cnbXmppCon-pysrc.html#CNBXMPPCon.sendFile">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -712,6 +766,25 @@
       
     </td>
   </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cnb.cnbXmppCon.CNBXMPPCon-class.html#isValidDomain" class="summary-sig-name">isValidDomain</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">domain</span>)</span><br />
+      Determine if a domain is valid for this connection (Ex: for xmpp, 
+      there are muc domains (gmail.com) and user domains (talk.google.com))</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cnb.cnbXmppCon-pysrc.html#CNBXMPPCon.isValidDomain">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
   <tr>
     <td colspan="2" class="summary">
     <p class="indent-wrapped-lines"><b>Inherited from <code><a href="cnb.cnbCon.CNBCon-class.html">cnbCon.CNBCon</a></code></b>:
@@ -739,6 +812,7 @@
       <code>start</code>
       </p>
     <div class="private">    <p class="indent-wrapped-lines"><b>Inherited from <code>threading.Thread</code></b> (private):
+      <code>_reset_internal_locks</code>,
       <code>_set_daemon</code>,
       <code>_set_ident</code>
       </p></div>
@@ -782,20 +856,6 @@
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a name="GMAIL_MUC_DOMAIN"></a><span class="summary-name">GMAIL_MUC_DOMAIN</span> = <code title="'talk.google.com'"><code class="variable-quote">'</code><code class="variable-string">talk.google.com</code><code class="variable-quote">'</code></code>
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-        <a name="HF_MUC_DOMAIN"></a><span class="summary-name">HF_MUC_DOMAIN</span> = <code title="'conference.hackfest.ca'"><code class="variable-quote">'</code><code class="variable-string">conference.hackfest.ca</code><code class="variable-quote">'</code></code>
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
         <a href="cnb.cnbXmppCon.CNBXMPPCon-class.html#MSG_AUTHORIZE_ME" class="summary-name">MSG_AUTHORIZE_ME</a> = <code title="'Hey there. You are not yet on my roster. Authorize my request and I w\
 ill do the same.'"><code class="variable-quote">'</code><code class="variable-string">Hey there. You are not yet on my roster. A</code><code class="variable-ellipsis">...</code></code>
     </td>
@@ -826,6 +886,20 @@ ill do the same.'"><code class="variable-quote">'</code><code class="variable-st
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
         <a name="PING_TIMEOUT"></a><span class="summary-name">PING_TIMEOUT</span> = <code title="10">10</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="MAX_REPLY_SIZE"></a><span class="summary-name">MAX_REPLY_SIZE</span> = <code title="10000">10000</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="SLEEP_TIME_BETWEEN_REPLY"></a><span class="summary-name">SLEEP_TIME_BETWEEN_REPLY</span> = <code title="1">1</code>
     </td>
   </tr>
 <tr>
@@ -986,7 +1060,7 @@ ill do the same.'"><code class="variable-quote">'</code><code class="variable-st
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">time</span>
     </td><td class="summary">
-        <a name="_lastping"></a><span class="summary-name">_lastping</span> = <code title="1364437349.14">1364437349.14</code><br />
+        <a name="_lastping"></a><span class="summary-name">_lastping</span> = <code title="1369076460.59">1369076460.59</code><br />
       Keep the last ping time
     </td>
   </tr>
@@ -1038,6 +1112,14 @@ ill do the same.'"><code class="variable-quote">'</code><code class="variable-st
       Connection Handler
     </td>
   </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">Object</span>
+    </td><td class="summary">
+        <a name="ibb"></a><span class="summary-name">ibb</span> = <code title="None">None</code><br />
+      File Transfer Handler
+    </td>
+  </tr>
   <tr>
     <td colspan="2" class="summary">
     <p class="indent-wrapped-lines"><b>Inherited from <code><a href="cnb.cnbCon.CNBCon-class.html">cnbCon.CNBCon</a></code></b>:
@@ -1075,6 +1157,9 @@ ill do the same.'"><code class="variable-quote">'</code><code class="variable-st
       <code>ident</code>,
       <code>name</code>
       </p>
+    <div class="private">    <p class="indent-wrapped-lines"><b>Inherited from <code>threading.Thread</code></b> (private):
+      <code>_block</code>
+      </p></div>
     <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
       <code>__class__</code>
       </p>
@@ -1115,8 +1200,7 @@ ill do the same.'"><code class="variable-quote">'</code><code class="variable-st
     </td>
   </tr></table>
   
-  <p>x.__init__(...) initializes x; see x.__class__.__doc__ for 
-  signature</p>
+  <p>x.__init__(...) initializes x; see help(type(x)) for signature</p>
   <dl class="fields">
     <dt>Overrides:
         object.__init__
@@ -1145,6 +1229,27 @@ ill do the same.'"><code class="variable-quote">'</code><code class="variable-st
     <dt>Overrides:
         <a href="cnb.cnbCon.CNBCon-class.html#__del__">cnbCon.CNBCon.__del__</a>
     </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="_initMondaySuckRoom"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_initMondaySuckRoom</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cnb.cnbXmppCon-pysrc.html#CNBXMPPCon._initMondaySuckRoom">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Initialize the &quot;Monday suck&quot; room. This method is called 
+  when the class is initialize but can also be called to reset room when 
+  the ownership is lost (gmail)</p>
+  <dl class="fields">
   </dl>
 </td></tr></table>
 </div>
@@ -1201,10 +1306,7 @@ ill do the same.'"><code class="variable-quote">'</code><code class="variable-st
         <li><strong class="pname"><code>presence</code></strong> (Object) - Presence notification</li>
     </ul></dd>
   </dl>
-<div class="fields">      <p><strong>To Do:</strong>
-        manage more presence status
-      </p>
-</div></td></tr></table>
+</td></tr></table>
 </div>
 <a name="_callback_iq"></a>
 <div class="private">
@@ -1223,7 +1325,7 @@ ill do the same.'"><code class="variable-quote">'</code><code class="variable-st
   </tr></table>
   
   <p>IQ callback function. A IQ query is a way to query a xmpp server for 
-  some informations (ex: get list of members in a room). IQ Response are 
+  some informations (ex: get list of members in a room). IQ Responses are 
   handled here.</p>
   <dl class="fields">
     <dt>Parameters:</dt>
@@ -1442,6 +1544,37 @@ ill do the same.'"><code class="variable-quote">'</code><code class="variable-st
   </dl>
 </td></tr></table>
 </div>
+<a name="_splitByLine"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_splitByLine</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">txt</span>,
+        <span class="sig-arg">maxl</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cnb.cnbXmppCon-pysrc.html#CNBXMPPCon._splitByLine">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+
+       Split a string, with the 
+delimiter, into blocks that are smaller than maxl.
+       @param text: String to split
+       @type text: string
+       @param maxl: Max Length of the split
+       @type maxl: int
+       
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
 <a name="run"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
@@ -1546,6 +1679,37 @@ ill do the same.'"><code class="variable-quote">'</code><code class="variable-st
     </ul></dd>
   </dl>
 </td></tr></table>
+</div>
+<a name="sendFile"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">sendFile</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">jid</span>,
+        <span class="sig-arg">sFile</span>,
+        <span class="sig-arg">sData</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cnb.cnbXmppCon-pysrc.html#CNBXMPPCon.sendFile">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Send a file to a user. Note that this is really slow.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>jid</code></strong> (JID) - JID of the destination user</li>
+        <li><strong class="pname"><code>sFile</code></strong> (string) - File path (Must be absolute)</li>
+        <li><strong class="pname"><code>sData</code></strong> (string) - Data stream to send (set sFile to None to send this way)</li>
+    </ul></dd>
+  </dl>
+<div class="fields">      <p><strong>Note:</strong>
+        THIS IS NOT WORKING! Don't use it.
+      </p>
+</div></td></tr></table>
 </div>
 <a name="send_message"></a>
 <div>
@@ -1767,6 +1931,34 @@ ill do the same.'"><code class="variable-quote">'</code><code class="variable-st
   </dl>
 </td></tr></table>
 </div>
+<a name="isValidDomain"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">isValidDomain</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">domain</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cnb.cnbXmppCon-pysrc.html#CNBXMPPCon.isValidDomain">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Determine if a domain is valid for this connection (Ex: for xmpp, 
+  there are muc domains (gmail.com) and user domains (talk.google.com))</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>domain</code></strong> (string) - The domain to check</li>
+    </ul></dd>
+    <dt>Overrides:
+        <a href="cnb.cnbCon.CNBCon-class.html#isValidDomain">cnbCon.CNBCon.isValidDomain</a>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
 <br />
 <!-- ==================== CLASS VARIABLE DETAILS ==================== -->
 <a name="section-ClassVariableDetails"></a>
@@ -1950,9 +2142,6 @@ None
 <table class="navbar" border="0" width="100%" cellpadding="0"
        bgcolor="#a0c0ff" cellspacing="0">
   <tr valign="middle">
-  <!-- Home link -->
-      <th>&nbsp;&nbsp;&nbsp;<a
-        href="cnb-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
 
   <!-- Tree link -->
       <th>&nbsp;&nbsp;&nbsp;<a
@@ -1972,7 +2161,7 @@ None
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Wed Mar 27 22:22:30 2013
+    Generated by Epydoc 3.0.1 on Mon May 20 15:01:04 2013
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

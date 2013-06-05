@@ -1,0 +1,12 @@
+#ID,QUESTION,ANSWERS,FLAG,FLAG_VALUE,DURATION
+#FOR MULTIPLE ANSWERS: "[ANSWER1,ANSWER2]" (no spaces between answers)
+#
+1,"In the phdays hashrunner 2013 contest, the sha512crypt hashes had a theme based on a virus.  What type of hardware was this virus targetting?",VAX,FLAG-o1jpv5jjy9m0ei8t1e28bvomsv,4,20
+2,"Quel collège a été piraté?","[Dawson]",FLAG-hp80y6m7ic9n9tfpg169ejteu2,1,20
+3,"Quel est le nom du pirate du collège de la question précédente?","Hamad Al-Khabaz",FLAG-lyyzgre1c1ikd1dt5t3dyf1yvj,1,20
+4,"Quel est le nom du pirate qui a fait un DDoS au Québec en 2013?","Kevin Courtois",FLAG-w8pyftgqj9wb49jyhdgg1mn6ic,1,20
+5,"If you’re in Swakopmund with a leo card and dial *100*1#, it’s called a ________ code?",USSD,FLAG-fqk9t714p9oy0pmvcpw955h99g,4,15
+6,"What’s the 3-char abbreviation representing a protection used on accounts for which the master password was stolen?",2fa,FLAG-7t7nslq4tbiyqb4i5qajtva38j,2,15
+7,"What's the name of the actual oyabun of the 3rd japanese organized crime family?","Yoshio Tsunoda",FLAG-63bvabehf9uw249obvctsjtrvq,1,20
+8,"It's encryption is supposedly unbreakable, but the murder of Bonnanno's family soon-to-be godfather proved otherwise, even if details aren't disclosed. What device are we talking about?","[blackberry,black berry]",FLAG-ml0543si2s1jl2w8ezagzddoyc,1,20
+9,"What's the nick of our bad programmer :)?","[Mr.Un1k0d3r,Mr. Un1k0d3r]",FLAG-jyloxprb51h01bptn8ajmp0t7p,1,20

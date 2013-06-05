@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>cnb.modAvailable.CNBMMEmail</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="cnb-module.html">Package&nbsp;cnb</a> ::
+        <a href="cnb.modAvailable-module.html">Package&nbsp;modAvailable</a> ::
+        Module&nbsp;CNBMMEmail
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="cnb.modAvailable.CNBMMEmail-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="cnb.modAvailable.CNBMMEmail-module.html">Module cnb.modAvailable.CNBMMEmail</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno">  1</tt>  <tt class="py-line"><tt class="py-comment">#!/usr/bin/python</tt> </tt>
+<a name="L2"></a><tt class="py-lineno">  2</tt>  <tt class="py-line"><tt class="py-comment"># -*- coding: utf-8 -*-</tt> </tt>
+<a name="L3"></a><tt class="py-lineno">  3</tt>  <tt class="py-line"> </tt>
+<a name="L4"></a><tt class="py-lineno">  4</tt>  <tt class="py-line"><tt class="py-docstring">'''</tt> </tt>
+<a name="L5"></a><tt class="py-lineno">  5</tt>  <tt class="py-line"><tt class="py-docstring">CNB Matrix Module - email</tt> </tt>
+<a name="L6"></a><tt class="py-lineno">  6</tt>  <tt class="py-line"><tt class="py-docstring">'''</tt> </tt>
+<a name="L7"></a><tt class="py-lineno">  7</tt>  <tt class="py-line"> </tt>
+<a name="L8"></a><tt class="py-lineno">  8</tt>  <tt class="py-line"><tt class="py-comment"># System imports</tt> </tt>
+<a name="L9"></a><tt class="py-lineno">  9</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">re</tt> </tt>
+<a name="L10"></a><tt class="py-lineno"> 10</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-0" class="py-name" targets="Variable cnb.cnbMessage.CNBMessage.email=cnb.cnbMessage.CNBMessage-class.html#email"><a title="cnb.cnbMessage.CNBMessage.email" class="py-name" href="#" onclick="return doclink('link-0', 'email', 'link-0');">email</a></tt><tt class="py-op">.</tt><tt class="py-name">MIMEMultipart</tt> <tt class="py-keyword">import</tt> <tt class="py-name">MIMEMultipart</tt> </tt>
+<a name="L11"></a><tt class="py-lineno"> 11</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-1" class="py-name"><a title="cnb.cnbMessage.CNBMessage.email" class="py-name" href="#" onclick="return doclink('link-1', 'email', 'link-0');">email</a></tt><tt class="py-op">.</tt><tt class="py-name">MIMEBase</tt> <tt class="py-keyword">import</tt> <tt class="py-name">MIMEBase</tt> </tt>
+<a name="L12"></a><tt class="py-lineno"> 12</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-2" class="py-name"><a title="cnb.cnbMessage.CNBMessage.email" class="py-name" href="#" onclick="return doclink('link-2', 'email', 'link-0');">email</a></tt><tt class="py-op">.</tt><tt class="py-name">MIMEText</tt> <tt class="py-keyword">import</tt> <tt class="py-name">MIMEText</tt> </tt>
+<a name="L13"></a><tt class="py-lineno"> 13</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-3" class="py-name"><a title="cnb.cnbMessage.CNBMessage.email" class="py-name" href="#" onclick="return doclink('link-3', 'email', 'link-0');">email</a></tt><tt class="py-op">.</tt><tt class="py-name">Utils</tt> <tt class="py-keyword">import</tt> <tt class="py-name">COMMASPACE</tt><tt class="py-op">,</tt> <tt class="py-name">formatdate</tt> </tt>
+<a name="L14"></a><tt class="py-lineno"> 14</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-4" class="py-name"><a title="cnb.cnbMessage.CNBMessage.email" class="py-name" href="#" onclick="return doclink('link-4', 'email', 'link-0');">email</a></tt> <tt class="py-keyword">import</tt> <tt class="py-name">Encoders</tt> </tt>
+<a name="L15"></a><tt class="py-lineno"> 15</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-5" class="py-name" targets="Package cnb=cnb-module.html,Module cnb.cnb=cnb.cnb-module.html"><a title="cnb
+cnb.cnb" class="py-name" href="#" onclick="return doclink('link-5', 'cnb', 'link-5');">cnb</a></tt><tt class="py-op">.</tt><tt id="link-6" class="py-name" targets="Module cnb.cnbMatrixModule=cnb.cnbMatrixModule-module.html"><a title="cnb.cnbMatrixModule" class="py-name" href="#" onclick="return doclink('link-6', 'cnbMatrixModule', 'link-6');">cnbMatrixModule</a></tt> <tt class="py-keyword">import</tt> <tt id="link-7" class="py-name" targets="Class cnb.cnbMatrixModule.CNBMatrixModule=cnb.cnbMatrixModule.CNBMatrixModule-class.html"><a title="cnb.cnbMatrixModule.CNBMatrixModule" class="py-name" href="#" onclick="return doclink('link-7', 'CNBMatrixModule', 'link-7');">CNBMatrixModule</a></tt> </tt>
+<a name="L16"></a><tt class="py-lineno"> 16</tt>  <tt class="py-line"> </tt>
+<a name="CNBMMEmail"></a><div id="CNBMMEmail-def"><a name="L17"></a><tt class="py-lineno"> 17</tt> <a class="py-toggle" href="#" id="CNBMMEmail-toggle" onclick="return toggle('CNBMMEmail');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="cnb.modAvailable.CNBMMEmail.CNBMMEmail-class.html">CNBMMEmail</a><tt class="py-op">(</tt><tt class="py-base-class">CNBMatrixModule</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="CNBMMEmail-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="CNBMMEmail-expanded"><a name="L18"></a><tt class="py-lineno"> 18</tt>  <tt class="py-line">    <tt class="py-docstring">"""</tt> </tt>
+<a name="L19"></a><tt class="py-lineno"> 19</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L20"></a><tt class="py-lineno"> 20</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="L21"></a><tt class="py-lineno"> 21</tt>  <tt class="py-line"> </tt>
+<a name="L22"></a><tt class="py-lineno"> 22</tt>  <tt class="py-line">    <tt id="link-8" class="py-name" targets="Variable cnb.cnbMatrixModule.CNBMatrixModule.name=cnb.cnbMatrixModule.CNBMatrixModule-class.html#name,Variable cnb.modAvailable.CNBMMAutoJoin.CNBMMAutoJoin.name=cnb.modAvailable.CNBMMAutoJoin.CNBMMAutoJoin-class.html#name,Variable cnb.modAvailable.CNBMMBotInfo.CNBMMBotInfo.name=cnb.modAvailable.CNBMMBotInfo.CNBMMBotInfo-class.html#name,Variable cnb.modAvailable.CNBMMChuckApprouve.CNBMMChuckApprouve.name=cnb.modAvailable.CNBMMChuckApprouve.CNBMMChuckApprouve-class.html#name,Variable cnb.modAvailable.CNBMMChuckFacts.CNBMMChuckFacts.name=cnb.modAvailable.CNBMMChuckFacts.CNBMMChuckFacts-class.html#name,Variable cnb.modAvailable.CNBMMChuckKukDo.CNBMMChuckKukDo.name=cnb.modAvailable.CNBMMChuckKukDo.CNBMMChuckKukDo-class.html#name,Variable cnb.modAvailable.CNBMMCrack.CNBMMCrack.name=cnb.modAvailable.CNBMMCrack.CNBMMCrack-class.html#name,Variable cnb.modAvailable.CNBMMDie.CNBMMDie.name=cnb.modAvailable.CNBMMDie.CNBMMDie-class.html#name,Variable cnb.modAvailable.CNBMMEmail.CNBMMEmail.name=cnb.modAvailable.CNBMMEmail.CNBMMEmail-class.html#name,Variable cnb.modAvailable.CNBMMEncode.CNBMMEncode.name=cnb.modAvailable.CNBMMEncode.CNBMMEncode-class.html#name,Variable cnb.modAvailable.CNBMMGreeting.CNBMMGreeting.name=cnb.modAvailable.CNBMMGreeting.CNBMMGreeting-class.html#name,Variable cnb.modAvailable.CNBMMHash.CNBMMHash.name=cnb.modAvailable.CNBMMHash.CNBMMHash-class.html#name,Variable cnb.modAvailable.CNBMMHelp.CNBMMHelp.name=cnb.modAvailable.CNBMMHelp.CNBMMHelp-class.html#name,Variable cnb.modAvailable.CNBMMInsult.CNBMMInsult.name=cnb.modAvailable.CNBMMInsult.CNBMMInsult-class.html#name,Variable cnb.modAvailable.CNBMMJoin.CNBMMJoin.name=cnb.modAvailable.CNBMMJoin.CNBMMJoin-class.html#name,Variable cnb.modAvailable.CNBMMMods.CNBMMMods.name=cnb.modAvailable.CNBMMMods.CNBMMMods-class.html#name,Variable cnb.modAvailable.CNBMMMondaySuck.CNBMMMondaySuck.name=cnb.modAvailable.CNBMMMondaySuck.CNBMMMondaySuck-class.html#name,Variable cnb.modAvailable.CNBMMNmap.CNBMMNmap.name=cnb.modAvailable.CNBMMNmap.CNBMMNmap-class.html#name,Variable cnb.modAvailable.CNBMMSendFile.CNBMMSendFile.name=cnb.modAvailable.CNBMMSendFile.CNBMMSendFile-class.html#name,Variable cnb.modAvailable.CNBMMTaMere.CNBMMTaMere.name=cnb.modAvailable.CNBMMTaMere.CNBMMTaMere-class.html#name,Variable cnb.modAvailable.CNBMMTestAll.CNBMMTestAll.name=cnb.modAvailable.CNBMMTestAll.CNBMMTestAll-class.html#name,Variable cnb.modAvailable.CNBMMTetherFail.CNBMMTetherFail.name=cnb.modAvailable.CNBMMTetherFail.CNBMMTetherFail-class.html#name,Variable cnb.modAvailable.CNBMMTrivia.CNBMMTrivia.name=cnb.modAvailable.CNBMMTrivia.CNBMMTrivia-class.html#name,Variable cnb.modAvailable.CNBMMUnmorse.CNBMMUnmorse.name=cnb.modAvailable.CNBMMUnmorse.CNBMMUnmorse-class.html#name,Variable cnb.modAvailable.CNBMMWeather.CNBMMWeather.name=cnb.modAvailable.CNBMMWeather.CNBMMWeather-class.html#name,Variable cnb.modAvailable.CNBMMWebSurf.CNBMMWebSurf.name=cnb.modAvailable.CNBMMWebSurf.CNBMMWebSurf-class.html#name,Variable cnb.modAvailable.CNBMMpat.CNBMMpat.name=cnb.modAvailable.CNBMMpat.CNBMMpat-class.html#name,Variable cnb.modAvailable.CNBMMsay.CNBMMsay.name=cnb.modAvailable.CNBMMsay.CNBMMsay-class.html#name,Variable cnb.modAvailable.CNBMMspy.CNBMMspy.name=cnb.modAvailable.CNBMMspy.CNBMMspy-class.html#name,Variable cnb.modAvailable.CNBMMvn.CNBMMvn.name=cnb.modAvailable.CNBMMvn.CNBMMvn-class.html#name,Variable script-TEMPLATE_ALWAYS_py.CNBMMTemplateAlways.name=script-TEMPLATE_ALWAYS_py.CNBMMTemplateAlways-class.html#name,Variable script-TEMPLATE_CMD_py.CNBMMTemplateCmd.name=script-TEMPLATE_CMD_py.CNBMMTemplateCmd-class.html#name,Variable script-TEMPLATE_PATTERN_py.CNBMMTemplatePattern.name=script-TEMPLATE_PATTERN_py.CNBMMTemplatePattern-class.html#name"><a title="cnb.cnbMatrixModule.CNBMatrixModule.name
+cnb.modAvailable.CNBMMAutoJoin.CNBMMAutoJoin.name
+cnb.modAvailable.CNBMMBotInfo.CNBMMBotInfo.name
+cnb.modAvailable.CNBMMChuckApprouve.CNBMMChuckApprouve.name
+cnb.modAvailable.CNBMMChuckFacts.CNBMMChuckFacts.name
+cnb.modAvailable.CNBMMChuckKukDo.CNBMMChuckKukDo.name
+cnb.modAvailable.CNBMMCrack.CNBMMCrack.name
+cnb.modAvailable.CNBMMDie.CNBMMDie.name
+cnb.modAvailable.CNBMMEmail.CNBMMEmail.name
+cnb.modAvailable.CNBMMEncode.CNBMMEncode.name
+cnb.modAvailable.CNBMMGreeting.CNBMMGreeting.name
+cnb.modAvailable.CNBMMHash.CNBMMHash.name
+cnb.modAvailable.CNBMMHelp.CNBMMHelp.name
+cnb.modAvailable.CNBMMInsult.CNBMMInsult.name
+cnb.modAvailable.CNBMMJoin.CNBMMJoin.name
+cnb.modAvailable.CNBMMMods.CNBMMMods.name
+cnb.modAvailable.CNBMMMondaySuck.CNBMMMondaySuck.name
+cnb.modAvailable.CNBMMNmap.CNBMMNmap.name
+cnb.modAvailable.CNBMMSendFile.CNBMMSendFile.name
+cnb.modAvailable.CNBMMTaMere.CNBMMTaMere.name
+cnb.modAvailable.CNBMMTestAll.CNBMMTestAll.name
+cnb.modAvailable.CNBMMTetherFail.CNBMMTetherFail.name
+cnb.modAvailable.CNBMMTrivia.CNBMMTrivia.name
+cnb.modAvailable.CNBMMUnmorse.CNBMMUnmorse.name
+cnb.modAvailable.CNBMMWeather.CNBMMWeather.name
+cnb.modAvailable.CNBMMWebSurf.CNBMMWebSurf.name
+cnb.modAvailable.CNBMMpat.CNBMMpat.name
+cnb.modAvailable.CNBMMsay.CNBMMsay.name
+cnb.modAvailable.CNBMMspy.CNBMMspy.name
+cnb.modAvailable.CNBMMvn.CNBMMvn.name
+script-TEMPLATE_ALWAYS_py.CNBMMTemplateAlways.name
+script-TEMPLATE_CMD_py.CNBMMTemplateCmd.name
+script-TEMPLATE_PATTERN_py.CNBMMTemplatePattern.name" class="py-name" href="#" onclick="return doclink('link-8', 'name', 'link-8');">name</a></tt> <tt class="py-op">=</tt> <tt class="py-string">'email'</tt> </tt>
+<a name="L23"></a><tt class="py-lineno"> 23</tt>  <tt class="py-line">    <tt id="link-9" class="py-name" targets="Variable cnb.cnbMatrixModule.CNBMatrixModule.usage=cnb.cnbMatrixModule.CNBMatrixModule-class.html#usage,Variable cnb.modAvailable.CNBMMAutoJoin.CNBMMAutoJoin.usage=cnb.modAvailable.CNBMMAutoJoin.CNBMMAutoJoin-class.html#usage,Variable cnb.modAvailable.CNBMMBotInfo.CNBMMBotInfo.usage=cnb.modAvailable.CNBMMBotInfo.CNBMMBotInfo-class.html#usage,Variable cnb.modAvailable.CNBMMChuckApprouve.CNBMMChuckApprouve.usage=cnb.modAvailable.CNBMMChuckApprouve.CNBMMChuckApprouve-class.html#usage,Variable cnb.modAvailable.CNBMMChuckFacts.CNBMMChuckFacts.usage=cnb.modAvailable.CNBMMChuckFacts.CNBMMChuckFacts-class.html#usage,Variable cnb.modAvailable.CNBMMChuckKukDo.CNBMMChuckKukDo.usage=cnb.modAvailable.CNBMMChuckKukDo.CNBMMChuckKukDo-class.html#usage,Variable cnb.modAvailable.CNBMMCrack.CNBMMCrack.usage=cnb.modAvailable.CNBMMCrack.CNBMMCrack-class.html#usage,Variable cnb.modAvailable.CNBMMDie.CNBMMDie.usage=cnb.modAvailable.CNBMMDie.CNBMMDie-class.html#usage,Variable cnb.modAvailable.CNBMMEmail.CNBMMEmail.usage=cnb.modAvailable.CNBMMEmail.CNBMMEmail-class.html#usage,Variable cnb.modAvailable.CNBMMEncode.CNBMMEncode.usage=cnb.modAvailable.CNBMMEncode.CNBMMEncode-class.html#usage,Variable cnb.modAvailable.CNBMMGreeting.CNBMMGreeting.usage=cnb.modAvailable.CNBMMGreeting.CNBMMGreeting-class.html#usage,Variable cnb.modAvailable.CNBMMHash.CNBMMHash.usage=cnb.modAvailable.CNBMMHash.CNBMMHash-class.html#usage,Variable cnb.modAvailable.CNBMMHelp.CNBMMHelp.usage=cnb.modAvailable.CNBMMHelp.CNBMMHelp-class.html#usage,Variable cnb.modAvailable.CNBMMInsult.CNBMMInsult.usage=cnb.modAvailable.CNBMMInsult.CNBMMInsult-class.html#usage,Variable cnb.modAvailable.CNBMMJoin.CNBMMJoin.usage=cnb.modAvailable.CNBMMJoin.CNBMMJoin-class.html#usage,Variable cnb.modAvailable.CNBMMMods.CNBMMMods.usage=cnb.modAvailable.CNBMMMods.CNBMMMods-class.html#usage,Variable cnb.modAvailable.CNBMMMondaySuck.CNBMMMondaySuck.usage=cnb.modAvailable.CNBMMMondaySuck.CNBMMMondaySuck-class.html#usage,Variable cnb.modAvailable.CNBMMNmap.CNBMMNmap.usage=cnb.modAvailable.CNBMMNmap.CNBMMNmap-class.html#usage,Variable cnb.modAvailable.CNBMMSendFile.CNBMMSendFile.usage=cnb.modAvailable.CNBMMSendFile.CNBMMSendFile-class.html#usage,Variable cnb.modAvailable.CNBMMTaMere.CNBMMTaMere.usage=cnb.modAvailable.CNBMMTaMere.CNBMMTaMere-class.html#usage,Variable cnb.modAvailable.CNBMMTestAll.CNBMMTestAll.usage=cnb.modAvailable.CNBMMTestAll.CNBMMTestAll-class.html#usage,Variable cnb.modAvailable.CNBMMTetherFail.CNBMMTetherFail.usage=cnb.modAvailable.CNBMMTetherFail.CNBMMTetherFail-class.html#usage,Variable cnb.modAvailable.CNBMMTrivia.CNBMMTrivia.usage=cnb.modAvailable.CNBMMTrivia.CNBMMTrivia-class.html#usage,Variable cnb.modAvailable.CNBMMUnmorse.CNBMMUnmorse.usage=cnb.modAvailable.CNBMMUnmorse.CNBMMUnmorse-class.html#usage,Variable cnb.modAvailable.CNBMMWeather.CNBMMWeather.usage=cnb.modAvailable.CNBMMWeather.CNBMMWeather-class.html#usage,Variable cnb.modAvailable.CNBMMWebSurf.CNBMMWebSurf.usage=cnb.modAvailable.CNBMMWebSurf.CNBMMWebSurf-class.html#usage,Variable cnb.modAvailable.CNBMMpat.CNBMMpat.usage=cnb.modAvailable.CNBMMpat.CNBMMpat-class.html#usage,Variable cnb.modAvailable.CNBMMsay.CNBMMsay.usage=cnb.modAvailable.CNBMMsay.CNBMMsay-class.html#usage,Variable cnb.modAvailable.CNBMMspy.CNBMMspy.usage=cnb.modAvailable.CNBMMspy.CNBMMspy-class.html#usage,Variable cnb.modAvailable.CNBMMvn.CNBMMvn.usage=cnb.modAvailable.CNBMMvn.CNBMMvn-class.html#usage,Variable script-TEMPLATE_ALWAYS_py.CNBMMTemplateAlways.usage=script-TEMPLATE_ALWAYS_py.CNBMMTemplateAlways-class.html#usage,Variable script-TEMPLATE_CMD_py.CNBMMTemplateCmd.usage=script-TEMPLATE_CMD_py.CNBMMTemplateCmd-class.html#usage,Variable script-TEMPLATE_PATTERN_py.CNBMMTemplatePattern.usage=script-TEMPLATE_PATTERN_py.CNBMMTemplatePattern-class.html#usage"><a title="cnb.cnbMatrixModule.CNBMatrixModule.usage
+cnb.modAvailable.CNBMMAutoJoin.CNBMMAutoJoin.usage
+cnb.modAvailable.CNBMMBotInfo.CNBMMBotInfo.usage
+cnb.modAvailable.CNBMMChuckApprouve.CNBMMChuckApprouve.usage
+cnb.modAvailable.CNBMMChuckFacts.CNBMMChuckFacts.usage
+cnb.modAvailable.CNBMMChuckKukDo.CNBMMChuckKukDo.usage
+cnb.modAvailable.CNBMMCrack.CNBMMCrack.usage
+cnb.modAvailable.CNBMMDie.CNBMMDie.usage
+cnb.modAvailable.CNBMMEmail.CNBMMEmail.usage
+cnb.modAvailable.CNBMMEncode.CNBMMEncode.usage
+cnb.modAvailable.CNBMMGreeting.CNBMMGreeting.usage
+cnb.modAvailable.CNBMMHash.CNBMMHash.usage
+cnb.modAvailable.CNBMMHelp.CNBMMHelp.usage
+cnb.modAvailable.CNBMMInsult.CNBMMInsult.usage
+cnb.modAvailable.CNBMMJoin.CNBMMJoin.usage
+cnb.modAvailable.CNBMMMods.CNBMMMods.usage
+cnb.modAvailable.CNBMMMondaySuck.CNBMMMondaySuck.usage
+cnb.modAvailable.CNBMMNmap.CNBMMNmap.usage
+cnb.modAvailable.CNBMMSendFile.CNBMMSendFile.usage
+cnb.modAvailable.CNBMMTaMere.CNBMMTaMere.usage
+cnb.modAvailable.CNBMMTestAll.CNBMMTestAll.usage
+cnb.modAvailable.CNBMMTetherFail.CNBMMTetherFail.usage
+cnb.modAvailable.CNBMMTrivia.CNBMMTrivia.usage
+cnb.modAvailable.CNBMMUnmorse.CNBMMUnmorse.usage
+cnb.modAvailable.CNBMMWeather.CNBMMWeather.usage
+cnb.modAvailable.CNBMMWebSurf.CNBMMWebSurf.usage
+cnb.modAvailable.CNBMMpat.CNBMMpat.usage
+cnb.modAvailable.CNBMMsay.CNBMMsay.usage
+cnb.modAvailable.CNBMMspy.CNBMMspy.usage
+cnb.modAvailable.CNBMMvn.CNBMMvn.usage
+script-TEMPLATE_ALWAYS_py.CNBMMTemplateAlways.usage
+script-TEMPLATE_CMD_py.CNBMMTemplateCmd.usage
+script-TEMPLATE_PATTERN_py.CNBMMTemplatePattern.usage" class="py-name" href="#" onclick="return doclink('link-9', 'usage', 'link-9');">usage</a></tt> <tt class="py-op">=</tt> <tt class="py-string">'email stats|logs'</tt> </tt>
+<a name="L24"></a><tt class="py-lineno"> 24</tt>  <tt class="py-line">    <tt id="link-10" class="py-name" targets="Variable cnb.cnbMatrixModule.CNBMatrixModule.desc=cnb.cnbMatrixModule.CNBMatrixModule-class.html#desc,Variable cnb.modAvailable.CNBMMAutoJoin.CNBMMAutoJoin.desc=cnb.modAvailable.CNBMMAutoJoin.CNBMMAutoJoin-class.html#desc,Variable cnb.modAvailable.CNBMMBotInfo.CNBMMBotInfo.desc=cnb.modAvailable.CNBMMBotInfo.CNBMMBotInfo-class.html#desc,Variable cnb.modAvailable.CNBMMChuckApprouve.CNBMMChuckApprouve.desc=cnb.modAvailable.CNBMMChuckApprouve.CNBMMChuckApprouve-class.html#desc,Variable cnb.modAvailable.CNBMMChuckFacts.CNBMMChuckFacts.desc=cnb.modAvailable.CNBMMChuckFacts.CNBMMChuckFacts-class.html#desc,Variable cnb.modAvailable.CNBMMChuckKukDo.CNBMMChuckKukDo.desc=cnb.modAvailable.CNBMMChuckKukDo.CNBMMChuckKukDo-class.html#desc,Variable cnb.modAvailable.CNBMMCrack.CNBMMCrack.desc=cnb.modAvailable.CNBMMCrack.CNBMMCrack-class.html#desc,Variable cnb.modAvailable.CNBMMDie.CNBMMDie.desc=cnb.modAvailable.CNBMMDie.CNBMMDie-class.html#desc,Variable cnb.modAvailable.CNBMMEmail.CNBMMEmail.desc=cnb.modAvailable.CNBMMEmail.CNBMMEmail-class.html#desc,Variable cnb.modAvailable.CNBMMEncode.CNBMMEncode.desc=cnb.modAvailable.CNBMMEncode.CNBMMEncode-class.html#desc,Variable cnb.modAvailable.CNBMMGreeting.CNBMMGreeting.desc=cnb.modAvailable.CNBMMGreeting.CNBMMGreeting-class.html#desc,Variable cnb.modAvailable.CNBMMHash.CNBMMHash.desc=cnb.modAvailable.CNBMMHash.CNBMMHash-class.html#desc,Variable cnb.modAvailable.CNBMMHelp.CNBMMHelp.desc=cnb.modAvailable.CNBMMHelp.CNBMMHelp-class.html#desc,Variable cnb.modAvailable.CNBMMInsult.CNBMMInsult.desc=cnb.modAvailable.CNBMMInsult.CNBMMInsult-class.html#desc,Variable cnb.modAvailable.CNBMMJoin.CNBMMJoin.desc=cnb.modAvailable.CNBMMJoin.CNBMMJoin-class.html#desc,Variable cnb.modAvailable.CNBMMMods.CNBMMMods.desc=cnb.modAvailable.CNBMMMods.CNBMMMods-class.html#desc,Variable cnb.modAvailable.CNBMMMondaySuck.CNBMMMondaySuck.desc=cnb.modAvailable.CNBMMMondaySuck.CNBMMMondaySuck-class.html#desc,Variable cnb.modAvailable.CNBMMNmap.CNBMMNmap.desc=cnb.modAvailable.CNBMMNmap.CNBMMNmap-class.html#desc,Variable cnb.modAvailable.CNBMMSendFile.CNBMMSendFile.desc=cnb.modAvailable.CNBMMSendFile.CNBMMSendFile-class.html#desc,Variable cnb.modAvailable.CNBMMTaMere.CNBMMTaMere.desc=cnb.modAvailable.CNBMMTaMere.CNBMMTaMere-class.html#desc,Variable cnb.modAvailable.CNBMMTestAll.CNBMMTestAll.desc=cnb.modAvailable.CNBMMTestAll.CNBMMTestAll-class.html#desc,Variable cnb.modAvailable.CNBMMTetherFail.CNBMMTetherFail.desc=cnb.modAvailable.CNBMMTetherFail.CNBMMTetherFail-class.html#desc,Variable cnb.modAvailable.CNBMMTrivia.CNBMMTrivia.desc=cnb.modAvailable.CNBMMTrivia.CNBMMTrivia-class.html#desc,Variable cnb.modAvailable.CNBMMUnmorse.CNBMMUnmorse.desc=cnb.modAvailable.CNBMMUnmorse.CNBMMUnmorse-class.html#desc,Variable cnb.modAvailable.CNBMMWeather.CNBMMWeather.desc=cnb.modAvailable.CNBMMWeather.CNBMMWeather-class.html#desc,Variable cnb.modAvailable.CNBMMWebSurf.CNBMMWebSurf.desc=cnb.modAvailable.CNBMMWebSurf.CNBMMWebSurf-class.html#desc,Variable cnb.modAvailable.CNBMMpat.CNBMMpat.desc=cnb.modAvailable.CNBMMpat.CNBMMpat-class.html#desc,Variable cnb.modAvailable.CNBMMsay.CNBMMsay.desc=cnb.modAvailable.CNBMMsay.CNBMMsay-class.html#desc,Variable cnb.modAvailable.CNBMMspy.CNBMMspy.desc=cnb.modAvailable.CNBMMspy.CNBMMspy-class.html#desc,Variable cnb.modAvailable.CNBMMvn.CNBMMvn.desc=cnb.modAvailable.CNBMMvn.CNBMMvn-class.html#desc,Variable script-TEMPLATE_ALWAYS_py.CNBMMTemplateAlways.desc=script-TEMPLATE_ALWAYS_py.CNBMMTemplateAlways-class.html#desc,Variable script-TEMPLATE_CMD_py.CNBMMTemplateCmd.desc=script-TEMPLATE_CMD_py.CNBMMTemplateCmd-class.html#desc,Variable script-TEMPLATE_PATTERN_py.CNBMMTemplatePattern.desc=script-TEMPLATE_PATTERN_py.CNBMMTemplatePattern-class.html#desc"><a title="cnb.cnbMatrixModule.CNBMatrixModule.desc
+cnb.modAvailable.CNBMMAutoJoin.CNBMMAutoJoin.desc
+cnb.modAvailable.CNBMMBotInfo.CNBMMBotInfo.desc
+cnb.modAvailable.CNBMMChuckApprouve.CNBMMChuckApprouve.desc
+cnb.modAvailable.CNBMMChuckFacts.CNBMMChuckFacts.desc
+cnb.modAvailable.CNBMMChuckKukDo.CNBMMChuckKukDo.desc
+cnb.modAvailable.CNBMMCrack.CNBMMCrack.desc
+cnb.modAvailable.CNBMMDie.CNBMMDie.desc
+cnb.modAvailable.CNBMMEmail.CNBMMEmail.desc
+cnb.modAvailable.CNBMMEncode.CNBMMEncode.desc
+cnb.modAvailable.CNBMMGreeting.CNBMMGreeting.desc
+cnb.modAvailable.CNBMMHash.CNBMMHash.desc
+cnb.modAvailable.CNBMMHelp.CNBMMHelp.desc
+cnb.modAvailable.CNBMMInsult.CNBMMInsult.desc
+cnb.modAvailable.CNBMMJoin.CNBMMJoin.desc
+cnb.modAvailable.CNBMMMods.CNBMMMods.desc
+cnb.modAvailable.CNBMMMondaySuck.CNBMMMondaySuck.desc
+cnb.modAvailable.CNBMMNmap.CNBMMNmap.desc
+cnb.modAvailable.CNBMMSendFile.CNBMMSendFile.desc
+cnb.modAvailable.CNBMMTaMere.CNBMMTaMere.desc
+cnb.modAvailable.CNBMMTestAll.CNBMMTestAll.desc
+cnb.modAvailable.CNBMMTetherFail.CNBMMTetherFail.desc
+cnb.modAvailable.CNBMMTrivia.CNBMMTrivia.desc
+cnb.modAvailable.CNBMMUnmorse.CNBMMUnmorse.desc
+cnb.modAvailable.CNBMMWeather.CNBMMWeather.desc
+cnb.modAvailable.CNBMMWebSurf.CNBMMWebSurf.desc
+cnb.modAvailable.CNBMMpat.CNBMMpat.desc
+cnb.modAvailable.CNBMMsay.CNBMMsay.desc
+cnb.modAvailable.CNBMMspy.CNBMMspy.desc
+cnb.modAvailable.CNBMMvn.CNBMMvn.desc
+script-TEMPLATE_ALWAYS_py.CNBMMTemplateAlways.desc
+script-TEMPLATE_CMD_py.CNBMMTemplateCmd.desc
+script-TEMPLATE_PATTERN_py.CNBMMTemplatePattern.desc" class="py-name" href="#" onclick="return doclink('link-10', 'desc', 'link-10');">desc</a></tt> <tt class="py-op">=</tt> <tt class="py-string">'Send some information by emails'</tt> </tt>
+<a name="L25"></a><tt class="py-lineno"> 25</tt>  <tt class="py-line">    <tt id="link-11" class="py-name" targets="Variable cnb.cnbMatrixModule.CNBMatrixModule.aliases=cnb.cnbMatrixModule.CNBMatrixModule-class.html#aliases,Variable cnb.modAvailable.CNBMMAutoJoin.CNBMMAutoJoin.aliases=cnb.modAvailable.CNBMMAutoJoin.CNBMMAutoJoin-class.html#aliases,Variable cnb.modAvailable.CNBMMBotInfo.CNBMMBotInfo.aliases=cnb.modAvailable.CNBMMBotInfo.CNBMMBotInfo-class.html#aliases,Variable cnb.modAvailable.CNBMMChuckFacts.CNBMMChuckFacts.aliases=cnb.modAvailable.CNBMMChuckFacts.CNBMMChuckFacts-class.html#aliases,Variable cnb.modAvailable.CNBMMChuckKukDo.CNBMMChuckKukDo.aliases=cnb.modAvailable.CNBMMChuckKukDo.CNBMMChuckKukDo-class.html#aliases,Variable cnb.modAvailable.CNBMMCrack.CNBMMCrack.aliases=cnb.modAvailable.CNBMMCrack.CNBMMCrack-class.html#aliases,Variable cnb.modAvailable.CNBMMDie.CNBMMDie.aliases=cnb.modAvailable.CNBMMDie.CNBMMDie-class.html#aliases,Variable cnb.modAvailable.CNBMMEmail.CNBMMEmail.aliases=cnb.modAvailable.CNBMMEmail.CNBMMEmail-class.html#aliases,Variable cnb.modAvailable.CNBMMEncode.CNBMMEncode.aliases=cnb.modAvailable.CNBMMEncode.CNBMMEncode-class.html#aliases,Variable cnb.modAvailable.CNBMMHash.CNBMMHash.aliases=cnb.modAvailable.CNBMMHash.CNBMMHash-class.html#aliases,Variable cnb.modAvailable.CNBMMHelp.CNBMMHelp.aliases=cnb.modAvailable.CNBMMHelp.CNBMMHelp-class.html#aliases,Variable cnb.modAvailable.CNBMMJoin.CNBMMJoin.aliases=cnb.modAvailable.CNBMMJoin.CNBMMJoin-class.html#aliases,Variable cnb.modAvailable.CNBMMMods.CNBMMMods.aliases=cnb.modAvailable.CNBMMMods.CNBMMMods-class.html#aliases,Variable cnb.modAvailable.CNBMMMondaySuck.CNBMMMondaySuck.aliases=cnb.modAvailable.CNBMMMondaySuck.CNBMMMondaySuck-class.html#aliases,Variable cnb.modAvailable.CNBMMNmap.CNBMMNmap.aliases=cnb.modAvailable.CNBMMNmap.CNBMMNmap-class.html#aliases,Variable cnb.modAvailable.CNBMMSendFile.CNBMMSendFile.aliases=cnb.modAvailable.CNBMMSendFile.CNBMMSendFile-class.html#aliases,Variable cnb.modAvailable.CNBMMTaMere.CNBMMTaMere.aliases=cnb.modAvailable.CNBMMTaMere.CNBMMTaMere-class.html#aliases,Variable cnb.modAvailable.CNBMMTestAll.CNBMMTestAll.aliases=cnb.modAvailable.CNBMMTestAll.CNBMMTestAll-class.html#aliases,Variable cnb.modAvailable.CNBMMTetherFail.CNBMMTetherFail.aliases=cnb.modAvailable.CNBMMTetherFail.CNBMMTetherFail-class.html#aliases,Variable cnb.modAvailable.CNBMMTrivia.CNBMMTrivia.aliases=cnb.modAvailable.CNBMMTrivia.CNBMMTrivia-class.html#aliases,Variable cnb.modAvailable.CNBMMUnmorse.CNBMMUnmorse.aliases=cnb.modAvailable.CNBMMUnmorse.CNBMMUnmorse-class.html#aliases,Variable cnb.modAvailable.CNBMMWeather.CNBMMWeather.aliases=cnb.modAvailable.CNBMMWeather.CNBMMWeather-class.html#aliases,Variable cnb.modAvailable.CNBMMWebSurf.CNBMMWebSurf.aliases=cnb.modAvailable.CNBMMWebSurf.CNBMMWebSurf-class.html#aliases,Variable cnb.modAvailable.CNBMMpat.CNBMMpat.aliases=cnb.modAvailable.CNBMMpat.CNBMMpat-class.html#aliases,Variable cnb.modAvailable.CNBMMsay.CNBMMsay.aliases=cnb.modAvailable.CNBMMsay.CNBMMsay-class.html#aliases,Variable cnb.modAvailable.CNBMMspy.CNBMMspy.aliases=cnb.modAvailable.CNBMMspy.CNBMMspy-class.html#aliases,Variable cnb.modAvailable.CNBMMvn.CNBMMvn.aliases=cnb.modAvailable.CNBMMvn.CNBMMvn-class.html#aliases,Variable script-TEMPLATE_ALWAYS_py.CNBMMTemplateAlways.aliases=script-TEMPLATE_ALWAYS_py.CNBMMTemplateAlways-class.html#aliases,Variable script-TEMPLATE_CMD_py.CNBMMTemplateCmd.aliases=script-TEMPLATE_CMD_py.CNBMMTemplateCmd-class.html#aliases,Variable script-TEMPLATE_PATTERN_py.CNBMMTemplatePattern.aliases=script-TEMPLATE_PATTERN_py.CNBMMTemplatePattern-class.html#aliases"><a title="cnb.cnbMatrixModule.CNBMatrixModule.aliases
+cnb.modAvailable.CNBMMAutoJoin.CNBMMAutoJoin.aliases
+cnb.modAvailable.CNBMMBotInfo.CNBMMBotInfo.aliases
+cnb.modAvailable.CNBMMChuckFacts.CNBMMChuckFacts.aliases
+cnb.modAvailable.CNBMMChuckKukDo.CNBMMChuckKukDo.aliases
+cnb.modAvailable.CNBMMCrack.CNBMMCrack.aliases
+cnb.modAvailable.CNBMMDie.CNBMMDie.aliases
+cnb.modAvailable.CNBMMEmail.CNBMMEmail.aliases
+cnb.modAvailable.CNBMMEncode.CNBMMEncode.aliases
+cnb.modAvailable.CNBMMHash.CNBMMHash.aliases
+cnb.modAvailable.CNBMMHelp.CNBMMHelp.aliases
+cnb.modAvailable.CNBMMJoin.CNBMMJoin.aliases
+cnb.modAvailable.CNBMMMods.CNBMMMods.aliases
+cnb.modAvailable.CNBMMMondaySuck.CNBMMMondaySuck.aliases
+cnb.modAvailable.CNBMMNmap.CNBMMNmap.aliases
+cnb.modAvailable.CNBMMSendFile.CNBMMSendFile.aliases
+cnb.modAvailable.CNBMMTaMere.CNBMMTaMere.aliases
+cnb.modAvailable.CNBMMTestAll.CNBMMTestAll.aliases
+cnb.modAvailable.CNBMMTetherFail.CNBMMTetherFail.aliases
+cnb.modAvailable.CNBMMTrivia.CNBMMTrivia.aliases
+cnb.modAvailable.CNBMMUnmorse.CNBMMUnmorse.aliases
+cnb.modAvailable.CNBMMWeather.CNBMMWeather.aliases
+cnb.modAvailable.CNBMMWebSurf.CNBMMWebSurf.aliases
+cnb.modAvailable.CNBMMpat.CNBMMpat.aliases
+cnb.modAvailable.CNBMMsay.CNBMMsay.aliases
+cnb.modAvailable.CNBMMspy.CNBMMspy.aliases
+cnb.modAvailable.CNBMMvn.CNBMMvn.aliases
+script-TEMPLATE_ALWAYS_py.CNBMMTemplateAlways.aliases
+script-TEMPLATE_CMD_py.CNBMMTemplateCmd.aliases
+script-TEMPLATE_PATTERN_py.CNBMMTemplatePattern.aliases" class="py-name" href="#" onclick="return doclink('link-11', 'aliases', 'link-11');">aliases</a></tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-op">]</tt> </tt>
+<a name="L26"></a><tt class="py-lineno"> 26</tt>  <tt class="py-line">    <tt id="link-12" class="py-name" targets="Variable cnb.cnbMatrixModule.CNBMatrixModule.isAdmin=cnb.cnbMatrixModule.CNBMatrixModule-class.html#isAdmin,Variable cnb.modAvailable.CNBMMDie.CNBMMDie.isAdmin=cnb.modAvailable.CNBMMDie.CNBMMDie-class.html#isAdmin,Variable cnb.modAvailable.CNBMMEmail.CNBMMEmail.isAdmin=cnb.modAvailable.CNBMMEmail.CNBMMEmail-class.html#isAdmin,Variable cnb.modAvailable.CNBMMJoin.CNBMMJoin.isAdmin=cnb.modAvailable.CNBMMJoin.CNBMMJoin-class.html#isAdmin,Variable cnb.modAvailable.CNBMMMods.CNBMMMods.isAdmin=cnb.modAvailable.CNBMMMods.CNBMMMods-class.html#isAdmin,Variable cnb.modAvailable.CNBMMNmap.CNBMMNmap.isAdmin=cnb.modAvailable.CNBMMNmap.CNBMMNmap-class.html#isAdmin,Variable cnb.modAvailable.CNBMMTestAll.CNBMMTestAll.isAdmin=cnb.modAvailable.CNBMMTestAll.CNBMMTestAll-class.html#isAdmin,Variable cnb.modAvailable.CNBMMTrivia.CNBMMTrivia.isAdmin=cnb.modAvailable.CNBMMTrivia.CNBMMTrivia-class.html#isAdmin,Variable cnb.modAvailable.CNBMMsay.CNBMMsay.isAdmin=cnb.modAvailable.CNBMMsay.CNBMMsay-class.html#isAdmin,Variable cnb.modAvailable.CNBMMspy.CNBMMspy.isAdmin=cnb.modAvailable.CNBMMspy.CNBMMspy-class.html#isAdmin"><a title="cnb.cnbMatrixModule.CNBMatrixModule.isAdmin
+cnb.modAvailable.CNBMMDie.CNBMMDie.isAdmin
+cnb.modAvailable.CNBMMEmail.CNBMMEmail.isAdmin
+cnb.modAvailable.CNBMMJoin.CNBMMJoin.isAdmin
+cnb.modAvailable.CNBMMMods.CNBMMMods.isAdmin
+cnb.modAvailable.CNBMMNmap.CNBMMNmap.isAdmin
+cnb.modAvailable.CNBMMTestAll.CNBMMTestAll.isAdmin
+cnb.modAvailable.CNBMMTrivia.CNBMMTrivia.isAdmin
+cnb.modAvailable.CNBMMsay.CNBMMsay.isAdmin
+cnb.modAvailable.CNBMMspy.CNBMMspy.isAdmin" class="py-name" href="#" onclick="return doclink('link-12', 'isAdmin', 'link-12');">isAdmin</a></tt> <tt class="py-op">=</tt> <tt class="py-name">True</tt> </tt>
+<a name="L27"></a><tt class="py-lineno"> 27</tt>  <tt class="py-line">    <tt id="link-13" class="py-name" targets="Variable cnb.cnbMatrixModule.CNBMatrixModule.hidden=cnb.cnbMatrixModule.CNBMatrixModule-class.html#hidden,Variable cnb.modAvailable.CNBMMDie.CNBMMDie.hidden=cnb.modAvailable.CNBMMDie.CNBMMDie-class.html#hidden,Variable cnb.modAvailable.CNBMMEmail.CNBMMEmail.hidden=cnb.modAvailable.CNBMMEmail.CNBMMEmail-class.html#hidden,Variable cnb.modAvailable.CNBMMTestAll.CNBMMTestAll.hidden=cnb.modAvailable.CNBMMTestAll.CNBMMTestAll-class.html#hidden,Variable cnb.modAvailable.CNBMMUnmorse.CNBMMUnmorse.hidden=cnb.modAvailable.CNBMMUnmorse.CNBMMUnmorse-class.html#hidden,Variable cnb.modAvailable.CNBMMpat.CNBMMpat.hidden=cnb.modAvailable.CNBMMpat.CNBMMpat-class.html#hidden,Variable cnb.modAvailable.CNBMMvn.CNBMMvn.hidden=cnb.modAvailable.CNBMMvn.CNBMMvn-class.html#hidden"><a title="cnb.cnbMatrixModule.CNBMatrixModule.hidden
+cnb.modAvailable.CNBMMDie.CNBMMDie.hidden
+cnb.modAvailable.CNBMMEmail.CNBMMEmail.hidden
+cnb.modAvailable.CNBMMTestAll.CNBMMTestAll.hidden
+cnb.modAvailable.CNBMMUnmorse.CNBMMUnmorse.hidden
+cnb.modAvailable.CNBMMpat.CNBMMpat.hidden
+cnb.modAvailable.CNBMMvn.CNBMMvn.hidden" class="py-name" href="#" onclick="return doclink('link-13', 'hidden', 'link-13');">hidden</a></tt> <tt class="py-op">=</tt> <tt class="py-name">True</tt> </tt>
+<a name="L28"></a><tt class="py-lineno"> 28</tt>  <tt class="py-line"> </tt>
+<a name="L29"></a><tt class="py-lineno"> 29</tt>  <tt class="py-line"> </tt>
+<a name="CNBMMEmail.__init__"></a><div id="CNBMMEmail.__init__-def"><a name="L30"></a><tt class="py-lineno"> 30</tt> <a class="py-toggle" href="#" id="CNBMMEmail.__init__-toggle" onclick="return toggle('CNBMMEmail.__init__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="cnb.modAvailable.CNBMMEmail.CNBMMEmail-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt><tt class="py-param">log</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="CNBMMEmail.__init__-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="CNBMMEmail.__init__-expanded"><a name="L31"></a><tt class="py-lineno"> 31</tt>  <tt class="py-line">        <tt id="link-14" class="py-name"><a title="cnb.cnbMatrixModule.CNBMatrixModule" class="py-name" href="#" onclick="return doclink('link-14', 'CNBMatrixModule', 'link-7');">CNBMatrixModule</a></tt><tt class="py-op">.</tt><tt id="link-15" class="py-name" targets="Method cnb.cnb.CNB.__init__()=cnb.cnb.CNB-class.html#__init__,Method cnb.cnbCon.CNBCon.__init__()=cnb.cnbCon.CNBCon-class.html#__init__,Method cnb.cnbConnectorManager.CNBConnectorManager.__init__()=cnb.cnbConnectorManager.CNBConnectorManager-class.html#__init__,Method cnb.cnbConsole.CNBConsole.__init__()=cnb.cnbConsole.CNBConsole-class.html#__init__,Method cnb.cnbCore.CNBCore.__init__()=cnb.cnbCore.CNBCore-class.html#__init__,Method cnb.cnbIrcCon.CNBIRCCon.__init__()=cnb.cnbIrcCon.CNBIRCCon-class.html#__init__,Method cnb.cnbMatrixModule.CNBMatrixModule.__init__()=cnb.cnbMatrixModule.CNBMatrixModule-class.html#__init__,Method cnb.cnbMessage.CNBMessage.__init__()=cnb.cnbMessage.CNBMessage-class.html#__init__,Method cnb.cnbXmppCon.CNBXMPPCon.__init__()=cnb.cnbXmppCon.CNBXMPPCon-class.html#__init__,Method cnb.modAvailable.CNBMMAutoJoin.CNBMMAutoJoin.__init__()=cnb.modAvailable.CNBMMAutoJoin.CNBMMAutoJoin-class.html#__init__,Method cnb.modAvailable.CNBMMBotInfo.CNBMMBotInfo.__init__()=cnb.modAvailable.CNBMMBotInfo.CNBMMBotInfo-class.html#__init__,Method cnb.modAvailable.CNBMMChuckApprouve.CNBMMChuckApprouve.__init__()=cnb.modAvailable.CNBMMChuckApprouve.CNBMMChuckApprouve-class.html#__init__,Method cnb.modAvailable.CNBMMChuckFacts.CNBMMChuckFacts.__init__()=cnb.modAvailable.CNBMMChuckFacts.CNBMMChuckFacts-class.html#__init__,Method cnb.modAvailable.CNBMMChuckKukDo.CNBMMChuckKukDo.__init__()=cnb.modAvailable.CNBMMChuckKukDo.CNBMMChuckKukDo-class.html#__init__,Method cnb.modAvailable.CNBMMCrack.CNBMMCrack.__init__()=cnb.modAvailable.CNBMMCrack.CNBMMCrack-class.html#__init__,Method cnb.modAvailable.CNBMMDie.CNBMMDie.__init__()=cnb.modAvailable.CNBMMDie.CNBMMDie-class.html#__init__,Method cnb.modAvailable.CNBMMEmail.CNBMMEmail.__init__()=cnb.modAvailable.CNBMMEmail.CNBMMEmail-class.html#__init__,Method cnb.modAvailable.CNBMMEncode.CNBMMEncode.__init__()=cnb.modAvailable.CNBMMEncode.CNBMMEncode-class.html#__init__,Method cnb.modAvailable.CNBMMGreeting.CNBMMGreeting.__init__()=cnb.modAvailable.CNBMMGreeting.CNBMMGreeting-class.html#__init__,Method cnb.modAvailable.CNBMMHash.CNBMMHash.__init__()=cnb.modAvailable.CNBMMHash.CNBMMHash-class.html#__init__,Method cnb.modAvailable.CNBMMHelp.CNBMMHelp.__init__()=cnb.modAvailable.CNBMMHelp.CNBMMHelp-class.html#__init__,Method cnb.modAvailable.CNBMMInsult.CNBMMInsult.__init__()=cnb.modAvailable.CNBMMInsult.CNBMMInsult-class.html#__init__,Method cnb.modAvailable.CNBMMJoin.CNBMMJoin.__init__()=cnb.modAvailable.CNBMMJoin.CNBMMJoin-class.html#__init__,Method cnb.modAvailable.CNBMMMods.CNBMMMods.__init__()=cnb.modAvailable.CNBMMMods.CNBMMMods-class.html#__init__,Method cnb.modAvailable.CNBMMMondaySuck.CNBMMMondaySuck.__init__()=cnb.modAvailable.CNBMMMondaySuck.CNBMMMondaySuck-class.html#__init__,Method cnb.modAvailable.CNBMMNmap.CNBMMNmap.__init__()=cnb.modAvailable.CNBMMNmap.CNBMMNmap-class.html#__init__,Method cnb.modAvailable.CNBMMSendFile.CNBMMSendFile.__init__()=cnb.modAvailable.CNBMMSendFile.CNBMMSendFile-class.html#__init__,Method cnb.modAvailable.CNBMMTaMere.CNBMMTaMere.__init__()=cnb.modAvailable.CNBMMTaMere.CNBMMTaMere-class.html#__init__,Method cnb.modAvailable.CNBMMTestAll.CNBMMTestAll.__init__()=cnb.modAvailable.CNBMMTestAll.CNBMMTestAll-class.html#__init__,Method cnb.modAvailable.CNBMMTetherFail.CNBMMTetherFail.__init__()=cnb.modAvailable.CNBMMTetherFail.CNBMMTetherFail-class.html#__init__,Method cnb.modAvailable.CNBMMTrivia.CNBMMTrivia.__init__()=cnb.modAvailable.CNBMMTrivia.CNBMMTrivia-class.html#__init__,Method cnb.modAvailable.CNBMMTrivia.CNBMMTriviaGame.__init__()=cnb.modAvailable.CNBMMTrivia.CNBMMTriviaGame-class.html#__init__,Method cnb.modAvailable.CNBMMUnmorse.CNBMMUnmorse.__init__()=cnb.modAvailable.CNBMMUnmorse.CNBMMUnmorse-class.html#__init__,Method cnb.modAvailable.CNBMMWeather.CNBMMWeather.__init__()=cnb.modAvailable.CNBMMWeather.CNBMMWeather-class.html#__init__,Method cnb.modAvailable.CNBMMWebSurf.CNBMMWebSurf.__init__()=cnb.modAvailable.CNBMMWebSurf.CNBMMWebSurf-class.html#__init__,Method cnb.modAvailable.CNBMMpat.CNBMMpat.__init__()=cnb.modAvailable.CNBMMpat.CNBMMpat-class.html#__init__,Method cnb.modAvailable.CNBMMsay.CNBMMsay.__init__()=cnb.modAvailable.CNBMMsay.CNBMMsay-class.html#__init__,Method cnb.modAvailable.CNBMMspy.CNBMMspy.__init__()=cnb.modAvailable.CNBMMspy.CNBMMspy-class.html#__init__,Method cnb.modAvailable.CNBMMvn.CNBMMvn.__init__()=cnb.modAvailable.CNBMMvn.CNBMMvn-class.html#__init__,Method cnb.singleton.Singleton.__init__()=cnb.singleton.Singleton-class.html#__init__,Method script-TEMPLATE_ALWAYS_py.CNBMMTemplateAlways.__init__()=script-TEMPLATE_ALWAYS_py.CNBMMTemplateAlways-class.html#__init__,Method script-TEMPLATE_CMD_py.CNBMMTemplateCmd.__init__()=script-TEMPLATE_CMD_py.CNBMMTemplateCmd-class.html#__init__,Method script-TEMPLATE_PATTERN_py.CNBMMTemplatePattern.__init__()=script-TEMPLATE_PATTERN_py.CNBMMTemplatePattern-class.html#__init__"><a title="cnb.cnb.CNB.__init__
+cnb.cnbCon.CNBCon.__init__
+cnb.cnbConnectorManager.CNBConnectorManager.__init__
+cnb.cnbConsole.CNBConsole.__init__
+cnb.cnbCore.CNBCore.__init__
+cnb.cnbIrcCon.CNBIRCCon.__init__
+cnb.cnbMatrixModule.CNBMatrixModule.__init__
+cnb.cnbMessage.CNBMessage.__init__
+cnb.cnbXmppCon.CNBXMPPCon.__init__
+cnb.modAvailable.CNBMMAutoJoin.CNBMMAutoJoin.__init__
+cnb.modAvailable.CNBMMBotInfo.CNBMMBotInfo.__init__
+cnb.modAvailable.CNBMMChuckApprouve.CNBMMChuckApprouve.__init__
+cnb.modAvailable.CNBMMChuckFacts.CNBMMChuckFacts.__init__
+cnb.modAvailable.CNBMMChuckKukDo.CNBMMChuckKukDo.__init__
+cnb.modAvailable.CNBMMCrack.CNBMMCrack.__init__
+cnb.modAvailable.CNBMMDie.CNBMMDie.__init__
+cnb.modAvailable.CNBMMEmail.CNBMMEmail.__init__
+cnb.modAvailable.CNBMMEncode.CNBMMEncode.__init__
+cnb.modAvailable.CNBMMGreeting.CNBMMGreeting.__init__
+cnb.modAvailable.CNBMMHash.CNBMMHash.__init__
+cnb.modAvailable.CNBMMHelp.CNBMMHelp.__init__
+cnb.modAvailable.CNBMMInsult.CNBMMInsult.__init__
+cnb.modAvailable.CNBMMJoin.CNBMMJoin.__init__
+cnb.modAvailable.CNBMMMods.CNBMMMods.__init__
+cnb.modAvailable.CNBMMMondaySuck.CNBMMMondaySuck.__init__
+cnb.modAvailable.CNBMMNmap.CNBMMNmap.__init__
+cnb.modAvailable.CNBMMSendFile.CNBMMSendFile.__init__
+cnb.modAvailable.CNBMMTaMere.CNBMMTaMere.__init__
+cnb.modAvailable.CNBMMTestAll.CNBMMTestAll.__init__
+cnb.modAvailable.CNBMMTetherFail.CNBMMTetherFail.__init__
+cnb.modAvailable.CNBMMTrivia.CNBMMTrivia.__init__
+cnb.modAvailable.CNBMMTrivia.CNBMMTriviaGame.__init__
+cnb.modAvailable.CNBMMUnmorse.CNBMMUnmorse.__init__
+cnb.modAvailable.CNBMMWeather.CNBMMWeather.__init__
+cnb.modAvailable.CNBMMWebSurf.CNBMMWebSurf.__init__
+cnb.modAvailable.CNBMMpat.CNBMMpat.__init__
+cnb.modAvailable.CNBMMsay.CNBMMsay.__init__
+cnb.modAvailable.CNBMMspy.CNBMMspy.__init__
+cnb.modAvailable.CNBMMvn.CNBMMvn.__init__
+cnb.singleton.Singleton.__init__
+script-TEMPLATE_ALWAYS_py.CNBMMTemplateAlways.__init__
+script-TEMPLATE_CMD_py.CNBMMTemplateCmd.__init__
+script-TEMPLATE_PATTERN_py.CNBMMTemplatePattern.__init__" class="py-name" href="#" onclick="return doclink('link-15', '__init__', 'link-15');">__init__</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">,</tt><tt id="link-16" class="py-name" targets="Variable cnb.cnbCon.CNBCon.log=cnb.cnbCon.CNBCon-class.html#log,Variable cnb.cnbConnectorManager.CNBConnectorManager.log=cnb.cnbConnectorManager.CNBConnectorManager-class.html#log,Variable cnb.cnbCore.CNBCore.log=cnb.cnbCore.CNBCore-class.html#log,Variable cnb.cnbMatrixModule.CNBMatrixModule.log=cnb.cnbMatrixModule.CNBMatrixModule-class.html#log"><a title="cnb.cnbCon.CNBCon.log
+cnb.cnbConnectorManager.CNBConnectorManager.log
+cnb.cnbCore.CNBCore.log
+cnb.cnbMatrixModule.CNBMatrixModule.log" class="py-name" href="#" onclick="return doclink('link-16', 'log', 'link-16');">log</a></tt><tt class="py-op">)</tt> </tt>
+</div><a name="L32"></a><tt class="py-lineno"> 32</tt>  <tt class="py-line"> </tt>
+<a name="CNBMMEmail.__del__"></a><div id="CNBMMEmail.__del__-def"><a name="L33"></a><tt class="py-lineno"> 33</tt> <a class="py-toggle" href="#" id="CNBMMEmail.__del__-toggle" onclick="return toggle('CNBMMEmail.__del__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="cnb.modAvailable.CNBMMEmail.CNBMMEmail-class.html#__del__">__del__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="CNBMMEmail.__del__-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="CNBMMEmail.__del__-expanded"><a name="L34"></a><tt class="py-lineno"> 34</tt>  <tt class="py-line">        <tt class="py-keyword">pass</tt> </tt>
+</div><a name="L35"></a><tt class="py-lineno"> 35</tt>  <tt class="py-line"> </tt>
+<a name="CNBMMEmail._validateEmail"></a><div id="CNBMMEmail._validateEmail-def"><a name="L36"></a><tt class="py-lineno"> 36</tt> <a class="py-toggle" href="#" id="CNBMMEmail._validateEmail-toggle" onclick="return toggle('CNBMMEmail._validateEmail');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="cnb.modAvailable.CNBMMEmail.CNBMMEmail-class.html#_validateEmail">_validateEmail</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">email</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="CNBMMEmail._validateEmail-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="CNBMMEmail._validateEmail-expanded"><a name="L37"></a><tt class="py-lineno"> 37</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">len</tt><tt class="py-op">(</tt><tt id="link-17" class="py-name"><a title="cnb.cnbMessage.CNBMessage.email" class="py-name" href="#" onclick="return doclink('link-17', 'email', 'link-0');">email</a></tt><tt class="py-op">)</tt> <tt class="py-op">&gt;</tt> <tt class="py-number">7</tt><tt class="py-op">:</tt> </tt>
+<a name="L38"></a><tt class="py-lineno"> 38</tt>  <tt class="py-line">            <tt class="py-keyword">if</tt> <tt class="py-name">re</tt><tt class="py-op">.</tt><tt class="py-name">match</tt><tt class="py-op">(</tt><tt class="py-string">"^.+\\@(\\[?)[a-zA-Z0-9\\-\\.]+\\.([a-zA-Z]{2,3}|[0-9]{1,3})(\\]?)$"</tt><tt class="py-op">,</tt> <tt id="link-18" class="py-name"><a title="cnb.cnbMessage.CNBMessage.email" class="py-name" href="#" onclick="return doclink('link-18', 'email', 'link-0');">email</a></tt><tt class="py-op">)</tt> <tt class="py-op">!=</tt> <tt class="py-name">None</tt><tt class="py-op">:</tt> </tt>
+<a name="L39"></a><tt class="py-lineno"> 39</tt>  <tt class="py-line">                <tt class="py-keyword">return</tt> <tt class="py-number">1</tt> </tt>
+<a name="L40"></a><tt class="py-lineno"> 40</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-number">0</tt> </tt>
+</div><a name="L41"></a><tt class="py-lineno"> 41</tt>  <tt class="py-line"> </tt>
+<a name="CNBMMEmail._validateDate"></a><div id="CNBMMEmail._validateDate-def"><a name="L42"></a><tt class="py-lineno"> 42</tt> <a class="py-toggle" href="#" id="CNBMMEmail._validateDate-toggle" onclick="return toggle('CNBMMEmail._validateDate');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="cnb.modAvailable.CNBMMEmail.CNBMMEmail-class.html#_validateDate">_validateDate</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">date</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="CNBMMEmail._validateDate-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="CNBMMEmail._validateDate-expanded"><a name="L43"></a><tt class="py-lineno"> 43</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">len</tt><tt class="py-op">(</tt><tt class="py-name">date</tt><tt class="py-op">)</tt> <tt class="py-op">&gt;</tt> <tt class="py-number">7</tt><tt class="py-op">:</tt> </tt>
+<a name="L44"></a><tt class="py-lineno"> 44</tt>  <tt class="py-line">            <tt class="py-keyword">if</tt> <tt class="py-name">re</tt><tt class="py-op">.</tt><tt class="py-name">match</tt><tt class="py-op">(</tt><tt class="py-string">"^[1-2]{1}[0-9]{3}\-[01]{1}[0-9]{1}\-[0123]{1}[0-9]{1}$"</tt><tt class="py-op">,</tt> <tt class="py-name">date</tt><tt class="py-op">)</tt> <tt class="py-op">!=</tt> <tt class="py-name">None</tt><tt class="py-op">:</tt> </tt>
+<a name="L45"></a><tt class="py-lineno"> 45</tt>  <tt class="py-line">                <tt class="py-keyword">return</tt> <tt class="py-number">1</tt> </tt>
+<a name="L46"></a><tt class="py-lineno"> 46</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-number">0</tt> </tt>
+</div><a name="L47"></a><tt class="py-lineno"> 47</tt>  <tt class="py-line"> </tt>
+<a name="CNBMMEmail._sendEmail"></a><div id="CNBMMEmail._sendEmail-def"><a name="L48"></a><tt class="py-lineno"> 48</tt> <a class="py-toggle" href="#" id="CNBMMEmail._sendEmail-toggle" onclick="return toggle('CNBMMEmail._sendEmail');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="cnb.modAvailable.CNBMMEmail.CNBMMEmail-class.html#_sendEmail">_sendEmail</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">to</tt><tt class="py-op">,</tt> <tt class="py-param">subject</tt><tt class="py-op">,</tt> <tt class="py-param">text</tt><tt class="py-op">,</tt> <tt class="py-param">files</tt><tt class="py-op">=</tt><tt class="py-op">[</tt><tt class="py-op">]</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="CNBMMEmail._sendEmail-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="CNBMMEmail._sendEmail-expanded"><a name="L49"></a><tt class="py-lineno"> 49</tt>  <tt class="py-line">        <tt class="py-keyword">assert</tt> <tt id="link-19" class="py-name" targets="Variable cnb.cnbMessage.CNBMessage.type=cnb.cnbMessage.CNBMessage-class.html#type"><a title="cnb.cnbMessage.CNBMessage.type" class="py-name" href="#" onclick="return doclink('link-19', 'type', 'link-19');">type</a></tt><tt class="py-op">(</tt><tt class="py-name">to</tt><tt class="py-op">)</tt><tt class="py-op">==</tt><tt class="py-name">list</tt> </tt>
+<a name="L50"></a><tt class="py-lineno"> 50</tt>  <tt class="py-line">        <tt class="py-keyword">assert</tt> <tt id="link-20" class="py-name"><a title="cnb.cnbMessage.CNBMessage.type" class="py-name" href="#" onclick="return doclink('link-20', 'type', 'link-19');">type</a></tt><tt class="py-op">(</tt><tt class="py-name">files</tt><tt class="py-op">)</tt><tt class="py-op">==</tt><tt class="py-name">list</tt> </tt>
+<a name="L51"></a><tt class="py-lineno"> 51</tt>  <tt class="py-line"> </tt>
+<a name="L52"></a><tt class="py-lineno"> 52</tt>  <tt class="py-line">        <tt id="link-21" class="py-name" targets="Variable cnb.modAvailable.CNBMMpat.CNBMMpat.msg=cnb.modAvailable.CNBMMpat.CNBMMpat-class.html#msg,Variable cnb.modAvailable.CNBMMvn.CNBMMvn.msg=cnb.modAvailable.CNBMMvn.CNBMMvn-class.html#msg"><a title="cnb.modAvailable.CNBMMpat.CNBMMpat.msg
+cnb.modAvailable.CNBMMvn.CNBMMvn.msg" class="py-name" href="#" onclick="return doclink('link-21', 'msg', 'link-21');">msg</a></tt> <tt class="py-op">=</tt> <tt class="py-name">MIMEMultipart</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L53"></a><tt class="py-lineno"> 53</tt>  <tt class="py-line">        <tt id="link-22" class="py-name"><a title="cnb.modAvailable.CNBMMpat.CNBMMpat.msg
+cnb.modAvailable.CNBMMvn.CNBMMvn.msg" class="py-name" href="#" onclick="return doclink('link-22', 'msg', 'link-21');">msg</a></tt><tt class="py-op">[</tt><tt class="py-string">'From'</tt><tt class="py-op">]</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_name</tt> <tt class="py-op">+</tt> <tt class="py-string">'&lt;'</tt> <tt class="py-op">+</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_smtpUser</tt> <tt class="py-op">+</tt> <tt class="py-string">'&gt;'</tt> </tt>
+<a name="L54"></a><tt class="py-lineno"> 54</tt>  <tt class="py-line">        <tt id="link-23" class="py-name"><a title="cnb.modAvailable.CNBMMpat.CNBMMpat.msg
+cnb.modAvailable.CNBMMvn.CNBMMvn.msg" class="py-name" href="#" onclick="return doclink('link-23', 'msg', 'link-21');">msg</a></tt><tt class="py-op">[</tt><tt class="py-string">'To'</tt><tt class="py-op">]</tt> <tt class="py-op">=</tt> <tt class="py-name">COMMASPACE</tt><tt class="py-op">.</tt><tt class="py-name">join</tt><tt class="py-op">(</tt><tt class="py-name">to</tt><tt class="py-op">)</tt> </tt>
+<a name="L55"></a><tt class="py-lineno"> 55</tt>  <tt class="py-line">        <tt id="link-24" class="py-name"><a title="cnb.modAvailable.CNBMMpat.CNBMMpat.msg
+cnb.modAvailable.CNBMMvn.CNBMMvn.msg" class="py-name" href="#" onclick="return doclink('link-24', 'msg', 'link-21');">msg</a></tt><tt class="py-op">[</tt><tt class="py-string">'Date'</tt><tt class="py-op">]</tt> <tt class="py-op">=</tt> <tt class="py-name">formatdate</tt><tt class="py-op">(</tt><tt class="py-name">localtime</tt><tt class="py-op">=</tt><tt class="py-name">True</tt><tt class="py-op">)</tt> </tt>
+<a name="L56"></a><tt class="py-lineno"> 56</tt>  <tt class="py-line">        <tt id="link-25" class="py-name"><a title="cnb.modAvailable.CNBMMpat.CNBMMpat.msg
+cnb.modAvailable.CNBMMvn.CNBMMvn.msg" class="py-name" href="#" onclick="return doclink('link-25', 'msg', 'link-21');">msg</a></tt><tt class="py-op">[</tt><tt class="py-string">'Subject'</tt><tt class="py-op">]</tt> <tt class="py-op">=</tt> <tt class="py-name">subject</tt> </tt>
+<a name="L57"></a><tt class="py-lineno"> 57</tt>  <tt class="py-line">     </tt>
+<a name="L58"></a><tt class="py-lineno"> 58</tt>  <tt class="py-line">        <tt id="link-26" class="py-name"><a title="cnb.modAvailable.CNBMMpat.CNBMMpat.msg
+cnb.modAvailable.CNBMMvn.CNBMMvn.msg" class="py-name" href="#" onclick="return doclink('link-26', 'msg', 'link-21');">msg</a></tt><tt class="py-op">.</tt><tt class="py-name">attach</tt><tt class="py-op">(</tt><tt class="py-name">MIMEText</tt><tt class="py-op">(</tt><tt id="link-27" class="py-name" targets="Variable cnb.cnbMessage.CNBMessage.text=cnb.cnbMessage.CNBMessage-class.html#text"><a title="cnb.cnbMessage.CNBMessage.text" class="py-name" href="#" onclick="return doclink('link-27', 'text', 'link-27');">text</a></tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L59"></a><tt class="py-lineno"> 59</tt>  <tt class="py-line">     </tt>
+<a name="L60"></a><tt class="py-lineno"> 60</tt>  <tt class="py-line">        <tt class="py-keyword">for</tt> <tt class="py-name">file</tt> <tt class="py-keyword">in</tt> <tt class="py-name">files</tt><tt class="py-op">:</tt> </tt>
+<a name="L61"></a><tt class="py-lineno"> 61</tt>  <tt class="py-line">            <tt class="py-name">part</tt> <tt class="py-op">=</tt> <tt class="py-name">MIMEBase</tt><tt class="py-op">(</tt><tt class="py-string">'application'</tt><tt class="py-op">,</tt> <tt class="py-string">"octet-stream"</tt><tt class="py-op">)</tt> </tt>
+<a name="L62"></a><tt class="py-lineno"> 62</tt>  <tt class="py-line">            <tt class="py-name">part</tt><tt class="py-op">.</tt><tt class="py-name">set_payload</tt><tt class="py-op">(</tt> <tt class="py-name">open</tt><tt class="py-op">(</tt><tt class="py-name">file</tt><tt class="py-op">,</tt><tt class="py-string">"rb"</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt class="py-name">read</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L63"></a><tt class="py-lineno"> 63</tt>  <tt class="py-line">            <tt class="py-name">Encoders</tt><tt class="py-op">.</tt><tt class="py-name">encode_base64</tt><tt class="py-op">(</tt><tt class="py-name">part</tt><tt class="py-op">)</tt> </tt>
+<a name="L64"></a><tt class="py-lineno"> 64</tt>  <tt class="py-line">            <tt class="py-name">part</tt><tt class="py-op">.</tt><tt class="py-name">add_header</tt><tt class="py-op">(</tt><tt class="py-string">'Content-Disposition'</tt><tt class="py-op">,</tt> <tt class="py-string">'attachment; filename="%s"'</tt> <tt class="py-op">%</tt> <tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">path</tt><tt class="py-op">.</tt><tt class="py-name">basename</tt><tt class="py-op">(</tt><tt class="py-name">file</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L65"></a><tt class="py-lineno"> 65</tt>  <tt class="py-line">            <tt id="link-28" class="py-name"><a title="cnb.modAvailable.CNBMMpat.CNBMMpat.msg
+cnb.modAvailable.CNBMMvn.CNBMMvn.msg" class="py-name" href="#" onclick="return doclink('link-28', 'msg', 'link-21');">msg</a></tt><tt class="py-op">.</tt><tt class="py-name">attach</tt><tt class="py-op">(</tt><tt class="py-name">part</tt><tt class="py-op">)</tt> </tt>
+<a name="L66"></a><tt class="py-lineno"> 66</tt>  <tt class="py-line">     </tt>
+<a name="L67"></a><tt class="py-lineno"> 67</tt>  <tt class="py-line">        <tt class="py-name">smtp</tt> <tt class="py-op">=</tt> <tt class="py-name">smtplib</tt><tt class="py-op">.</tt><tt class="py-name">SMTP</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_smtpHost</tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_smtpPort</tt><tt class="py-op">)</tt> </tt>
+<a name="L68"></a><tt class="py-lineno"> 68</tt>  <tt class="py-line">        <tt class="py-name">smtp</tt><tt class="py-op">.</tt><tt class="py-name">ehlo</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L69"></a><tt class="py-lineno"> 69</tt>  <tt class="py-line">        <tt class="py-name">smtp</tt><tt class="py-op">.</tt><tt class="py-name">starttls</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L70"></a><tt class="py-lineno"> 70</tt>  <tt class="py-line">        <tt class="py-name">smtp</tt><tt class="py-op">.</tt><tt class="py-name">ehlo</tt> </tt>
+<a name="L71"></a><tt class="py-lineno"> 71</tt>  <tt class="py-line">        <tt class="py-name">smtp</tt><tt class="py-op">.</tt><tt class="py-name">login</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_smtpUser</tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_smtpPass</tt><tt class="py-op">)</tt> </tt>
+<a name="L72"></a><tt class="py-lineno"> 72</tt>  <tt class="py-line">        <tt class="py-name">smtp</tt><tt class="py-op">.</tt><tt class="py-name">sendmail</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_smtpUser</tt><tt class="py-op">,</tt> <tt class="py-name">to</tt><tt class="py-op">,</tt> <tt id="link-29" class="py-name"><a title="cnb.modAvailable.CNBMMpat.CNBMMpat.msg
+cnb.modAvailable.CNBMMvn.CNBMMvn.msg" class="py-name" href="#" onclick="return doclink('link-29', 'msg', 'link-21');">msg</a></tt><tt class="py-op">.</tt><tt class="py-name">as_string</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L73"></a><tt class="py-lineno"> 73</tt>  <tt class="py-line">        <tt class="py-name">smtp</tt><tt class="py-op">.</tt><tt class="py-name">close</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L74"></a><tt class="py-lineno"> 74</tt>  <tt class="py-line"> </tt>
+<a name="CNBMMEmail.processCmd"></a><div id="CNBMMEmail.processCmd-def"><a name="L75"></a><tt class="py-lineno"> 75</tt> <a class="py-toggle" href="#" id="CNBMMEmail.processCmd-toggle" onclick="return toggle('CNBMMEmail.processCmd');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="cnb.modAvailable.CNBMMEmail.CNBMMEmail-class.html#processCmd">processCmd</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">oMsg</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="CNBMMEmail.processCmd-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="CNBMMEmail.processCmd-expanded"><a name="L76"></a><tt class="py-lineno"> 76</tt>  <tt class="py-line">        <tt class="py-name">result</tt> <tt class="py-op">=</tt> <tt class="py-string">''</tt> </tt>
+<a name="L77"></a><tt class="py-lineno"> 77</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">len</tt><tt class="py-op">(</tt><tt class="py-name">oMsg</tt><tt class="py-op">.</tt><tt id="link-30" class="py-name" targets="Variable cnb.cnbMessage.CNBMessage.args=cnb.cnbMessage.CNBMessage-class.html#args"><a title="cnb.cnbMessage.CNBMessage.args" class="py-name" href="#" onclick="return doclink('link-30', 'args', 'link-30');">args</a></tt><tt class="py-op">)</tt> <tt class="py-op">&gt;=</tt> <tt class="py-number">1</tt><tt class="py-op">:</tt> </tt>
+<a name="L78"></a><tt class="py-lineno"> 78</tt>  <tt class="py-line">            <tt class="py-keyword">if</tt> <tt class="py-name">oMsg</tt><tt class="py-op">.</tt><tt id="link-31" class="py-name" targets="Variable cnb.cnbMessage.CNBMessage.protocol=cnb.cnbMessage.CNBMessage-class.html#protocol"><a title="cnb.cnbMessage.CNBMessage.protocol" class="py-name" href="#" onclick="return doclink('link-31', 'protocol', 'link-31');">protocol</a></tt><tt class="py-op">.</tt><tt class="py-name">startswith</tt><tt class="py-op">(</tt><tt class="py-string">'xmpp'</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L79"></a><tt class="py-lineno"> 79</tt>  <tt class="py-line">                <tt class="py-keyword">if</tt> <tt class="py-name">oMsg</tt><tt class="py-op">.</tt><tt id="link-32" class="py-name"><a title="cnb.cnbMessage.CNBMessage.args" class="py-name" href="#" onclick="return doclink('link-32', 'args', 'link-30');">args</a></tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt> <tt class="py-op">==</tt> <tt class="py-string">'stats'</tt><tt class="py-op">:</tt> </tt>
+<a name="L80"></a><tt class="py-lineno"> 80</tt>  <tt class="py-line">                    <tt class="py-comment"># Email validation</tt> </tt>
+<a name="L81"></a><tt class="py-lineno"> 81</tt>  <tt class="py-line">                    <tt class="py-name">to</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-op">]</tt> </tt>
+<a name="L82"></a><tt class="py-lineno"> 82</tt>  <tt class="py-line">                    <tt class="py-keyword">if</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-33" class="py-name" targets="Method cnb.modAvailable.CNBMMEmail.CNBMMEmail._validateEmail()=cnb.modAvailable.CNBMMEmail.CNBMMEmail-class.html#_validateEmail"><a title="cnb.modAvailable.CNBMMEmail.CNBMMEmail._validateEmail" class="py-name" href="#" onclick="return doclink('link-33', '_validateEmail', 'link-33');">_validateEmail</a></tt><tt class="py-op">(</tt><tt class="py-name">oMsg</tt><tt class="py-op">.</tt><tt id="link-34" class="py-name"><a title="cnb.cnbMessage.CNBMessage.email" class="py-name" href="#" onclick="return doclink('link-34', 'email', 'link-0');">email</a></tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L83"></a><tt class="py-lineno"> 83</tt>  <tt class="py-line">                        <tt class="py-name">to</tt><tt class="py-op">.</tt><tt class="py-name">append</tt><tt class="py-op">(</tt><tt class="py-name">oMsg</tt><tt class="py-op">.</tt><tt id="link-35" class="py-name"><a title="cnb.cnbMessage.CNBMessage.email" class="py-name" href="#" onclick="return doclink('link-35', 'email', 'link-0');">email</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L84"></a><tt class="py-lineno"> 84</tt>  <tt class="py-line"> </tt>
+<a name="L85"></a><tt class="py-lineno"> 85</tt>  <tt class="py-line">                    <tt class="py-comment"># Processing</tt> </tt>
+<a name="L86"></a><tt class="py-lineno"> 86</tt>  <tt class="py-line">                    <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-36" class="py-name" targets="Method cnb.modAvailable.CNBMMEmail.CNBMMEmail._sendEmail()=cnb.modAvailable.CNBMMEmail.CNBMMEmail-class.html#_sendEmail"><a title="cnb.modAvailable.CNBMMEmail.CNBMMEmail._sendEmail" class="py-name" href="#" onclick="return doclink('link-36', '_sendEmail', 'link-36');">_sendEmail</a></tt><tt class="py-op">(</tt><tt class="py-name">to</tt><tt class="py-op">,</tt> <tt class="py-string">'Bot Stats'</tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_stats</tt><tt class="py-op">(</tt><tt class="py-name">None</tt><tt class="py-op">,</tt> <tt class="py-name">None</tt><tt class="py-op">,</tt> <tt class="py-name">oMsg</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L87"></a><tt class="py-lineno"> 87</tt>  <tt class="py-line">                    <tt class="py-name">result</tt> <tt class="py-op">=</tt> <tt class="py-string">'Email sent'</tt> </tt>
+<a name="L88"></a><tt class="py-lineno"> 88</tt>  <tt class="py-line"> </tt>
+<a name="L89"></a><tt class="py-lineno"> 89</tt>  <tt class="py-line">                <tt class="py-keyword">elif</tt> <tt class="py-name">oMsg</tt><tt class="py-op">.</tt><tt id="link-37" class="py-name"><a title="cnb.cnbMessage.CNBMessage.args" class="py-name" href="#" onclick="return doclink('link-37', 'args', 'link-30');">args</a></tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt> <tt class="py-op">==</tt> <tt class="py-string">'logs'</tt><tt class="py-op">:</tt> </tt>
+<a name="L90"></a><tt class="py-lineno"> 90</tt>  <tt class="py-line">                    <tt class="py-comment"># Email validation</tt> </tt>
+<a name="L91"></a><tt class="py-lineno"> 91</tt>  <tt class="py-line">                    <tt class="py-name">to</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-op">]</tt> </tt>
+<a name="L92"></a><tt class="py-lineno"> 92</tt>  <tt class="py-line">                    <tt class="py-keyword">if</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-38" class="py-name"><a title="cnb.modAvailable.CNBMMEmail.CNBMMEmail._validateEmail" class="py-name" href="#" onclick="return doclink('link-38', '_validateEmail', 'link-33');">_validateEmail</a></tt><tt class="py-op">(</tt><tt class="py-name">oMsg</tt><tt class="py-op">.</tt><tt id="link-39" class="py-name"><a title="cnb.cnbMessage.CNBMessage.email" class="py-name" href="#" onclick="return doclink('link-39', 'email', 'link-0');">email</a></tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L93"></a><tt class="py-lineno"> 93</tt>  <tt class="py-line">                        <tt class="py-name">to</tt><tt class="py-op">.</tt><tt class="py-name">append</tt><tt class="py-op">(</tt><tt class="py-name">oMsg</tt><tt class="py-op">.</tt><tt id="link-40" class="py-name"><a title="cnb.cnbMessage.CNBMessage.email" class="py-name" href="#" onclick="return doclink('link-40', 'email', 'link-0');">email</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L94"></a><tt class="py-lineno"> 94</tt>  <tt class="py-line">    </tt>
+<a name="L95"></a><tt class="py-lineno"> 95</tt>  <tt class="py-line">                    <tt class="py-comment"># Processing</tt> </tt>
+<a name="L96"></a><tt class="py-lineno"> 96</tt>  <tt class="py-line">                    <tt class="py-keyword">if</tt> <tt class="py-name">len</tt><tt class="py-op">(</tt><tt class="py-name">oMsg</tt><tt class="py-op">.</tt><tt id="link-41" class="py-name"><a title="cnb.cnbMessage.CNBMessage.args" class="py-name" href="#" onclick="return doclink('link-41', 'args', 'link-30');">args</a></tt><tt class="py-op">)</tt> <tt class="py-op">&gt;=</tt> <tt class="py-number">2</tt><tt class="py-op">:</tt> </tt>
+<a name="L97"></a><tt class="py-lineno"> 97</tt>  <tt class="py-line">                        <tt class="py-comment"># Send single log, from date</tt> </tt>
+<a name="L98"></a><tt class="py-lineno"> 98</tt>  <tt class="py-line">                        <tt class="py-keyword">if</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-42" class="py-name" targets="Method cnb.modAvailable.CNBMMEmail.CNBMMEmail._validateDate()=cnb.modAvailable.CNBMMEmail.CNBMMEmail-class.html#_validateDate"><a title="cnb.modAvailable.CNBMMEmail.CNBMMEmail._validateDate" class="py-name" href="#" onclick="return doclink('link-42', '_validateDate', 'link-42');">_validateDate</a></tt><tt class="py-op">(</tt><tt class="py-name">oMsg</tt><tt class="py-op">.</tt><tt id="link-43" class="py-name"><a title="cnb.cnbMessage.CNBMessage.args" class="py-name" href="#" onclick="return doclink('link-43', 'args', 'link-30');">args</a></tt><tt class="py-op">[</tt><tt class="py-number">1</tt><tt class="py-op">]</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L99"></a><tt class="py-lineno"> 99</tt>  <tt class="py-line">                            <tt class="py-name">f</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_logDir</tt> <tt class="py-op">+</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">LOG_FILE</tt> <tt class="py-op">+</tt> <tt class="py-string">'.'</tt> <tt class="py-op">+</tt> <tt class="py-name">oMsg</tt><tt class="py-op">.</tt><tt id="link-44" class="py-name"><a title="cnb.cnbMessage.CNBMessage.args" class="py-name" href="#" onclick="return doclink('link-44', 'args', 'link-30');">args</a></tt><tt class="py-op">[</tt><tt class="py-number">1</tt><tt class="py-op">]</tt> </tt>
+<a name="L100"></a><tt class="py-lineno">100</tt>  <tt class="py-line">                            <tt class="py-keyword">if</tt> <tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">path</tt><tt class="py-op">.</tt><tt class="py-name">isfile</tt><tt class="py-op">(</tt><tt class="py-name">f</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L101"></a><tt class="py-lineno">101</tt>  <tt class="py-line">                                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-45" class="py-name"><a title="cnb.modAvailable.CNBMMEmail.CNBMMEmail._sendEmail" class="py-name" href="#" onclick="return doclink('link-45', '_sendEmail', 'link-36');">_sendEmail</a></tt><tt class="py-op">(</tt><tt class="py-name">to</tt><tt class="py-op">,</tt> <tt class="py-string">'Bot Logs: '</tt> <tt class="py-op">+</tt> <tt class="py-name">f</tt><tt class="py-op">,</tt> <tt class="py-name">None</tt><tt class="py-op">,</tt> <tt class="py-op">[</tt><tt class="py-name">f</tt><tt class="py-op">]</tt><tt class="py-op">)</tt> </tt>
+<a name="L102"></a><tt class="py-lineno">102</tt>  <tt class="py-line">                                <tt class="py-name">result</tt> <tt class="py-op">=</tt> <tt class="py-string">'Email sent'</tt> </tt>
+<a name="L103"></a><tt class="py-lineno">103</tt>  <tt class="py-line">                            <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L104"></a><tt class="py-lineno">104</tt>  <tt class="py-line">                                <tt class="py-name">result</tt> <tt class="py-op">=</tt> <tt class="py-string">'This log file does not exist'</tt> </tt>
+<a name="L105"></a><tt class="py-lineno">105</tt>  <tt class="py-line">                        <tt class="py-comment"># Send all logs</tt> </tt>
+<a name="L106"></a><tt class="py-lineno">106</tt>  <tt class="py-line">                        <tt class="py-keyword">elif</tt> <tt class="py-name">oMsg</tt><tt class="py-op">.</tt><tt id="link-46" class="py-name"><a title="cnb.cnbMessage.CNBMessage.args" class="py-name" href="#" onclick="return doclink('link-46', 'args', 'link-30');">args</a></tt><tt class="py-op">[</tt><tt class="py-number">1</tt><tt class="py-op">]</tt> <tt class="py-op">==</tt> <tt class="py-string">'*'</tt><tt class="py-op">:</tt> </tt>
+<a name="L107"></a><tt class="py-lineno">107</tt>  <tt class="py-line">                            <tt class="py-name">logFiles</tt> <tt class="py-op">=</tt> <tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">listdir</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_logDir</tt><tt class="py-op">)</tt> </tt>
+<a name="L108"></a><tt class="py-lineno">108</tt>  <tt class="py-line">                            <tt class="py-keyword">for</tt> <tt class="py-name">i</tt> <tt class="py-keyword">in</tt> <tt class="py-name">range</tt><tt class="py-op">(</tt><tt class="py-name">len</tt><tt class="py-op">(</tt><tt class="py-name">logFiles</tt><tt class="py-op">)</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L109"></a><tt class="py-lineno">109</tt>  <tt class="py-line">                                <tt class="py-name">logFiles</tt><tt class="py-op">[</tt><tt class="py-name">i</tt><tt class="py-op">]</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_logDir</tt> <tt class="py-op">+</tt> <tt class="py-name">logFiles</tt><tt class="py-op">[</tt><tt class="py-name">i</tt><tt class="py-op">]</tt> </tt>
+<a name="L110"></a><tt class="py-lineno">110</tt>  <tt class="py-line">                            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-47" class="py-name"><a title="cnb.modAvailable.CNBMMEmail.CNBMMEmail._sendEmail" class="py-name" href="#" onclick="return doclink('link-47', '_sendEmail', 'link-36');">_sendEmail</a></tt><tt class="py-op">(</tt><tt class="py-name">to</tt><tt class="py-op">,</tt> <tt class="py-string">'Bot Logs: *'</tt><tt class="py-op">,</tt> <tt class="py-name">None</tt><tt class="py-op">,</tt> <tt class="py-name">logFiles</tt><tt class="py-op">)</tt> </tt>
+<a name="L111"></a><tt class="py-lineno">111</tt>  <tt class="py-line">                            <tt class="py-name">result</tt> <tt class="py-op">=</tt> <tt class="py-string">'Email sent'</tt> </tt>
+<a name="L112"></a><tt class="py-lineno">112</tt>  <tt class="py-line">                        <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L113"></a><tt class="py-lineno">113</tt>  <tt class="py-line">                            <tt class="py-name">result</tt> <tt class="py-op">=</tt> <tt class="py-string">'Could not load files, email canceled'</tt> </tt>
+<a name="L114"></a><tt class="py-lineno">114</tt>  <tt class="py-line">                    <tt class="py-comment"># Send today's log</tt> </tt>
+<a name="L115"></a><tt class="py-lineno">115</tt>  <tt class="py-line">                    <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L116"></a><tt class="py-lineno">116</tt>  <tt class="py-line">                        <tt class="py-name">f</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_logDir</tt> <tt class="py-op">+</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">LOG_FILE</tt> </tt>
+<a name="L117"></a><tt class="py-lineno">117</tt>  <tt class="py-line">                        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-48" class="py-name"><a title="cnb.modAvailable.CNBMMEmail.CNBMMEmail._sendEmail" class="py-name" href="#" onclick="return doclink('link-48', '_sendEmail', 'link-36');">_sendEmail</a></tt><tt class="py-op">(</tt><tt class="py-name">to</tt><tt class="py-op">,</tt> <tt class="py-string">'Bot Logs: '</tt> <tt class="py-op">+</tt> <tt class="py-name">f</tt><tt class="py-op">,</tt> <tt class="py-name">None</tt><tt class="py-op">,</tt> <tt class="py-op">[</tt><tt class="py-name">f</tt><tt class="py-op">]</tt><tt class="py-op">)</tt> </tt>
+<a name="L118"></a><tt class="py-lineno">118</tt>  <tt class="py-line">                        <tt class="py-name">result</tt> <tt class="py-op">=</tt> <tt class="py-string">'Email sent'</tt> </tt>
+<a name="L119"></a><tt class="py-lineno">119</tt>  <tt class="py-line">                <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L120"></a><tt class="py-lineno">120</tt>  <tt class="py-line">                    <tt class="py-name">result</tt> <tt class="py-op">=</tt> <tt class="py-string">'This argument is not supported'</tt> </tt>
+<a name="L121"></a><tt class="py-lineno">121</tt>  <tt class="py-line">            <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L122"></a><tt class="py-lineno">122</tt>  <tt class="py-line">                <tt class="py-name">result</tt> <tt class="py-op">=</tt> <tt class="py-string">'Emails can be sent only through XMPP'</tt> </tt>
+<a name="L123"></a><tt class="py-lineno">123</tt>  <tt class="py-line">        <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L124"></a><tt class="py-lineno">124</tt>  <tt class="py-line">            <tt class="py-name">result</tt> <tt class="py-op">=</tt> <tt class="py-string">"This cmd takes at least 1 arguments, check help"</tt> </tt>
+<a name="L125"></a><tt class="py-lineno">125</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">result</tt> </tt>
+</div></div><a name="L126"></a><tt class="py-lineno">126</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Mon May 20 15:01:08 2013
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

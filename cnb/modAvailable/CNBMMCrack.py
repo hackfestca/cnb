@@ -5,19 +5,22 @@
 CNB Matrix Module - crack
 '''
 
-# System imports
 import subprocess
 from copy import copy
 from time import sleep, strftime
+from cnb.cnbManager import CNBManager
 from cnb.cnbConfig import CNBConfig
 from cnb.cnbMatrixModule import CNBMatrixModule
 
 class CNBMMCrack(CNBMatrixModule):
     """ 
-    Crack some kind of passwords
-    Usage: crack HASH1 HASH2 ...
-    Details: For now, the bot uses bozocrack to google some hash. In further version, the bot should check its own cache, google, rainbow and then bruteforce them
-          HASHX: Supported hash: Everything google can find...
+    @todo: Crack using a huge dictionnary
+    @todo: Cache cracked passwords
+    """
+
+    name = 'crack'
+    usage = 'crack [TYPE] HASH1 [HASH2 ...]'
+    desc = '''The bot uses bozocrack to google some hash.
             MD4       - RFC 1320
             MD5       - RFC 1321
             SHA1      - RFC 3174 (FIPS 180-3)
@@ -35,17 +38,13 @@ class CNBMMCrack(CNBMatrixModule):
             JUNIPER   - Juniper Networks $9$ encrypted passwords
             LDAP_MD5  - MD5 Base64 encoded
             LDAP_SHA1 - SHA1 Base64 encoded
-
-    @todo: Crack using a huge dictionnary
-    """
-
-    name = 'crack'
-    usage = 'crack <TYPE> <HASH>'
-    desc = 'Crack some hash :)'
+'''
     aliases = []
 
     FIND_MY_HASH_FILE = 'findmyhash/hashlist'
     FIND_MY_HASH_CMD = ['findmyhash_v1.1.2.py', '-f']
+    MSG_CRACKING = 'On my way...'
+    MSG_CRACKED = '***** HASH CRACKED!! *****'
 
     def __init__(self,log):
         CNBMatrixModule.__init__(self,log)
@@ -79,8 +78,20 @@ class CNBMMCrack(CNBMatrixModule):
             cmd.insert(1, hashType)
             cmd.append(tmpFileName)
             self.log.info(str(cmd))
+
+            # Telling the user that the hash will be cracked
+            oConMgr = CNBManager.getInstance()
+            oConMgr.sayCNB(oMsg.conId,oMsg.getSource(),self.MSG_CRACKING)
+
+            # Process and reply
             result = subprocess.Popen(cmd, stdout=subprocess.PIPE).communicate()[0]
 
+            # If the pass was cracked, remove some crap before sending results
+            if self.MSG_CRACKED in result:
+                result = result[result.find(self.MSG_CRACKED)::]
+                fh = open(tmpFileName,"a")
+                fh.write(result + "\n")
+                fh.close()
         else:
             result = "This cmd takes at least 2 arguments, check help"
         return result

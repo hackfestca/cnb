@@ -5,7 +5,6 @@
 CNB Matrix Module - die
 '''
 
-# System imports
 from cnb.cnbManager import CNBManager
 from cnb.cnbMatrixModule import CNBMatrixModule
 
@@ -21,6 +20,7 @@ class CNBMMDie(CNBMatrixModule):
     hidden = True
     isAdmin = True
 
+    MSG_OUTPUT = ':('
 
     def __init__(self,log):
         CNBMatrixModule.__init__(self,log)
@@ -36,5 +36,5 @@ class CNBMMDie(CNBMatrixModule):
             t = int(oMsg.args[0])
         oMgr = CNBManager.getInstance()
         oMgr.killCNB()
-        result = ':('
+        result = self.MSG_OUTPUT
         return result

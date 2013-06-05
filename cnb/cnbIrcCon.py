@@ -163,7 +163,7 @@ class CNBIRCCon(CNBCon):
         oMsg.protocol = 'irc'
         oMsg.conId = self._botConfig.get('bot', 'id')
         oMsg.type = str(e.eventtype())
-        oMsg.isPrivate = (oMsg.type == 'privmsg' or oMsg.type == 'privnotice')
+        oMsg.isPrivate = (oMsg.type == 'privmsg' or oMsg.type == 'privnotice' or oMsg.type == 'invite')
         oMsg.source = str(e.source())
         oMsg.target = str(e.target())
         oMsg.text = str(e.arguments()[0]).strip()
@@ -173,6 +173,8 @@ class CNBIRCCon(CNBCon):
         if oMsg.isPrivate:
             oMsg.username = str(e.source()).split('!')[0]
             oMsg.replyTo = str(e.source()).split('!')[0]
+            if oMsg.type == 'invite':
+                oMsg.room = oMsg.text
         else:
             #oMsg.username = str(e.target())
             oMsg.username = str(e.source()).split('!')[0]
@@ -257,6 +259,7 @@ class CNBIRCCon(CNBCon):
         self.connection.pong(e.target())
 
     def _on_pubmsg(self, c, e):
+        """[Internal]"""
         oMatrix = CNBMatrix.getInstance()
         oMsg = self._getMsgFromEvent(e, 'Pub Msg')
         if self._botConfig.get('bot', 'username') != oMsg.replyTo:
@@ -267,6 +270,7 @@ class CNBIRCCon(CNBCon):
                     sleep(self.IRC_REPLY_SLEEP)
 
     def _on_privmsg(self, c, e):
+        """[Internal]"""
         oMatrix = CNBMatrix.getInstance()
         oMsg = self._getMsgFromEvent(e, 'Priv Msg')
         if self._botConfig.get('bot', 'username') != oMsg.replyTo:
@@ -288,6 +292,17 @@ class CNBIRCCon(CNBCon):
         oMsg = self._getMsgFromEvent(e, 'Priv Notice')
         if oMsg.replyTo == 'NickServ' and 'You are now identified for' in oMsg.text:
             self.setState('identified')
+
+    def _on_invite(self, c, e):
+        """[Internal]"""
+        oMatrix = CNBMatrix.getInstance()
+        oMsg = self._getMsgFromEvent(e, 'Invite')
+        if self._botConfig.get('bot', 'username') != oMsg.replyTo:
+            replies = oMatrix.processIrcMod(oMsg)
+            if replies != None:
+                for r in replies:
+                    c.privmsg(oMsg.replyTo, r)
+                    sleep(self.IRC_REPLY_SLEEP)
 
     def _on_disconnect(self, c, e):
         """[Internal]"""
@@ -551,7 +566,10 @@ class CNBIRCCon(CNBCon):
         @type msg: String
         """
         self.log.info('Sending message to: ' + user)
-        self.connection.privmsg(user, msg)
+        aMsg = msg.split("\n")
+        for m in aMsg:
+            self.connection.privmsg(user, m)
+            sleep(self.IRC_REPLY_SLEEP)
 
     def isValidDomain(self, domain):
         """

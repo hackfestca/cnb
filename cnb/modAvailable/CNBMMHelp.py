@@ -5,7 +5,6 @@
 CNB Matrix Module - help
 '''
 
-# System imports
 from cnb.cnbMatrix import CNBMatrix
 from cnb.cnbMatrixModule import CNBMatrixModule
 
@@ -17,7 +16,7 @@ class CNBMMHelp(CNBMatrixModule):
     name = 'help'
     usage = 'help [cmd]'
     desc = 'This cmd return a help page listing available commands'
-    aliases = []
+    aliases = ['h']
 
 
     def __init__(self,log):

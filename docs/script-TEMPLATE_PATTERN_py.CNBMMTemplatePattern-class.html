@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>script-TEMPLATE_PATTERN_py.CNBMMTemplatePattern</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="script-TEMPLATE_PATTERN_py-module.html">Script&nbsp;TEMPLATE_PATTERN_py</a> ::
+        Class&nbsp;CNBMMTemplatePattern
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="script-TEMPLATE_PATTERN_py.CNBMMTemplatePattern-class.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS DESCRIPTION ==================== -->
+<h1 class="epydoc">Class CNBMMTemplatePattern</h1><p class="nomargin-top"><span class="codelink"><a href="script-TEMPLATE_PATTERN_py-pysrc.html#CNBMMTemplatePattern">source&nbsp;code</a></span></p>
+<center>
+<center>  <map id="uml_class_diagram_for_script_t_3" name="uml_class_diagram_for_script_t_3">
+<area shape="rect" id="node130" href="script-TEMPLATE_PATTERN_py.CNBMMTemplatePattern-class.html#name" title="Module name" alt="" coords="59,364,212,383"/>
+<area shape="rect" id="node130" href="script-TEMPLATE_PATTERN_py.CNBMMTemplatePattern-class.html#usage" title="Module usage help page" alt="" coords="59,383,212,401"/>
+<area shape="rect" id="node130" href="script-TEMPLATE_PATTERN_py.CNBMMTemplatePattern-class.html#desc" title="Module description" alt="" coords="59,401,212,420"/>
+<area shape="rect" id="node130" href="script-TEMPLATE_PATTERN_py.CNBMMTemplatePattern-class.html#aliases" title="Module aliases (ex: For .fact module, we could add .facts, .chuckfact, &#160;.chuckfacts, etc.)" alt="" coords="59,420,212,439"/>
+<area shape="rect" id="node130" href="script-TEMPLATE_PATTERN_py.CNBMMTemplatePattern-class.html#enProcessPattern" title="Determine if the module is processed from a pattern." alt="" coords="59,439,212,457"/>
+<area shape="rect" id="node130" href="script-TEMPLATE_PATTERN_py.CNBMMTemplatePattern-class.html#__init__" title="script&#45;TEMPLATE_PATTERN_py.CNBMMTemplatePattern.__init__" alt="" coords="59,460,212,479"/>
+<area shape="rect" id="node130" href="script-TEMPLATE_PATTERN_py.CNBMMTemplatePattern-class.html#__del__" title="script&#45;TEMPLATE_PATTERN_py.CNBMMTemplatePattern.__del__" alt="" coords="59,479,212,497"/>
+<area shape="rect" id="node130" href="script-TEMPLATE_PATTERN_py.CNBMMTemplatePattern-class.html#checkPattern" title="For pattern mode only: Check if the message satisfy the pattern." alt="" coords="59,497,212,516"/>
+<area shape="rect" id="node130" href="script-TEMPLATE_PATTERN_py.CNBMMTemplatePattern-class.html#processCmd" title="For command mode only: This method should be overwritten to process &#160;something" alt="" coords="59,516,212,535"/>
+<area shape="rect" id="node1" href="script-TEMPLATE_PATTERN_py.CNBMMTemplatePattern-class.html" title="script&#45;TEMPLATE_PATTERN_py.CNBMMTemplatePattern" alt="" coords="47,339,223,541"/>
+<area shape="rect" id="node131" href="cnb.cnbMatrixModule.CNBMatrixModule-class.html#isAdmin" title="Determine if the module can be accessed by admins only" alt="" coords="17,31,255,49"/>
+<area shape="rect" id="node131" href="cnb.cnbMatrixModule.CNBMatrixModule-class.html#replyToUserOnly" title="Determine if the module reply to the user only, even if the cmd was send on a room/chan" alt="" coords="17,49,255,68"/>
+<area shape="rect" id="node131" href="cnb.cnbMatrixModule.CNBMatrixModule-class.html#hidden" title="Determine if the module is hidden." alt="" coords="17,68,255,87"/>
+<area shape="rect" id="node131" href="cnb.cnbMatrixModule.CNBMatrixModule-class.html#enProcessCmd" title="Determine if the module is processed from a command." alt="" coords="17,87,255,105"/>
+<area shape="rect" id="node131" href="cnb.cnbMatrixModule.CNBMatrixModule-class.html#enProcessAlways" title="Determine if the module is processed at anytime." alt="" coords="17,105,255,124"/>
+<area shape="rect" id="node131" href="cnb.cnbMatrixModule.CNBMatrixModule-class.html#log" title="log object" alt="" coords="17,124,255,143"/>
+<area shape="rect" id="node131" href="cnb.cnbMatrixModule.CNBMatrixModule-class.html#prefix" title="Module prefix" alt="" coords="17,143,255,161"/>
+<area shape="rect" id="node131" href="cnb.cnbMatrixModule.CNBMatrixModule-class.html#parser" title="Input messages parser." alt="" coords="17,161,255,180"/>
+<area shape="rect" id="node131" href="cnb.cnbMatrixModule.CNBMatrixModule-class.html#users" title="List of users that are allowed to use the module." alt="" coords="17,180,255,199"/>
+<area shape="rect" id="node131" href="cnb.cnbMatrixModule.CNBMatrixModule-class.html#getParsedArgs" title="cnb.cnbMatrixModule.CNBMatrixModule.getParsedArgs" alt="" coords="17,201,255,220"/>
+<area shape="rect" id="node131" href="cnb.cnbMatrixModule.CNBMatrixModule-class.html#getFullName" title="Get full name of a module (including prefix)" alt="" coords="17,220,255,239"/>
+<area shape="rect" id="node131" href="cnb.cnbMatrixModule.CNBMatrixModule-class.html#getUsage" title="Get usage of a module (including prefix)" alt="" coords="17,239,255,257"/>
+<area shape="rect" id="node131" href="cnb.cnbMatrixModule.CNBMatrixModule-class.html#getAliases" title="Get a complete list of the module aliases" alt="" coords="17,257,255,276"/>
+<area shape="rect" id="node131" href="cnb.cnbMatrixModule.CNBMatrixModule-class.html#processPattern" title="For pattern mode only: This method should be overwritten to process &#160;something when checkPattern() return True" alt="" coords="17,276,255,295"/>
+<area shape="rect" id="node131" href="cnb.cnbMatrixModule.CNBMatrixModule-class.html#processAlways" title="This method should be overwritten to process something on every message" alt="" coords="17,295,255,313"/>
+<area shape="rect" id="node2" href="cnb.cnbMatrixModule.CNBMatrixModule-class.html" title="Definition of a Matrix Module." alt="" coords="5,6,267,319"/>
+</map>
+  <img src="uml_class_diagram_for_script_t_3.gif" alt='' usemap="#uml_class_diagram_for_script_t_3" ismap="ismap" class="graph-without-title" />
+</center>
+</center>
+<hr />
+<!-- ==================== INSTANCE METHODS ==================== -->
+<a name="section-InstanceMethods"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Instance Methods</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-InstanceMethods"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="script-TEMPLATE_PATTERN_py.CNBMMTemplatePattern-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">log</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="script-TEMPLATE_PATTERN_py-pysrc.html#CNBMMTemplatePattern.__init__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="script-TEMPLATE_PATTERN_py.CNBMMTemplatePattern-class.html#__del__" class="summary-sig-name">__del__</a>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="script-TEMPLATE_PATTERN_py-pysrc.html#CNBMMTemplatePattern.__del__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="script-TEMPLATE_PATTERN_py.CNBMMTemplatePattern-class.html#checkPattern" class="summary-sig-name">checkPattern</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">oMsg</span>)</span><br />
+      For pattern mode only: Check if the message satisfy the pattern.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="script-TEMPLATE_PATTERN_py-pysrc.html#CNBMMTemplatePattern.checkPattern">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="script-TEMPLATE_PATTERN_py.CNBMMTemplatePattern-class.html#processCmd" class="summary-sig-name">processCmd</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">oMsg</span>)</span><br />
+      For command mode only: This method should be overwritten to process 
+      something</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="script-TEMPLATE_PATTERN_py-pysrc.html#CNBMMTemplatePattern.processCmd">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="cnb.cnbMatrixModule.CNBMatrixModule-class.html">cnb.cnbMatrixModule.CNBMatrixModule</a></code></b>:
+      <code><a href="cnb.cnbMatrixModule.CNBMatrixModule-class.html#getAliases">getAliases</a></code>,
+      <code><a href="cnb.cnbMatrixModule.CNBMatrixModule-class.html#getFullName">getFullName</a></code>,
+      <code><a href="cnb.cnbMatrixModule.CNBMatrixModule-class.html#getParsedArgs">getParsedArgs</a></code>,
+      <code><a href="cnb.cnbMatrixModule.CNBMatrixModule-class.html#getUsage">getUsage</a></code>,
+      <code><a href="cnb.cnbMatrixModule.CNBMatrixModule-class.html#processAlways">processAlways</a></code>,
+      <code><a href="cnb.cnbMatrixModule.CNBMatrixModule-class.html#processPattern">processPattern</a></code>
+      </p>
+    <div class="private">    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="cnb.cnbMatrixModule.CNBMatrixModule-class.html">cnb.cnbMatrixModule.CNBMatrixModule</a></code></b> (private):
+      <code><a href="cnb.cnbMatrixModule.CNBMatrixModule-class.html#_checkIntegrity" onclick="show_private();">_checkIntegrity</a></code>,
+      <code><a href="cnb.cnbMatrixModule.CNBMatrixModule-class.html#_initOptParser" onclick="show_private();">_initOptParser</a></code>
+      </p></div>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS VARIABLES ==================== -->
+<a name="section-ClassVariables"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Class Variables</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-ClassVariables"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">String</span>
+    </td><td class="summary">
+        <a name="name"></a><span class="summary-name">name</span> = <code title="''">''</code><br />
+      Module name
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">String</span>
+    </td><td class="summary">
+        <a name="usage"></a><span class="summary-name">usage</span> = <code title="''">''</code><br />
+      Module usage help page
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">String</span>
+    </td><td class="summary">
+        <a href="script-TEMPLATE_PATTERN_py.CNBMMTemplatePattern-class.html#desc" class="summary-name">desc</a> = <code title="'This cmd do this and that             LANG: fr|en (default: en)'"><code class="variable-quote">'</code><code class="variable-string">This cmd do this and that             LANG: fr|en (def</code><code class="variable-ellipsis">...</code></code><br />
+      Module description
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">List</span>
+    </td><td class="summary">
+        <a name="aliases"></a><span class="summary-name">aliases</span> = <code title="[]">[]</code><br />
+      Module aliases (ex: For .fact module, we could add .facts, 
+      .chuckfact, .chuckfacts, etc.)
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">bool</span>
+    </td><td class="summary">
+        <a name="enProcessPattern"></a><span class="summary-name">enProcessPattern</span> = <code title="True">True</code><br />
+      Determine if the module is processed from a pattern.
+    </td>
+  </tr>
+</table>
+<!-- ==================== INSTANCE VARIABLES ==================== -->
+<a name="section-InstanceVariables"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Instance Variables</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-InstanceVariables"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="cnb.cnbMatrixModule.CNBMatrixModule-class.html">cnb.cnbMatrixModule.CNBMatrixModule</a></code></b>:
+      <code><a href="cnb.cnbMatrixModule.CNBMatrixModule-class.html#enProcessAlways">enProcessAlways</a></code>,
+      <code><a href="cnb.cnbMatrixModule.CNBMatrixModule-class.html#enProcessCmd">enProcessCmd</a></code>,
+      <code><a href="cnb.cnbMatrixModule.CNBMatrixModule-class.html#hidden">hidden</a></code>,
+      <code><a href="cnb.cnbMatrixModule.CNBMatrixModule-class.html#isAdmin">isAdmin</a></code>,
+      <code><a href="cnb.cnbMatrixModule.CNBMatrixModule-class.html#log">log</a></code>,
+      <code><a href="cnb.cnbMatrixModule.CNBMatrixModule-class.html#parser">parser</a></code>,
+      <code><a href="cnb.cnbMatrixModule.CNBMatrixModule-class.html#prefix">prefix</a></code>,
+      <code><a href="cnb.cnbMatrixModule.CNBMatrixModule-class.html#replyToUserOnly">replyToUserOnly</a></code>,
+      <code><a href="cnb.cnbMatrixModule.CNBMatrixModule-class.html#users">users</a></code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== METHOD DETAILS ==================== -->
+<a name="section-MethodDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Method Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-MethodDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="__init__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">log</span>)</span>
+    <br /><em class="fname">(Constructor)</em>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="script-TEMPLATE_PATTERN_py-pysrc.html#CNBMMTemplatePattern.__init__">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  
+  <dl class="fields">
+    <dt>Overrides:
+        <a href="cnb.cnbMatrixModule.CNBMatrixModule-class.html#__init__">cnb.cnbMatrixModule.CNBMatrixModule.__init__</a>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="__del__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__del__</span>(<span class="sig-arg">self</span>)</span>
+    <br /><em class="fname">(Destructor)</em>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="script-TEMPLATE_PATTERN_py-pysrc.html#CNBMMTemplatePattern.__del__">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  
+  <dl class="fields">
+    <dt>Overrides:
+        <a href="cnb.cnbMatrixModule.CNBMatrixModule-class.html#__del__">cnb.cnbMatrixModule.CNBMatrixModule.__del__</a>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="checkPattern"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">checkPattern</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">oMsg</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="script-TEMPLATE_PATTERN_py-pysrc.html#CNBMMTemplatePattern.checkPattern">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>For pattern mode only: Check if the message satisfy the pattern. This 
+  method must return true or false</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>oMsg</code></strong> - Message to process</li>
+    </ul></dd>
+    <dt>Overrides:
+        <a href="cnb.cnbMatrixModule.CNBMatrixModule-class.html#checkPattern">cnb.cnbMatrixModule.CNBMatrixModule.checkPattern</a>
+        <dd><em class="note">(inherited documentation)</em></dd>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="processCmd"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">processCmd</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">oMsg</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="script-TEMPLATE_PATTERN_py-pysrc.html#CNBMMTemplatePattern.processCmd">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>For command mode only: This method should be overwritten to process 
+  something</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>oMsg</code></strong> - Message to process</li>
+    </ul></dd>
+    <dt>Overrides:
+        <a href="cnb.cnbMatrixModule.CNBMatrixModule-class.html#processCmd">cnb.cnbMatrixModule.CNBMatrixModule.processCmd</a>
+        <dd><em class="note">(inherited documentation)</em></dd>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== CLASS VARIABLE DETAILS ==================== -->
+<a name="section-ClassVariableDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Class Variable Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-ClassVariableDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="desc"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">desc</h3>
+  Module description
+  <dl class="fields">
+    <dt>Type:</dt>
+      <dd>String</dd>
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+<code class="variable-quote">'</code><code class="variable-string">This cmd do this and that             LANG: fr|en (default: en)</code><code class="variable-quote">'</code>
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Mon May 20 15:01:07 2013
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

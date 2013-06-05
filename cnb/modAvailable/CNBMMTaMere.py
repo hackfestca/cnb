@@ -5,7 +5,6 @@
 CNB Matrix Module - tamere
 '''
 
-# System imports
 import random
 from cnb.cnbConfig import CNBConfig
 from cnb.cnbMatrixModule import CNBMatrixModule

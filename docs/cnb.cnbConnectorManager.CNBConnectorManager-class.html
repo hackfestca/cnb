@@ -14,9 +14,6 @@
 <table class="navbar" border="0" width="100%" cellpadding="0"
        bgcolor="#a0c0ff" cellspacing="0">
   <tr valign="middle">
-  <!-- Home link -->
-      <th>&nbsp;&nbsp;&nbsp;<a
-        href="cnb-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
 
   <!-- Tree link -->
       <th>&nbsp;&nbsp;&nbsp;<a
@@ -387,11 +384,49 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
+          <td><span class="summary-sig"><a href="cnb.cnbConnectorManager.CNBConnectorManager-class.html#sendFile" class="summary-sig-name">sendFile</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">conId</span>,
+        <span class="summary-sig-arg">dest</span>,
+        <span class="summary-sig-arg">f</span>)</span><br />
+      Send a file to a user for a specific connection</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cnb.cnbConnectorManager-pysrc.html#CNBConnectorManager.sendFile">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
           <td><span class="summary-sig"><a href="cnb.cnbConnectorManager.CNBConnectorManager-class.html#getConfigFromId" class="summary-sig-name">getConfigFromId</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">conId</span>)</span><br />
       Get a config object from a connector ID</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="cnb.cnbConnectorManager-pysrc.html#CNBConnectorManager.getConfigFromId">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cnb.cnbConnectorManager.CNBConnectorManager-class.html#getConIdFromDomain" class="summary-sig-name">getConIdFromDomain</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">domain</span>)</span><br />
+      This method return a connector ID for a valid domain</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cnb.cnbConnectorManager-pysrc.html#CNBConnectorManager.getConIdFromDomain">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -504,10 +539,7 @@
   every day.</p>
   <dl class="fields">
   </dl>
-<div class="fields">      <p><strong>To Do:</strong>
-        Set log level from config or user input
-      </p>
-</div></td></tr></table>
+</td></tr></table>
 </div>
 <a name="_normalize"></a>
 <div class="private">
@@ -736,6 +768,34 @@
   </dl>
 </td></tr></table>
 </div>
+<a name="sendFile"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">sendFile</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">conId</span>,
+        <span class="sig-arg">dest</span>,
+        <span class="sig-arg">f</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cnb.cnbConnectorManager-pysrc.html#CNBConnectorManager.sendFile">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Send a file to a user for a specific connection</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>conId</code></strong> (int) - Connector ID</li>
+        <li><strong class="pname"><code>dest</code></strong> (string) - Name of user send a message</li>
+        <li><strong class="pname"><code>f</code></strong> (string) - File to send</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
 <a name="getConfigFromId"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
@@ -760,14 +820,35 @@
   </dl>
 </td></tr></table>
 </div>
+<a name="getConIdFromDomain"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getConIdFromDomain</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">domain</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cnb.cnbConnectorManager-pysrc.html#CNBConnectorManager.getConIdFromDomain">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>This method return a connector ID for a valid domain</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>domain</code></strong> (string) - Domain name to search connector ID</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
 <br />
 <!-- ==================== NAVIGATION BAR ==================== -->
 <table class="navbar" border="0" width="100%" cellpadding="0"
        bgcolor="#a0c0ff" cellspacing="0">
   <tr valign="middle">
-  <!-- Home link -->
-      <th>&nbsp;&nbsp;&nbsp;<a
-        href="cnb-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
 
   <!-- Tree link -->
       <th>&nbsp;&nbsp;&nbsp;<a
@@ -787,7 +868,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Wed Mar 27 22:22:30 2013
+    Generated by Epydoc 3.0.1 on Mon May 20 15:01:03 2013
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

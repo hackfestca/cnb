@@ -2,10 +2,9 @@
 # -*- coding: utf-8 -*-
 
 '''
-CNB Matrix Module
+CNB Matrix Module - greeting
 '''
 
-# System imports
 import os
 import re
 import sys
@@ -17,48 +16,27 @@ class CNBMMGreeting(CNBMatrixModule):
 
     """
 
-    # Bot Config
-    enProcessCmd = False
-    enProcessPattern = True
-
-    # Bot vars
     name = 'greeting'
     usage = ''
     desc = 'Detect some greeting message and reply one'
-    SUP_MSG = ['sup', 'waza', 'hi', 'hello']
-    SUP_ANSWER = ['sup', 'waza', 'hi', 'hello']
+    enProcessCmd = False
+    enProcessPattern = True
 
-    #
-    # Function: __init__()
-    # Description: 
-    #
+    SUP_MSG = ['sup', 'waza', 'hi', 'hello', 'sup', "what's up", 'salut']
+    SUP_ANSWER = ['sup', 'waza', 'hi', 'hello', 'sup', "what's up", 'salut']
+
     def __init__(self,log):
         CNBMatrixModule.__init__(self,log)
         
-    #
-    # Function: __del__()
-    # Description: 
-    #
     def __del__(self):
         pass
 
-####################
-# Public Functions #
-####################
-    #
-    # Function: checkPattern(oMsg)
-    # Description: Should return True or False
-    #
     def checkPattern(self,oMsg):
         if oMsg.text in self.SUP_MSG:
             return True
         else:
             return False
                 
-    #
-    # Function: processPattern(oMsg)
-    # Description: 
-    #
     def processPattern(self,oMsg):
         return self.SUP_ANSWER[random.randint(1,len(self.SUP_ANSWER)-1)]
 
