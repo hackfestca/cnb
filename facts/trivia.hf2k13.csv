@@ -1,0 +1,37 @@
+#ID, "QUESTION", "[ANSWER1,ANSWER2,ANSWER3]",FLAG,FLAG_VALUE,QUESTION_DURATION
+#0,"This is a test question for you to test submit system. Simply submit 'answer' or 'reponse' in private","[answer,reponse]",GOOD_JOB_BUT_THIS_IS_NOT_A_FLAG,0,10
+#1,0x77421222 using Windows 7 SP1 FR?,GetProcAddress,Dm7CBFksWb0EIxVfIEkf,4,15
+#2,"http://scoreboard.ctf.hf/files/trivia.q2.png",md5,pQksHwLIu9ttmYyYzKYj,3,20
+#3,Common instructions sequence for SEH exploit,pop pop ret,mRYtgMiaZAVzCMa23IKJ,2,15
+#4,Acronym of exploitation technique using gadget chaining,ROP,2vrk3jdCOBD0vyeqrSgL,2,15
+#5,Memory area beginning after the BSS segment and that grows to higher addresses,Heap,5ezN6PJUTkFUspGwXouv,2,15
+#6,"LDAP filter to list disabled users that are member of the builtin administrators group and that contains “hf” in their name (no space, attributes are classified by alphabetical order,3 filters are required).","[(&(description=*hf*)(objectclass=person)(userAccountControl:1.2.840.113556.1.4.803:=2)),(&(description=*hf*)(objectclass=user)(userAccountControl:1.2.840.113556.1.4.803:=2))]",fuHABWGYwJTtUoMgvmCn,3,20
+#7,Say you want to run this: powershell.exe -file .\script.ps1 but you are restricted. Which argument would you add to run it successfuly?,ExecutionPolicy ByPass,jufxvZwM786t366vtZXh,2,15
+#8,(a | b) & ( ! (a & b)) = a ? b,"[^,xor]",4lJgsZURwMpxxL9rud6g,1,15
+#9,What is the first (top) title of the random hacks videos from the Wicked Clown ?,FTP Ebook,pSAyi5Hy2Py7AsXDHToc,4,15
+#10,"1) From the rightmost digit, which is the check digit, moving left, double the value of every second digit; if product of this doubling operation is greater than 9, then sum the digits. of the products.\n2) Take the sum of all the digits.\n3) If the total modulo 10 is equal to 0 then the number is valid.",Luhn algorithm,5SuTgbOa3BuZLoRP5O2d,1,15
+#11,Corporate switch A has following ports:\n\n#1 - Router 1 (ISP 1 - Fiber)\n#2 - Router 2 (ISP 2 - ADSL)\n#3 - Switch B (VoIP VLAN)\n#4 - Switch C (Security/Management VLAN)\n#5 - Switch D (Access to hosts)\n#6 - Switch E (Access to internal servers)\n#7 - Switch F (DMZ VLAN)\n\nWhich cable will you pull to DoS as much users as possible ?,power,7866cU8nVIzVjixox6YO,1,12
+#12,"What is the name of this function?\nmov edx, fs:[30h]\nmov edx, byte [edx+2]\ntest edx, edx\n",IsDebuggerPresent,KOrd6pnBlynlZXTCvh1m,2,15
+#13,What does cost 2M$ in Day of the Tentacle? a ...,diamond,mGDPOim7C0rLLSmmHumW,2,7
+#14,"Mentioned at PasswordsCon^13, it is used by sites such as StackOverflow and WordPress, it can be used to datamine someone with a md5-hashed email address.",gravatar,80rqPAGcWKwNRMWweSyt,3,10
+#15,The standard password storage for OSX can be bypassed with this tool when root privileges are gained. ,keychaindump,Zkm2qsmdfrMOYK1mldyP,3,10
+#16,"If a bushi does not commit seppuku when losing his master, he is discriminated as a...?",ronin,nLhHSiRI0HSTzUyuyQZy,2,5
+#17,"Seen in SG-1, the makers of the ion cannon; which city is their race name related to in nahuatl culture?",teotihuacan,DxwEgxgm34NUhKoyEh7C,3,7
+#18,"Being part of the winning party in the Castellamarese war, he was born in the Russian Empire and close to Lucky and Bugs, what is his birth family name?",Suchowljansky,TISZ1jFJ9ZIWNaDt4XkS,3,10
+19,xihal-dapul-kopak-cimok-sasof-fetix,Trivia l33t,hqHRV2FT4ZQppjTfl1G6,4,5
+20,"What does it mean? (it = http://scoreboard.ctf.hf/files/trivia.q20.png)",Anubis,JSy7nsOom8OzcSeuCAb1,2,5
+21,What ethnic group from Europe settled on the main island of Tierra del Fuego when conflicts increased with Selk’nam natives at the turn of 19th-20th century?,Croats,eXrGNDG9MzXQaCiFpBAk,2,15
+22,"Usually, when someone talks about ALGOL, which one is it?",60,rNaj7deEtJJnpaW1SyaO,1,5
+23,Chemical name of the “natural Valium”?,GABA,HzlXfUOKiM6b61G4U2Tb,1,5
+24,Nahuatl name for the spirit made in the Campeche state of Mexico from maguey?,mexcalli,bydcCMtP7YAi10YMfEOO,2,5
+25,What’s the name of the substance that will turn the taste of pretty much everything in a sweet taste?,miraculin,v5TkRS5WR3Lma4QERIVF,1,5
+26,What type of hashes does litecoin use?,scrypt,HHeEP6dKHqpfP3uLcNU2,1,3
+27,"Hex signature of the filetype is 1F 9D 90 - how's called the media containing one, destined for Apple II computers?",Golden Orchard,v3oCiGnOdw1Z6HEmvjJ0,3,7
+28,2 lumens = ? lux,20,iwZz0vTowu5OnLvG0DGQ,1,5
+29,Which part of the hash of the public key end up in a .onion address? (?l?l?l?l?l ?d?d ?l?l?l?l?l),first 20 bytes,TWvOOi42AJxKoQuVqkoA,3,8
+30,"If you want to crack a5/1 with a cellphone, what firmware would be installed? (greets to gat3way)",osmocom,P9IEl6RVTGtp8PlypR6E,2,7
+31,Which software is the way to go to capture and decode GSM traffic? (greets to gat3way),airprobe,rFrcxStPcCi7W7LWGMdW,2,6
+32,"In the GSM context, how many bits does a frame number mixed after key setup have? (greets to gat3way)",22,QAWVDLqQO6QRbmaN9OPa,4,8
+33,How do you call a lutin in the Resistance?  a …?,gnohm,IC03NsENXQGuR3glYkZL,2,20
+34,shimanigashi # ch. in 33101737?,20,36eb3df6b725280d2b98,3,15
+
